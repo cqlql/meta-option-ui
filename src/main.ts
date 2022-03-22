@@ -1,9 +1,18 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import registerGlobComp from './registerGlobComp'
 import router from './router'
 // import store from './store'
 
-createApp(App)
-  // .use(store)
-  .use(router)
-  .mount('#app')
+async function bootstrap() {
+  const app = createApp(App)
+
+  app.use(router)
+
+  // Register global components
+  registerGlobComp(app)
+
+  app.mount('#app')
+}
+
+bootstrap()

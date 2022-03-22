@@ -8,13 +8,6 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-        disallowTypeAnnotations: true,
-      },
-    ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-types': 'off',
 
