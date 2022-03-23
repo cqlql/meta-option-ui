@@ -29,11 +29,11 @@ const onFinishFailed = (errorInfo: any) => {
     <div class="center">
       <div class="top">
         <div class="logo">
-          <img src="" alt="" />
+          <img src="@/assets/logo.png" alt="" />
         </div>
         <div class="right">
           <div class="logoText">
-            <img src="" alt="" />
+            <img src="@/assets/logo-text.png" alt="" />
           </div>
           <div class="des"> New Generation Trading Platform </div>
         </div>
