@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
+import BgFull from '@/components/BgFull.vue'
 
 interface FormState {
   username: string
@@ -23,62 +24,73 @@ const onFinishFailed = (errorInfo: any) => {
 }
 </script>
 <template>
+  <BgFull></BgFull>
   <div class="LoginView">
-    <div class="top">
-      <div class="logo">
-        <img src="" alt="" />
-      </div>
-      <div class="right">
-        <div class="logoText">
+    <div class="center">
+      <div class="top">
+        <div class="logo">
           <img src="" alt="" />
         </div>
-        <div class="des"> New Generation Trading Platform </div>
+        <div class="right">
+          <div class="logoText">
+            <img src="" alt="" />
+          </div>
+          <div class="des"> New Generation Trading Platform </div>
+        </div>
       </div>
+      <a-form
+        class="form"
+        :model="formState"
+        name="basic"
+        :label-col="{ span: 6 }"
+        :wrapper-col="{ span: 18 }"
+        autocomplete="off"
+        hideRequiredMark
+        @finish="onFinish"
+        @finishFailed="onFinishFailed"
+      >
+        <a-form-item class="tab" :wrapper-col="{ offset: 6, span: 18 }">
+          <a-radio-group v-model:value="loginType" button-style="solid">
+            <a-radio-button value="eMail">E-mail Address</a-radio-button>
+            <a-radio-button value="phone">Phone Number</a-radio-button>
+          </a-radio-group>
+        </a-form-item>
+        <a-form-item
+          label="Account"
+          name="account"
+          :rules="[{ required: true, message: 'Please input your username!' }]"
+        >
+          <a-input v-model:value="formState.username" />
+        </a-form-item>
+
+        <a-form-item
+          label="Password"
+          name="password"
+          :rules="[{ required: true, message: 'Please input your password!' }]"
+        >
+          <a-input-password v-model:value="formState.password" />
+        </a-form-item>
+
+        <a-form-item :wrapper-col="{ offset: 6, span: 18 }">
+          <a-button type="primary" block html-type="submit">Submit</a-button>
+        </a-form-item>
+      </a-form>
     </div>
-    <a-form
-      class="form"
-      :model="formState"
-      name="basic"
-      :label-col="{ span: 6 }"
-      :wrapper-col="{ span: 18 }"
-      autocomplete="off"
-      hideRequiredMark
-      @finish="onFinish"
-      @finishFailed="onFinishFailed"
-    >
-      <a-form-item class="tab" :wrapper-col="{ offset: 6, span: 18 }">
-        <a-radio-group v-model:value="loginType" button-style="solid">
-          <a-radio-button value="eMail">E-mail Address</a-radio-button>
-          <a-radio-button value="phone">Phone Number</a-radio-button>
-        </a-radio-group>
-      </a-form-item>
-      <a-form-item
-        label="Account"
-        name="account"
-        :rules="[{ required: true, message: 'Please input your username!' }]"
-      >
-        <a-input v-model:value="formState.username" />
-      </a-form-item>
-
-      <a-form-item
-        label="Password"
-        name="password"
-        :rules="[{ required: true, message: 'Please input your password!' }]"
-      >
-        <a-input-password v-model:value="formState.password" />
-      </a-form-item>
-
-      <a-form-item :wrapper-col="{ offset: 6, span: 18 }">
-        <a-button type="primary" block html-type="submit">Submit</a-button>
-      </a-form-item>
-    </a-form>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .LoginView {
-  width: 550px;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // width: 550px;
+  // margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .top {
     display: flex;
