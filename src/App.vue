@@ -5,7 +5,11 @@
 <script lang="ts" setup></script>
 
 <style lang="scss">
+html {
+  font-size: 14px;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat-SemiBold;
 }
 </style>

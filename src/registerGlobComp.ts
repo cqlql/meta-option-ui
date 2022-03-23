@@ -4,7 +4,7 @@ import type { App } from 'vue'
 // import Button from '@/components/Button/Button.vue'
 import Icon from '@/components/Icon'
 
-import { Input, Layout, Button, Form, Radio } from 'ant-design-vue'
+import { Input, Layout, Button, Form, Radio, Row, Col } from 'ant-design-vue'
 
 export default function registerGlobComp(app: App) {
   app
@@ -19,4 +19,6 @@ export default function registerGlobComp(app: App) {
     .use(Layout)
     .use(Form)
     .use(Radio)
+    .use(Row)
+    .use(Col)
 }

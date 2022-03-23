@@ -1,14 +1,17 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import BgFull from '@/components/BgFull.vue'
+import ButtonYellow from '@/components/Button/ButtonYellow.vue'
 
 interface FormState {
-  username: string
+  areaCode?: string
+  account: string
   password: string
   remember: boolean
 }
 const formState = reactive<FormState>({
-  username: '',
+  areaCode: '+86',
+  account: '',
   password: '',
   remember: true,
 })
@@ -33,7 +36,7 @@ const onFinishFailed = (errorInfo: any) => {
         </div>
         <div class="right">
           <div class="logoText">
-            <img src="@/assets/logo-text.png" alt="" />
+            <img class="mx-auto" src="@/assets/logo-text.png" alt="" />
           </div>
           <div class="des"> New Generation Trading Platform </div>
         </div>
@@ -56,11 +59,37 @@ const onFinishFailed = (errorInfo: any) => {
           </a-radio-group>
         </a-form-item>
         <a-form-item
+          v-if="loginType === 'eMail'"
           label="Account"
           name="account"
-          :rules="[{ required: true, message: 'Please input your username!' }]"
+          :rules="[
+            { required: true, message: 'Please input your account!' },
+            {
+              pattern: /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/,
+              message: 'Please input the correct email address!',
+            },
+          ]"
         >
-          <a-input v-model:value="formState.username" />
+          <a-input
+            placeholder="E-mail Address"
+            v-model:value="formState.account"
+          />
+        </a-form-item>
+
+        <a-form-item
+          v-else
+          label="Account"
+          name="account"
+          :rules="[{ required: true, message: 'Please input your account!' }]"
+        >
+          <a-input-group compact>
+            <a-input v-model:value="formState.areaCode" style="width: 20%" />
+            <a-input
+              v-model:value="formState.account"
+              style="width: 80%"
+              placeholder="Phone Number"
+            />
+          </a-input-group>
         </a-form-item>
 
         <a-form-item
@@ -71,9 +100,23 @@ const onFinishFailed = (errorInfo: any) => {
           <a-input-password v-model:value="formState.password" />
         </a-form-item>
 
-        <a-form-item :wrapper-col="{ offset: 6, span: 18 }">
-          <a-button type="primary" block html-type="submit">Submit</a-button>
+        <a-form-item
+          style="margin-bottom: 0"
+          :wrapper-col="{ offset: 6, span: 18 }"
+        >
+          <ButtonYellow type="primary" block html-type="submit" shape="round">
+            Log In
+          </ButtonYellow>
         </a-form-item>
+
+        <a-row class="mt-2 text-light-50">
+          <a-col :offset="6" :span="18">
+            <div class="flex justify-between">
+              <a href="javascript:;">Forget Password</a>
+              <a href="javascript:;">Log In</a>
+            </div>
+          </a-col>
+        </a-row>
       </a-form>
     </div>
   </div>
@@ -89,11 +132,82 @@ const onFinishFailed = (errorInfo: any) => {
   // width: 550px;
   // margin: 0 auto;
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
+  color: #fff;
+
+  a {
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+      color: #40a9ff;
+    }
+  }
+
+  :deep(.ant-form) {
+    .ant-form-item-label > label {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .ant-radio-group-solid {
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: none;
+      }
+    }
+
+    .ant-form-item-control-input {
+      min-height: 34px;
+    }
+
+    .ant-radio-group {
+      display: flex;
+    }
+
+    .ant-radio-button-wrapper {
+      flex: 1;
+      height: 46px;
+      line-height: 46px;
+      font-size: 16px;
+    }
+
+    .ant-input {
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    .ant-input-password {
+      border-radius: 6px;
+    }
+
+    .ant-radio-button-wrapper:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+
+    .ant-radio-button-wrapper:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .ant-btn {
+      height: 38px;
+    }
+
+    .ant-input-group {
+      input:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+
+      input:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+    }
+  }
 
   .top {
     display: flex;
+    margin-bottom: 100px;
+    margin-top: 100px;
 
     .logo {
       width: 189px;
@@ -103,34 +217,39 @@ const onFinishFailed = (errorInfo: any) => {
 
     .right {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logoText {
+      height: 50px;
     }
 
     .des {
+      font-size: 29px;
+      letter-spacing: 1px;
+      line-height: 58px;
     }
   }
 
   .form {
+    width: 580px;
+    margin: 0 auto;
+
     .tab {
       text-align: center;
-    }
-
-    :deep(.ant-radio-group) {
-      display: flex;
-    }
-
-    :deep(.ant-radio-button-wrapper) {
-      flex: 1;
     }
   }
 }
 
 @media (max-width: 575px) {
   .LoginView {
-    width: auto;
-    margin: 0 15px;
+    .form {
+      width: auto;
+    }
+    // width: auto;
+    // margin: 0 15px;
 
     // :deep(.ant-col-offset-6) {
     //   margin: 0;
