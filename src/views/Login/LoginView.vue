@@ -27,7 +27,7 @@ const onFinishFailed = (errorInfo: any) => {
   <BgFull></BgFull>
   <div class="LoginView">
     <div class="center">
-      <div class="top">
+      <div class="top -enter-y">
         <div class="logo">
           <img src="@/assets/logo.png" alt="" />
         </div>
@@ -39,7 +39,7 @@ const onFinishFailed = (errorInfo: any) => {
         </div>
       </div>
       <a-form
-        class="form"
+        class="form -enter-y"
         :model="formState"
         name="basic"
         :label-col="{ span: 6 }"
