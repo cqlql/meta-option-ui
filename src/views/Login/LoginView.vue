@@ -122,7 +122,7 @@ const onFinishFailed = (errorInfo: any) => {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .LoginView {
   position: fixed;
   top: 0;
@@ -145,7 +145,7 @@ const onFinishFailed = (errorInfo: any) => {
     }
   }
 
-  :deep(.ant-form) {
+  .ant-form {
     .ant-form-item-label > label {
       color: #fff;
       font-size: 24px;
@@ -248,13 +248,8 @@ const onFinishFailed = (errorInfo: any) => {
     .form {
       width: auto;
     }
-    // width: auto;
-    // margin: 0 15px;
 
-    // :deep(.ant-col-offset-6) {
-    //   margin: 0;
-    // }
-    :deep(.ant-form-item-control) {
+    .ant-form-item-control {
       margin: 0;
     }
   }
