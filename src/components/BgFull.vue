@@ -3,7 +3,7 @@
   <div class="BgFull"> </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .BgFull {
   position: fixed;
   top: 0;

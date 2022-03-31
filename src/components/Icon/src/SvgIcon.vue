@@ -34,10 +34,10 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped>
-$prefix-cls: svg-icon;
+<style lang="less" scoped>
+@prefix-cls: svg-icon;
 
-.#{$prefix-cls} {
+.@{prefix-cls} {
   display: inline-block;
   overflow: hidden;
   vertical-align: -0.15em;

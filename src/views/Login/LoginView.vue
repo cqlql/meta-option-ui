@@ -122,7 +122,7 @@ const onFinishFailed = (errorInfo: any) => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="less" scoped>
 .LoginView {
   position: fixed;
   top: 0;

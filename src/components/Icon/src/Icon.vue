@@ -85,7 +85,7 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss">
+<style lang="less" scoped>
 .app-iconify {
   display: inline-block;
   // vertical-align: middle;

@@ -3,7 +3,7 @@
   <a-button class="ButtonYellow" v-bind="$attrs"><slot></slot></a-button>
 </template>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .ButtonYellow {
   background-color: #fc0;
   border-color: #fc0;
