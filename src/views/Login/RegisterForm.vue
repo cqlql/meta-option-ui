@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { inject, reactive, Ref, ref } from 'vue'
+import { inject, reactive, Ref } from 'vue'
 import ButtonYellow from '@/components/Button/ButtonYellow.vue'
 import { LoginState } from './types'
 interface FormState {

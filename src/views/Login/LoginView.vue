@@ -1,39 +1,16 @@
 <script lang="ts" setup>
-import { provide, reactive, ref } from 'vue'
+import { provide, ref } from 'vue'
 import BgFull from '@/components/BgFull.vue'
 import LoginForm from './LoginForm.vue'
 import RegisterForm from './RegisterForm.vue'
 import { LoginState } from './types'
 import { useRoute } from 'vue-router'
 
-interface FormState {
-  // areaCode?: string
-  account: string
-  password: string
-  remember: boolean
-}
-
 const route = useRoute()
-console.log('🚀 -- route', route)
 
 const loginState = ref<LoginState>((route.query.form as LoginState) || 'login')
 
 provide('loginState', loginState)
-
-const formState = reactive<FormState>({
-  // areaCode: '+86',
-  account: '',
-  password: '',
-  remember: true,
-})
-
-const onFinish = (values: any) => {
-  console.log('Success:', values)
-}
-
-const onFinishFailed = (errorInfo: any) => {
-  console.log('Failed:', errorInfo)
-}
 </script>
 <template>
   <BgFull></BgFull>
