@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { provide, reactive, ref } from 'vue'
 import BgFull from '@/components/BgFull.vue'
-import LoginForm from './LoginForm.vue';
-import RegisterForm from './RegisterForm.vue';
-import { LoginState } from './types';
+import LoginForm from './LoginForm.vue'
+import RegisterForm from './RegisterForm.vue'
+import { LoginState } from './types'
+import { useRoute } from 'vue-router'
 
 interface FormState {
   // areaCode?: string
@@ -12,9 +13,12 @@ interface FormState {
   remember: boolean
 }
 
-const loginState = ref<LoginState>('login')
+const route = useRoute()
+console.log('🚀 -- route', route)
 
-provide('loginState',loginState)
+const loginState = ref<LoginState>((route.query.form as LoginState) || 'login')
+
+provide('loginState', loginState)
 
 const formState = reactive<FormState>({
   // areaCode: '+86',
@@ -22,7 +26,6 @@ const formState = reactive<FormState>({
   password: '',
   remember: true,
 })
-
 
 const onFinish = (values: any) => {
   console.log('Success:', values)
@@ -41,7 +44,7 @@ const onFinishFailed = (errorInfo: any) => {
           <img src="@/assets/logo-text.png" alt="" />
         </div>
       </div>
-      <LoginForm v-if="loginState==='login'" />
+      <LoginForm v-if="loginState === 'login'" />
       <RegisterForm v-else />
     </div>
   </div>

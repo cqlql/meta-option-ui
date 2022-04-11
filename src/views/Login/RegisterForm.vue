@@ -6,13 +6,13 @@ interface FormState {
   account: string
   nickName: string
   password: string
-  remember: boolean
+  agree: boolean
 }
 const formState = reactive<FormState>({
   account: '',
   nickName: '',
   password: '',
-  remember: true,
+  agree: false,
 })
 
 const onFinish = (values: any) => {
@@ -67,6 +67,16 @@ const loginState = inject('loginState') as Ref<LoginState>
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
+    <!-- <div class="login-form-wrap"> -->
+    <a-form-item :wrapper-col="{ offset: 6, span: 18 }" name="agree">
+      <a-checkbox v-model:checked="formState.agree">
+        <span class="text-[#fff]"> Read and Agree </span>
+        <a href="">&lt;&lt;Terms of Service&gt;&gt;</a>
+      </a-checkbox>
+    </a-form-item>
+
+    <!-- </div> -->
+
     <a-form-item class="!mt-10 !mb-0" :wrapper-col="{ offset: 6, span: 18 }">
       <ButtonYellow type="primary" block html-type="submit" shape="round">
         Register
@@ -76,11 +86,11 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item :wrapper-col="{ offset: 6, span: 18 }">
       <div class="flex justify-between">
         <a href="javascript:;">Forget Password</a>
-        <a
+        <router-link
           href="javascript:;"
           @click="loginState = 'login'"
           :to="{ query: { form: 'login' } }"
-          >Log In</a
+          >Log In</router-link
         >
       </div>
     </a-form-item>
