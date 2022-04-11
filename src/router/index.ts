@@ -23,6 +23,7 @@ const routes: Array<AppRouteRecordRaw> = [
       title: 'home',
     },
   },
+
   // {
   //   path: '/about',
   //   name: 'about',
