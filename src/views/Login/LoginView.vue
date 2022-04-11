@@ -50,13 +50,15 @@ const onFinishFailed = (errorInfo: any) => {
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="less">
+@primary-color: #fc0;
+
 .LoginView {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
   // width: 550px;
   // margin: 0 auto;
   display: flex;
@@ -64,18 +66,9 @@ const onFinishFailed = (errorInfo: any) => {
   justify-content: center;
   color: #fff;
 
-  &::v-deep(.ant-form) {
+  .ant-form {
     width: 580px;
     margin: 0 auto;
-
-    a {
-      color: #fff;
-      font-size: 14px;
-
-      &:hover {
-        color: #40a9ff;
-      }
-    }
 
     .ant-form-item-label > label {
       color: #fff;
@@ -91,35 +84,6 @@ const onFinishFailed = (errorInfo: any) => {
     .ant-form-item-control-input {
       min-height: 34px;
     }
-
-    // .ant-radio-group {
-    //   display: flex;
-    // }
-
-    // .ant-radio-button-wrapper {
-    //   flex: 1;
-    //   height: 46px;
-    //   line-height: 46px;
-    //   font-size: 16px;
-    // }
-
-    // .ant-radio-button-wrapper:first-child {
-    //   border-radius: 6px 0 0 6px;
-    // }
-
-    // .ant-radio-button-wrapper:last-child {
-    //   border-radius: 0 6px 6px 0;
-    // }
-
-    // .ant-input-group {
-    //   input:first-child {
-    //     border-radius: 6px 0 0 6px;
-    //   }
-
-    //   input:last-child {
-    //     border-radius: 0 6px 6px 0;
-    //   }
-    // }
 
     .ant-input {
       font-size: 16px;
@@ -162,6 +126,51 @@ const onFinishFailed = (errorInfo: any) => {
     //   line-height: 58px;
     // }
   }
+
+  a {
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+      color: @primary-color;
+      // color: #40a9ff;
+    }
+  }
+
+  .link {
+    color: @primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .ant-checkbox-inner {
+    border-radius: 50px;
+  }
+
+  .ant-checkbox-checked::after,
+  .ant-checkbox-inner::after {
+    display: none;
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  // .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: @primary-color;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    // width: 16px;
+    // height: 16px;
+    border-color: @primary-color;
+    background-color: @primary-color;
+  }
 }
 
 @media (max-width: 800px) {
@@ -185,7 +194,7 @@ const onFinishFailed = (errorInfo: any) => {
       width: auto;
     }
 
-    &::v-deep(.ant-col-offset-6) {
+    .ant-col-offset-6 {
       margin: 0;
     }
   }

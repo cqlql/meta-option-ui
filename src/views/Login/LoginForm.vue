@@ -59,7 +59,7 @@ const loginState = inject('loginState') as Ref<LoginState>
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item class="!mt-10 !mb-0" :wrapper-col="{ offset: 6, span: 18 }">
+    <a-form-item class="!mb-0" :wrapper-col="{ offset: 6, span: 18 }">
       <ButtonYellow type="primary" block html-type="submit" shape="round">
         Log In
       </ButtonYellow>
