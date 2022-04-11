@@ -61,10 +61,20 @@ const onFinishFailed = (errorInfo: any) => {
   // bottom: 0;
   // width: 550px;
   // margin: 0 auto;
+  // display: flex;
+  // // align-items: center;
+  // justify-content: center;
+  // color: #fff;
+
   display: flex;
-  // align-items: center;
   justify-content: center;
   color: #fff;
+  align-items: center;
+  min-height: 100vh;
+
+  .center {
+    height: 650px;
+  }
 
   .ant-form {
     width: 580px;
@@ -102,7 +112,7 @@ const onFinishFailed = (errorInfo: any) => {
   .top {
     display: flex;
     margin-bottom: 100px;
-    margin-top: 100px;
+    // margin-top: 100px;
 
     .logo {
       width: 729px;
