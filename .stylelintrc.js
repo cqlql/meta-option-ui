@@ -1,5 +1,6 @@
 /* https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md */
 module.exports = {
+  plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   overrides: [
@@ -9,6 +10,51 @@ module.exports = {
     },
   ],
   rules: {
+    'order/order': [
+      [
+        'dollar-variables',
+        'custom-properties',
+        'at-rules',
+        'declarations',
+        {
+          type: 'at-rule',
+          name: 'supports',
+        },
+        {
+          type: 'at-rule',
+          name: 'media',
+        },
+        'rules',
+      ],
+      { severity: 'warning' },
+    ],
+    'order/properties-order': [
+      'position',
+      'left',
+      'top',
+      'right',
+      'bottom',
+      'z-index',
+
+      'display',
+      'align-items',
+      'justify-content',
+
+      'width',
+      'height',
+      'padding',
+      'margin',
+
+      'color',
+      'font-size',
+      'line-height',
+      'text-align',
+      'text-shadow',
+
+      'background',
+      'background-size',
+    ],
+
     'color-no-invalid-hex': true, // 禁止无效的十六进制颜色。
 
     'font-family-no-duplicate-names': true, // 不允许重复的字体系列名称。
