@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import PageLayout from './page/PageLayout.vue'
-import SideMenu from './SideMenu.vue'
+import NavMain from './NavMain.vue'
 import HeaderLayout from './HeaderLayout.vue'
 </script>
 <template>
   <section class="layout">
     <header class="layout-header"> <HeaderLayout> </HeaderLayout></header>
     <section class="layout-content">
-      <aside class="layout-aside"> <SideMenu></SideMenu> </aside>
+      <aside class="layout-aside"> <NavMain></NavMain> </aside>
       <main class="layout-main">
         <div class="wrap">
           <PageLayout></PageLayout>
