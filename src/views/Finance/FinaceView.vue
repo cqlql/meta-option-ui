@@ -1,22 +1,164 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+import TabButtons from '@/components/TabButtons.vue'
+import { Table as ATable, Tag as ATag } from 'ant-design-vue'
+
+// import { defineComponent } from 'vue'
+const list = [
+  {
+    label: 'Deposit',
+    value: 'Deposit',
+  },
+  {
+    label: 'Payment history',
+    value: 'Payment history',
+  },
+  {
+    label: 'Withdrawal',
+    value: 'Withdrawal',
+  },
+]
+
+const tabVal = ref('Deposit')
+const radioVal = ref('a')
+
+const columns = [
+  {
+    name: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age',
+    key: 'age',
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address',
+    key: 'address',
+  },
+  {
+    title: 'Tags',
+    key: 'tags',
+    dataIndex: 'tags',
+  },
+  {
+    title: 'Action',
+    key: 'action',
+  },
+]
+
+const data = [
+  {
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+    tags: ['nice', 'developer'],
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+    tags: ['loser'],
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+]
+</script>
 <template>
-  <div>
-    <pre>
-      她说“不是假装沉默，而是无力诉说”，那是21年2月，直到现在，我还是面对这句话沉默，倒不是想沉默，像话语本身，无力去说什么。
-    　　三月末，一个和我认识四年多的女孩子，自然是对我比较重要的女孩子离开了我，走的很决绝，我跟她说了很多，理智的，不理智的好像都说了，不过，她还是走了。我不知道该对自己说什么，心里难过但已经过了流眼泪的年纪，最后不也还是一个人沉默，相信着时间会抚平一切。
-    　　
-    四月初，我便趁着心里那股不甘劲，找了我初恋，跟她聊到她跟她男朋友闹矛盾，我傻乎乎的劝人家好好谈，能把握住就好好把握住，后来，人家真把握住了，我……尴尬，说了两句……沉默。大概，每次聊的最有意思的还是和初恋聊，她有一些观点以及在长时间跨度下我和她之间的观点对抗，或是相互理解，最终到达以种和谐的状态，但无论如何，我两不合适这个看法被反反复复拿到台面上讲，至于为什么，估计两
-    人都是在提醒自己吧。
-    　　就在四月初，我还问了另外一个未曾谋面的女孩子，一个阳光，积极，可爱，但是又倔，要强，追求“美”的女孩子，当然不是庸俗的美，不可否认的是，我认识她的时间最短，接触也减少，甚至未曾见过面，但她对我的影响确实最显而易见的，至少，她的生活方式以及对生活的态度让我在内在美和外在美找到一种平衡，而这个平衡是我在我那个四年多的孩子身上自习找不到的，我曾发说说讲过“过去，我所接触的一切包括我自己都认为追求内在的美远胜过追求外在的一切，现在我相信，一个内在追求美的人绝不会允许他的外在会有多糟糕。”，这种平衡展开来讲，能容纳很多对象，例如学习和娱乐，工作和家庭……而其中让我着迷的是它的平衡始终是一种美且向美，一种正态的发展。尽管如此优秀的一个女孩子，当我问她某些问题原因时，给我的答案依旧让我……沉默，与其说是人性，倒不如理解为“正常”，事实上，我对大多的人性已经麻木了，因为见的太多，反而确实太“正常”，以至于麻木到忘记它本身的不合伦理，像之前的“酸菜”……或者娱乐圈又是那个明星偷税，太正常了，曝光抵制，不曝光谁知道呢。
-    　　疫情封校快一个月了，学校里也有很多问题，社会也有很多问题，我看着上海，我就心疼啊，都是人命，都是家庭！
-    　　
-    我并不主张沉默，但一个沉默的成年人一定不是不想说些什么，有时候，沉默是一个缓冲地带，如果这样，他就成了不爱你，那我只能说，我们之间的是想观念有了代沟，我们不合适，我说：“理解一个人的沉默，理解一个人为何沉默”，当沉默成了永久，沉默的人一定不会再开口了。
-    　　
-    海棠花啊海棠花，你还有春天和我吧。如果觉得过不去了，很难了，就告诉自己，不要再沉默，你只管美且向美，时间会抚平一切并证明一切的。
-    　　 加油2022！加油这个春天！加油你和我！
-  </pre
-    >
+  <div class="FinaceView">
+    <TabButtons :list="list" v-model="tabVal"> </TabButtons>
+    <div class="content enter-y">
+      <div class="tabBtn">
+        <a-radio-group v-model:value="radioVal">
+          <a-radio-button value="a">Open Position</a-radio-button>
+          <a-radio-button value="b">Close Position</a-radio-button>
+        </a-radio-group>
+      </div>
+
+      <div class="table">
+        <a-table
+          :columns="columns"
+          :data-source="data"
+          class="ant-table-striped"
+          :pagination="{ hideOnSinglePage: true }"
+        >
+          <template #headerCell="{ column }">
+            <template v-if="column.key === 'name'">
+              <span> Name </span>
+            </template>
+          </template>
+
+          <template #bodyCell="{ column, record }">
+            <template v-if="column.key === 'name'">
+              <a>
+                {{ record.name }}
+              </a>
+            </template>
+            <template v-else-if="column.key === 'tags'">
+              <span>
+                <a-tag
+                  v-for="tag in record.tags"
+                  :key="tag"
+                  :color="
+                    tag === 'loser'
+                      ? 'volcano'
+                      : tag.length > 5
+                      ? 'geekblue'
+                      : 'green'
+                  "
+                >
+                  {{ tag.toUpperCase() }}
+                </a-tag>
+              </span>
+            </template>
+            <template v-else-if="column.key === 'action'">
+              <span>
+                <a>Invite 一 {{ record.name }}</a>
+                <a-divider type="vertical" />
+                <a>Delete</a>
+                <a-divider type="vertical" />
+                <a class="ant-dropdown-link"> More actions </a>
+              </span>
+            </template>
+          </template>
+        </a-table>
+      </div>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped>
+.FinaceView {
+  padding: 28px 80px;
+
+  .content {
+    padding: 30px;
+    margin: 58px 0 0;
+    background-color: #171e2d;
+    box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 6px;
+
+    .ant-radio-group {
+      // margin: 20px auto 0;
+    }
+
+    .tabBtn {
+      margin: 20px 0 0;
+      text-align: center;
+    }
+
+    .table {
+      width: 100%;
+    }
+  }
+}
+</style>

@@ -20,7 +20,7 @@ const list: ItemType[] = [
   },
   {
     name: 'Finance',
-    icon: 'icon-park-outline:funds',
+    icon: 'ri:money-dollar-circle-fill',
     routeName: 'finance',
   },
   {

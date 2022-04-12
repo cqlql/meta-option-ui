@@ -21,8 +21,8 @@ provide('loginState', loginState)
           <img src="@/assets/logo-text.png" alt="" />
         </div>
       </div>
-      <LoginForm v-if="loginState === 'login'" />
-      <RegisterForm v-else />
+      <LoginForm v-if="loginState === 'login'" class="enter-y" />
+      <RegisterForm v-else class="enter-y" />
     </div>
   </div>
 </template>
@@ -44,9 +44,9 @@ provide('loginState', loginState)
   // color: #fff;
 
   display: flex;
+  align-items: center;
   justify-content: center;
   color: #fff;
-  align-items: center;
   min-height: 100vh;
 
   .center {

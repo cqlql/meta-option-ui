@@ -42,12 +42,13 @@ module.exports = {
 
       'width',
       'height',
+      'line-height',
       'padding',
       'margin',
 
       'color',
       'font-size',
-      'line-height',
+
       'text-align',
       'text-shadow',
 

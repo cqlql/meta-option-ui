@@ -27,7 +27,7 @@ const loginState = inject('loginState') as Ref<LoginState>
 </script>
 <template>
   <a-form
-    class="form -enter-y"
+    class="form"
     :model="formState"
     name="basic"
     :label-col="{ span: 6 }"

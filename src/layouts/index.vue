@@ -47,6 +47,7 @@ import HeaderLayout from './HeaderLayout.vue'
   height: 100%;
   flex: 1;
   overflow: auto;
+  background-color: #262d3d;
 
   & > .wrap {
     position: absolute;
