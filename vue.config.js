@@ -1,6 +1,7 @@
 const path = require('path')
 const getLessVariables = require('./build/getLessVariables')
 module.exports = {
+  productionSourceMap: false,
   publicPath: '',
   css: {
     extract: false,
