@@ -44,7 +44,7 @@ function onSelect(index: number) {
   position: relative;
   // z-index: 1;
   display: flex;
-  height: 60px;
+  // height: 60px;
 
   // background-color: #f8f8f8;
   color: #fff;
@@ -60,10 +60,11 @@ function onSelect(index: number) {
     border: solid 2px #424b60;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
+    margin-right: -2px;
 
-    & + .item {
-      border-left: none;
-    }
+    // & + .item {
+    //   // border-left: none;
+    // }
 
     &:first-child {
       border-radius: 5px 0 0 5px;
@@ -71,6 +72,7 @@ function onSelect(index: number) {
 
     &:last-child {
       border-radius: 0 5px 5px 0;
+      margin-right: 0;
     }
 
     &:hover {
