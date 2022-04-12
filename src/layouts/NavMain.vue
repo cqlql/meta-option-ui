@@ -1,23 +1,41 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
 import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+type ItemType = {
+  name: string
+  icon: string
+  routeName: string
+}
+const router = useRouter()
+const route = useRoute()
 
-const selectedIndex = ref(0)
+const selectedRoute = ref(route.name)
 
-const list = [
+const list: ItemType[] = [
   {
     name: 'Trade',
     icon: 'ant-design:rise-outlined',
+    routeName: 'trade',
   },
   {
     name: 'Finance',
     icon: 'icon-park-outline:funds',
+    routeName: 'finance',
   },
   {
-    name: 'Finance',
+    name: 'Deal',
     icon: 'fa6-solid:handshake',
+    routeName: 'deal',
   },
 ]
+
+function to(item: ItemType) {
+  selectedRoute.value = item.routeName
+  router.push({
+    name: item.routeName,
+  })
+}
 </script>
 <template>
   <nav class="nav-main">
@@ -25,9 +43,9 @@ const list = [
       v-for="(item, index) of list"
       :key="index"
       class="item"
-      :class="{ active: selectedIndex === index }"
+      :class="{ active: selectedRoute === item.routeName }"
       href="javascript:;"
-      @click="selectedIndex = index"
+      @click="to(item)"
     >
       <i> <Icon :icon="item.icon"></Icon> </i>
       <span class="name">{{ item.name }}</span>
@@ -41,11 +59,13 @@ const list = [
     position: relative;
     display: block;
     display: flex;
+    justify-content: center;
     width: 110px;
     height: 110px;
     color: #7d8da1;
     text-align: center;
     cursor: pointer;
+    flex-direction: column;
 
     &::before {
       position: absolute;

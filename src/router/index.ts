@@ -3,7 +3,7 @@ import type { AppRouteRecordRaw } from './types'
 import { createRouter, createWebHashHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
 import LAYOUT from '@/layouts/index.vue'
-import FinaceView from '@/views/Finance/FinaceView.vue'
+import LoginView from '@/views/Login/LoginView.vue'
 
 const routes: Array<AppRouteRecordRaw> = [
   // {
@@ -26,11 +26,32 @@ const routes: Array<AppRouteRecordRaw> = [
     },
     children: [
       {
+        path: 'trade',
+        name: 'trade',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/Trade/TradeView.vue'),
+        meta: {
+          title: 'Trade',
+        },
+      },
+      {
         path: 'finance',
         name: 'finance',
-        component: FinaceView,
+        component: () =>
+          import(
+            /* webpackChunkName: "index" */ '@/views/Finance/FinaceView.vue'
+          ),
         meta: {
           title: 'finance',
+        },
+      },
+      {
+        path: 'deal',
+        name: 'deal',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/Deal/DealView.vue'),
+        meta: {
+          title: 'deal',
         },
       },
     ],
@@ -38,8 +59,7 @@ const routes: Array<AppRouteRecordRaw> = [
   {
     path: '/login',
     name: 'Login',
-    component: () =>
-      import(/* webpackChunkName: "index" */ '@/views/Login/LoginView.vue'),
+    component: LoginView,
     meta: {
       title: '登录',
     },
