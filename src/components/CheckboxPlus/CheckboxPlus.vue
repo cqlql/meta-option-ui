@@ -31,7 +31,7 @@ function select(index: number) {
   display: flex;
 
   & > .item {
-    background-color: #020220;
+    background-color: #263042;
     box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     border: solid 2px #333d51;

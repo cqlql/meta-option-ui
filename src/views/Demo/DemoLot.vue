@@ -6,9 +6,13 @@ import ButtonGreen from '@/components/Button/ButtonGreen.vue'
 import CheckboxPlusDemo from '@/components/CheckboxPlus/CheckboxPlusDemo.vue'
 import FormDemo from './comp/FormDemo.vue'
 import FormS2Demo from './comp/FormS2Demo.vue'
+import LabelInput from '@/components/LabelInput.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="LabelInput">
+      <LabelInput title="label" value="100,000"> </LabelInput>
+    </BoxView>
     <BoxView title="ant-form">
       <FormDemo> </FormDemo>
     </BoxView>

@@ -2,6 +2,7 @@
 import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
 import LabelValue from '@/components/LabelValue.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
+import LabelInput from '@/components/LabelInput.vue'
 
 const paymentList = [
   {
@@ -36,92 +37,96 @@ const amountList = [
 </script>
 <template>
   <div class="DepositView">
-    <div class="left enter-y">
-      <div class="item">
-        <h3>Choose payment system</h3>
-        <div class="content">
-          <CheckboxPlus :list="paymentList">
-            <template #default="{ value }">
-              <div>
-                <img src="" alt="" />
-              </div>
-              <div>{{ value }}</div>
-            </template>
-          </CheckboxPlus>
+    <div class="chunk left enter-y">
+      <div class="wrap">
+        <div class="item">
+          <h3>Choose payment system</h3>
+          <div class="content">
+            <CheckboxPlus :list="paymentList">
+              <template #default="{ value }">
+                <div>
+                  <img src="" alt="" />
+                </div>
+                <div>{{ value }}</div>
+              </template>
+            </CheckboxPlus>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <h3>Calculator</h3>
-        <div class="content">
-          <LabelValue title="$ USD">100,000</LabelValue>
-          <div class="row-list">
-            <table>
-              <colgroup>
-                <col class="col1" />
-                <col class="col2" />
-                <col class="col3" />
-              </colgroup>
-              <tr v-for="v of 5" :key="v">
-                <td>INR</td>
-                <td>~</td>
-                <td>744315.00</td>
-              </tr>
-            </table>
+        <div class="item">
+          <h3>Calculator</h3>
+          <div class="content">
+            <LabelInput title="$ USD" value="100,000"></LabelInput>
+            <div class="row-list">
+              <table>
+                <colgroup>
+                  <col class="col1" />
+                  <col class="col2" />
+                  <col class="col3" />
+                </colgroup>
+                <tr v-for="v of 5" :key="v">
+                  <td>INR</td>
+                  <td>~</td>
+                  <td>744315.00</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="right enter-y">
-      <div class="item">
-        <h3>
-          <span>Enter amount</span>
-          <a-checkbox>Bonus</a-checkbox>
-        </h3>
-        <div class="content">
-          <CheckboxPlus :list="amountList">
-            <template #default="{ value, info, type }">
-              <div class="CheckboxType">
-                <div :class="type">
-                  {{ value }}
+    <div class="chunk right enter-y">
+      <div class="wrap">
+        <div class="item">
+          <h3>
+            <span>Enter amount</span>
+            <a-checkbox>Bonus</a-checkbox>
+          </h3>
+          <div class="content">
+            <CheckboxPlus :list="amountList">
+              <template #default="{ value, info, type }">
+                <div class="CheckboxType">
+                  <div :class="type">
+                    {{ value }}
+                  </div>
+                  <div v-if="info" class="info">{{ info }}</div>
                 </div>
-                <div v-if="info" class="info">{{ info }}</div>
-              </div>
-            </template>
-          </CheckboxPlus>
+              </template>
+            </CheckboxPlus>
 
-          <LabelValue title="$ USD">100,000</LabelValue>
+            <LabelInput title="$ USD" value="100,000"></LabelInput>
 
-          <div class="one-data">
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <span> You pay </span>
-                  </th>
-                  <th>
-                    <span> Bonus </span>
-                    <Icon
-                      class="!text-sky-400 !text-2xl"
-                      icon="ant-design:info-circle-outlined"
-                    ></Icon>
-                  </th>
-                  <th>
-                    <span> You get </span>
-                    <span class="text-green-500">(20% Bonus)</span></th
-                  >
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>100,000</td>
-                  <td>20%</td>
-                  <td>120,000</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="one-data">
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <span> You pay </span>
+                    </th>
+                    <th>
+                      <span> Bonus </span>
+                      <Icon
+                        class="!text-sky-400 !text-2xl"
+                        icon="ant-design:info-circle-outlined"
+                      ></Icon>
+                    </th>
+                    <th>
+                      <span> You get </span>
+                      <span class="text-green-500">(20% Bonus)</span></th
+                    >
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>100,000</td>
+                    <td>20%</td>
+                    <td>120,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <a-button block type="primary2">CONTINUE</a-button>
           </div>
-
-          <a-button block type="primary2">CONTINUE</a-button>
         </div>
       </div>
     </div>
@@ -132,11 +137,15 @@ const amountList = [
 .DepositView {
   display: flex;
   padding-top: 80px;
+  // gap: 100px;
 
-  .left,
-  .right {
+  .chunk {
     flex: 1;
     padding: 10px 10px;
+
+    & > .wrap {
+      max-width: 500px;
+    }
   }
 
   .left {
@@ -153,7 +162,7 @@ const amountList = [
       grid-column-gap: 20px;
     }
 
-    .LabelValue {
+    .LabelInput {
       margin-top: 30px;
     }
   }
