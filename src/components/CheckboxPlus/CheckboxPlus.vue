@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 defineProps<{
   list: any[]
-  noTick: boolean
+  noTick?: boolean
 }>()
 
 let selectedIndex = ref(0)
@@ -38,6 +38,7 @@ function select(index: number) {
     position: relative;
     // overflow: hidden;
     padding: 10px 20px;
+    color: #a2a9bb;
 
     & > .checkbox-plus-tick {
       position: absolute;

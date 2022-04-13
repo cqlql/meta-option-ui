@@ -4,7 +4,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="LabelValue">
+  <div class="LabelInput">
     <span>{{ title }}</span>
     <span>
       <slot></slot>
@@ -13,7 +13,7 @@ defineProps<{
 </template>
 
 <style lang="less" scoped>
-.LabelValue {
+.LabelInput {
   display: flex;
   height: 60px;
   line-height: 60px;
