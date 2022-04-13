@@ -87,6 +87,10 @@ function to(item: ItemType) {
         opacity: 1;
         left: 0;
       }
+
+      .name {
+        color: #fff;
+      }
     }
 
     i {
@@ -95,6 +99,7 @@ function to(item: ItemType) {
       // justify-content: center;
       // height: 60px;
       font-size: 38px;
+      padding-top: 2px;
     }
 
     .app-iconify {
@@ -104,6 +109,7 @@ function to(item: ItemType) {
     .name {
       display: block;
       font-size: 14px;
+      transition: color 0.3s;
     }
   }
 }

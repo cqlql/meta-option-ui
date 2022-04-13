@@ -171,7 +171,6 @@ module.exports = {
     // 交给 prittier
     // 'declaration-block-trailing-semicolon': 'always',
 
-    'declaration-colon-newline-after': 'always-multi-line',
     'declaration-colon-space-after': 'always-single-line',
     'declaration-colon-space-before': 'never',
     'declaration-empty-line-before': [

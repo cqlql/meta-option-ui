@@ -66,6 +66,17 @@ const routes: Array<AppRouteRecordRaw> = [
   },
 ]
 
+if(process.env.NODE_ENV !== 'production') {
+  routes.push({
+    path: '/demo',
+    name: 'demo',
+    component: ()=>import('@/views/Demo/DemoLot.vue'),
+    meta: {
+      title: 'demo',
+    },
+  })
+}
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routes as unknown as RouteRecordRaw[],

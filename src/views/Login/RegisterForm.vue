@@ -40,6 +40,7 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item
       label="Account"
       name="account"
+      class="enter-y"
       :rules="[
         { required: true, message: 'Please input your account!' },
         {
@@ -54,6 +55,7 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item
       label="NickName"
       name="nickName"
+      class="enter-y"
       :rules="[{ required: true, message: 'Please input your NickName!' }]"
     >
       <a-input v-model:value="formState.nickName" />
@@ -62,12 +64,14 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item
       label="Password"
       name="password"
+           class="enter-y"
       :rules="[{ required: true, message: 'Please input your password!' }]"
     >
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <!-- <div class="login-form-wrap"> -->
+    <div class="enter-y">
+        <!-- <div class="login-form-wrap"> -->
     <a-form-item
       class="!mb-2"
       :wrapper-col="{ offset: 6, span: 18 }"
@@ -87,7 +91,7 @@ const loginState = inject('loginState') as Ref<LoginState>
       </ButtonYellow>
     </a-form-item>
 
-    <a-form-item :wrapper-col="{ offset: 6, span: 18 }">
+    <a-form-item  :wrapper-col="{ offset: 6, span: 18 }">
       <div class="flex justify-between">
         <a href="javascript:;">Forget Password</a>
         <router-link
@@ -98,6 +102,7 @@ const loginState = inject('loginState') as Ref<LoginState>
         >
       </div>
     </a-form-item>
+    </div>
   </a-form>
 </template>
 

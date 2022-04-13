@@ -40,6 +40,7 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item
       label="Account"
       name="account"
+         class="enter-y"
       :rules="[
         { required: true, message: 'Please input your account!' },
         {
@@ -54,12 +55,14 @@ const loginState = inject('loginState') as Ref<LoginState>
     <a-form-item
       label="Password"
       name="password"
+         class="enter-y"
       :rules="[{ required: true, message: 'Please input your password!' }]"
     >
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item class="!mb-0" :wrapper-col="{ offset: 6, span: 18 }">
+    <div class="enter-y">
+      <a-form-item class="!mb-0" :wrapper-col="{ offset: 6, span: 18 }">
       <ButtonYellow type="primary" block html-type="submit" shape="round">
         Log In
       </ButtonYellow>
@@ -75,6 +78,7 @@ const loginState = inject('loginState') as Ref<LoginState>
         >
       </div>
     </a-form-item>
+  </div>
   </a-form>
 </template>
 
