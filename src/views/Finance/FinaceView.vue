@@ -33,14 +33,8 @@ const list = [
 const tabVal = ref('WithdrawalView')
 </script>
 <template>
-  <div class="FinaceView">
+  <div class="mx-23 my-8">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <component :is="tabVal"></component>
   </div>
 </template>
-
-<style lang="less" scoped>
-.FinaceView {
-  padding: 28px 80px;
-}
-</style>

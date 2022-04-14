@@ -31,7 +31,7 @@ const amountList = [
 <template>
   <LayoutView class="DepositView">
     <template #left>
-      <div class="left">
+      <div class="left mt-5">
         <TitleItem title="Choose payment system">
           <CheckboxPlus :list="[{ name: 'bank' }, { name: 'USDT' }]">
             <template #bank>
@@ -52,7 +52,7 @@ const amountList = [
             </template>
           </CheckboxPlus>
         </TitleItem>
-        <TitleItem title="Calculator">
+        <TitleItem class="mt-8" title="Calculator">
           <LabelInput title="$ USD" value="100,000"></LabelInput>
           <div class="row-list">
             <table>
@@ -72,7 +72,7 @@ const amountList = [
       </div>
     </template>
     <template #right>
-      <TitleItem class="right" title="Enter amount">
+      <TitleItem class="right mt-5" title="Enter amount">
         <template #titleRight>
           <a-checkbox>Bonus</a-checkbox>
         </template>
@@ -128,10 +128,6 @@ const amountList = [
 <style lang="less" scoped>
 .DepositView {
   .left {
-    .TitleItem:first-child {
-      margin-bottom: 80px;
-    }
-
     .checkbox-plus > ::v-deep(.item:first-child) {
       margin-right: 20px;
     }

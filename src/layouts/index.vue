@@ -9,9 +9,7 @@ import HeaderLayout from './HeaderLayout.vue'
     <section class="layout-content">
       <aside class="layout-aside"> <NavMain></NavMain> </aside>
       <main class="layout-main">
-        <div class="wrap">
-          <PageLayout></PageLayout>
-        </div>
+        <PageLayout></PageLayout>
       </main>
     </section>
   </section>
@@ -49,12 +47,12 @@ import HeaderLayout from './HeaderLayout.vue'
   overflow: auto;
   background-color: #262d3d;
 
-  & > .wrap {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
+  // & > .wrap {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  // }
 }
 </style>

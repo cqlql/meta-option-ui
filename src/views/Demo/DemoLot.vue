@@ -34,10 +34,10 @@ import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
     <BoxView title="LabelInput">
       <LabelInput title="label" value="100,000"> </LabelInput>
     </BoxView>
-    <BoxView title="ant-form">
+    <BoxView title="ant-form vertical">
       <FormDemo> </FormDemo>
     </BoxView>
-    <BoxView title="ant-form-s2">
+    <BoxView title="ant-form s2">
       <FormS2Demo> </FormS2Demo>
     </BoxView>
     <BoxView title="CheckboxPaymentCard">

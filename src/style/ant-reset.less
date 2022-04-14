@@ -71,6 +71,7 @@
   .ant-table {
     background-color: transparent;
     color: #fff;
+    font-size: 18px;
   }
 
   .ant-table-tbody > tr > td {
@@ -105,9 +106,17 @@
 .layout-main {
   .ant-checkbox-wrapper {
     color: #fff;
+    font-size: 24px;
     .ant-checkbox-inner {
       background-color: transparent;
       border: solid 2px #333d51;
+      width: 24px;
+      height: 24px;
+    }
+
+    .ant-checkbox-inner::after {
+      width: 7.714286px;
+      height: 13.142857px;
     }
   }
 }
@@ -168,11 +177,19 @@
 }
 
 // =================================
-// ==============ant-form==========
+// ==============ant-input ant-form==========
 // =================================
 .layout-main {
   .ant-form-item-label > label {
     color: #fff;
+    font-size: 18px;
+  }
+
+  .ant-input {
+    font-size: 18px;
+  }
+  input.ant-input {
+    line-height: 48px;
   }
 
   .form-s2 {
@@ -186,12 +203,9 @@
       // border-right: 0;
       display: flex;
       justify-content: center;
-      font-size: 18px;
     }
     .ant-input {
       border-radius: 0 6px 6px 0;
-      height: 60px;
-      font-size: 18px;
     }
   }
 }
@@ -232,7 +246,7 @@
 
   .ant-btn-primary {
     &.big {
-      font-size: 30px;
+      font-size: 26px;
       height: 58px;
       line-height: 38px;
     }

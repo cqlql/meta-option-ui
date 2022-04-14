@@ -14,41 +14,51 @@ const formState: UnwrapRef<FormState> = reactive({
 })
 </script>
 <template>
-  <CardBox class="USDTAccount" title="USDT Account">
-    <a-form
-      class="form-s2 !pt-6"
-      :model="formState"
-      :labelCol="{ span: 8 }"
-      :wrapperCol="{ span: 16 }"
-    >
-      <a-form-item label="ABA Bank">
-        <a-input
+  <CardBox class="USDTAccount text-5xl" title="USDT Account">
+    <a-form layout="vertical" class="!pt-6" :model="formState">
+      <a-form-item>
+        <template #label>
+          <div class="flex justify-between">
+            <div>Transfer to ERC20 Address</div>
+            <div>
+              <a-checkbox></a-checkbox>
+            </div>
+          </div>
+        </template>
+        <a-textarea
           v-model:value="formState.fieldA"
           placeholder="input placeholder"
+          :auto-size="{ minRows: 3, maxRows: 5 }"
         />
       </a-form-item>
-      <a-form-item label="Account Name">
-        <a-input
-          v-model:value="formState.fieldB"
+      <a-form-item>
+        <template #label>
+          <div class="flex justify-between">
+            <div>Transfer to TRC20 Address</div>
+            <div>
+              <a-checkbox></a-checkbox>
+            </div>
+          </div>
+        </template>
+        <a-textarea
+          v-model:value="formState.fieldA"
           placeholder="input placeholder"
+          :auto-size="{ minRows: 3, maxRows: 5 }"
         />
       </a-form-item>
-      <a-form-item label="Account No.">
-        <a-input
-          v-model:value="formState.fieldB"
+      <a-form-item>
+        <template #label>
+          <div class="flex justify-between">
+            <div>Transfer to OMNI Address</div>
+            <div>
+              <a-checkbox></a-checkbox>
+            </div>
+          </div>
+        </template>
+        <a-textarea
+          v-model:value="formState.fieldA"
           placeholder="input placeholder"
-        />
-      </a-form-item>
-      <a-form-item label="Type">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
-        />
-      </a-form-item>
-      <a-form-item label="IFSC code ">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
+          :auto-size="{ minRows: 3, maxRows: 5 }"
         />
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
@@ -60,4 +70,10 @@ const formState: UnwrapRef<FormState> = reactive({
   </CardBox>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="less">
+.USDTAccount {
+  .ant-form-vertical .ant-form-item-label > label {
+    display: block;
+  }
+}
+</style>

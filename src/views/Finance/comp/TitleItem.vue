@@ -26,20 +26,6 @@ defineProps<{
     color: #fff;
     font-size: 24px;
     margin-bottom: 20px;
-
-    &::v-deep(.ant-checkbox-inner) {
-      width: 24px;
-      height: 24px;
-
-      &::after {
-        width: 7.714286px;
-        height: 13.142857px;
-      }
-    }
-
-    &::v-deep(.ant-checkbox-wrapper) {
-      font-size: 24px;
-    }
   }
 }
 </style>
