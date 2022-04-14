@@ -33,7 +33,7 @@ const list = [
 const tabVal = ref('WithdrawalView')
 </script>
 <template>
-  <div class="mx-23 my-8">
+  <div class="mx-23 my-10">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <component :is="tabVal"></component>
   </div>

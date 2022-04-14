@@ -8,15 +8,15 @@ const list = [
     value: 'BrokerCenter',
   },
   {
-    label: 'Commision',
-    value: 'Commision',
+    label: 'Commission',
+    value: 'Commission',
   },
 ]
 
 const tabVal = ref('WithdrawalView')
 </script>
 <template>
-  <div class="mx-23 my-8">
+  <div class="mx-23 my-10">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
   </div>
 </template>
