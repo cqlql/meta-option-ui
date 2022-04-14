@@ -3,6 +3,7 @@ import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import TitleItem from './TitleItem.vue'
+import LayoutView from './LayoutView.vue'
 
 const amountList = [
   {
@@ -28,9 +29,9 @@ const amountList = [
 ]
 </script>
 <template>
-  <div class="DepositView">
-    <div class="chunk left enter-y">
-      <div class="wrap">
+  <LayoutView class="DepositView">
+    <template #left>
+      <div class="left">
         <TitleItem title="Choose payment system">
           <CheckboxPlus :list="[{ name: 'bank' }, { name: 'USDT' }]">
             <template #bank>
@@ -69,78 +70,63 @@ const amountList = [
           </div>
         </TitleItem>
       </div>
-    </div>
-    <div class="chunk right enter-y">
-      <div class="wrap">
-        <TitleItem title="Enter amount">
-          <template #titleRight>
-            <a-checkbox>Bonus</a-checkbox>
-          </template>
-          <CheckboxPlus class="lime" :list="amountList">
-            <template #default="{ item: { value, info, type } }">
-              <div class="CheckboxType">
-                <div :class="type">
-                  {{ value }}
-                </div>
-                <div v-if="info" class="info">{{ info }}</div>
+    </template>
+    <template #right>
+      <TitleItem class="right" title="Enter amount">
+        <template #titleRight>
+          <a-checkbox>Bonus</a-checkbox>
+        </template>
+        <CheckboxPlus class="lime" :list="amountList">
+          <template #default="{ item: { value, info, type } }">
+            <div class="CheckboxType">
+              <div :class="type">
+                {{ value }}
               </div>
-            </template>
-          </CheckboxPlus>
+              <div v-if="info" class="info">{{ info }}</div>
+            </div>
+          </template>
+        </CheckboxPlus>
 
-          <LabelInput title="$ USD" value="100,000"></LabelInput>
+        <LabelInput title="$ USD" value="100,000"></LabelInput>
 
-          <div class="one-data">
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <span> You pay </span>
-                  </th>
-                  <th>
-                    <span> Bonus </span>
-                    <Icon
-                      class="!text-sky-400 !text-2xl"
-                      icon="ant-design:info-circle-outlined"
-                    ></Icon>
-                  </th>
-                  <th>
-                    <span> You get </span>
-                    <span class="text-green-500">(20% Bonus)</span></th
-                  >
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>100,000</td>
-                  <td>20%</td>
-                  <td>120,000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="one-data">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <span> You pay </span>
+                </th>
+                <th>
+                  <span> Bonus </span>
+                  <Icon
+                    class="!text-sky-400 !text-2xl"
+                    icon="ant-design:info-circle-outlined"
+                  ></Icon>
+                </th>
+                <th>
+                  <span> You get </span>
+                  <span class="text-green-500">(20% Bonus)</span></th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>100,000</td>
+                <td>20%</td>
+                <td>120,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <a-button block type="primary2">CONTINUE</a-button>
-        </TitleItem>
-      </div>
-    </div>
-  </div>
+        <a-button block type="primary2">CONTINUE</a-button>
+      </TitleItem>
+    </template>
+  </LayoutView>
 </template>
 
 <style lang="less" scoped>
 .DepositView {
-  display: flex;
-  padding-top: 80px;
-  // gap: 100px;
-
-  .chunk {
-    flex: 1;
-    padding: 10px 10px;
-
-    & > .wrap {
-      max-width: 500px;
-    }
-  }
-
   .left {
     .TitleItem:first-child {
       margin-bottom: 80px;

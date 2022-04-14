@@ -7,12 +7,26 @@ import FormDemo from './comp/FormDemo.vue'
 import FormS2Demo from './comp/FormS2Demo.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import ModalDemo from './comp/ModalDemo.vue'
-import QuestionText from './comp/QuestionText.vue'
+import QuestionTextDemo from './comp/QuestionTextDemo.vue'
+import CardBox from '@/components/CardBox.vue'
+import BankAccount from '../Finance/comp/BankAccount.vue'
+import EnterAmout from '../Finance/comp/EnterAmout.vue'
+import CheckboxPayment from '../Finance/comp/CheckboxPayment.vue'
+import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
-    <BoxView v-show="false" title="QuestionText">
-      <QuestionText></QuestionText>
+    <BoxView title="BankAccount">
+      <BankAccount></BankAccount>
+    </BoxView>
+    <BoxView title="CardBox">
+      <CardBox title="CardBox"> Content </CardBox>
+    </BoxView>
+    <BoxView title="EnterAmout">
+      <EnterAmout style="min-width: 500px"></EnterAmout>
+    </BoxView>
+    <BoxView title="QuestionText">
+      <QuestionTextDemo></QuestionTextDemo>
     </BoxView>
     <BoxView title="a-modal">
       <ModalDemo></ModalDemo>
@@ -25,6 +39,12 @@ import QuestionText from './comp/QuestionText.vue'
     </BoxView>
     <BoxView title="ant-form-s2">
       <FormS2Demo> </FormS2Demo>
+    </BoxView>
+    <BoxView title="CheckboxPaymentCard">
+      <CheckboxPaymentCard></CheckboxPaymentCard>
+    </BoxView>
+    <BoxView title="CheckboxPayment">
+      <CheckboxPayment></CheckboxPayment>
     </BoxView>
     <BoxView title="CheckboxPlus">
       <CheckboxPlusDemo> </CheckboxPlusDemo>

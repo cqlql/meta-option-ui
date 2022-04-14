@@ -34,6 +34,8 @@
 
 <style lang="less" scoped>
 .QuestionText {
+  color: #fff;
+
   & > h3 {
     line-height: 1.2;
     color: #fff;

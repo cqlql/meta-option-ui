@@ -1,14 +1,47 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   list: any[]
   noTick?: boolean
+  cancellable?: boolean
 }>()
 
-let selectedIndex = ref(0)
+const emit = defineEmits<{
+  (e: 'select', item: any): void
+  (e: 'change', item: any): void
+}>()
+
+let selectedIndex = ref(-1)
 function select(index: number) {
-  selectedIndex.value = index
+  if (props.cancellable) {
+    cancellableSelect(index)
+  } else {
+    requiredSelect(index)
+  }
+}
+
+function requiredSelect(index: number) {
+  let selectedItem = props.list[index]
+  if (selectedIndex.value !== index) {
+    selectedIndex.value = index
+    emit('change', selectedItem)
+  }
+
+  emit('select', selectedItem)
+}
+
+function cancellableSelect(index: number) {
+  if (selectedIndex.value === index) {
+    selectedIndex.value = -1
+    emit('change', {})
+    emit('select', {})
+  } else {
+    selectedIndex.value = index
+    let selectedItem = props.list[index]
+    emit('change', selectedItem)
+    emit('select', selectedItem)
+  }
 }
 </script>
 <template>
