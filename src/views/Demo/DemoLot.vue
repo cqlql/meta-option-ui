@@ -7,9 +7,13 @@ import FormDemo from './comp/FormDemo.vue'
 import FormS2Demo from './comp/FormS2Demo.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import ModalDemo from './comp/ModalDemo.vue'
+import QuestionText from './comp/QuestionText.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView v-show="false" title="QuestionText">
+      <QuestionText></QuestionText>
+    </BoxView>
     <BoxView title="a-modal">
       <ModalDemo></ModalDemo>
     </BoxView>

@@ -4,14 +4,6 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import TitleItem from './TitleItem.vue'
 
-const paymentList = [
-  {
-    value: 'Bank Card',
-  },
-  {
-    value: 'UPI pay',
-  },
-]
 const amountList = [
   {
     value: '1,000,000',
@@ -40,12 +32,22 @@ const amountList = [
     <div class="chunk left enter-y">
       <div class="wrap">
         <TitleItem title="Choose payment system">
-          <CheckboxPlus :list="paymentList">
-            <template #default="{ value }">
-              <div>
-                <img src="" alt="" />
+          <CheckboxPlus :list="[{ name: 'bank' }, { name: 'USDT' }]">
+            <template #bank>
+              <div class="CheckboxPayment_item">
+                <div class="img">
+                  <img src="@/assets/bank-card.png" />
+                </div>
+                <div class="label">Bank Card</div>
               </div>
-              <div>{{ value }}</div>
+            </template>
+            <template #USDT>
+              <div class="CheckboxPayment_item">
+                <div class="img">
+                  <img src="@/assets/upi.png" />
+                </div>
+                <div class="label">UPI pay</div>
+              </div>
             </template>
           </CheckboxPlus>
         </TitleItem>
@@ -74,8 +76,8 @@ const amountList = [
           <template #titleRight>
             <a-checkbox>Bonus</a-checkbox>
           </template>
-          <CheckboxPlus :list="amountList">
-            <template #default="{ value, info, type }">
+          <CheckboxPlus class="lime" :list="amountList">
+            <template #default="{ item: { value, info, type } }">
               <div class="CheckboxType">
                 <div :class="type">
                   {{ value }}
@@ -143,6 +145,10 @@ const amountList = [
     .TitleItem:first-child {
       margin-bottom: 80px;
     }
+
+    .checkbox-plus > ::v-deep(.item:first-child) {
+      margin-right: 20px;
+    }
   }
 
   .right {
@@ -155,6 +161,18 @@ const amountList = [
 
     .LabelInput {
       margin-top: 30px;
+    }
+  }
+
+  .CheckboxPayment_item {
+    padding: 10px 0;
+    text-align: center;
+
+    & > .label {
+      line-height: 1;
+      color: #a2a9bb;
+      font-size: 14px;
+      padding-top: 18px;
     }
   }
 

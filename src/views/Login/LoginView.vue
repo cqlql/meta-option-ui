@@ -18,7 +18,7 @@ provide('loginState', loginState)
     <div class="center">
       <div class="top -enter-y">
         <div class="logo">
-          <img src="@/assets/logo-text.png" alt="" />
+          <img src="@/assets/logo/logo-text.png" alt="" />
         </div>
       </div>
       <LoginForm v-if="loginState === 'login'" />
@@ -100,7 +100,7 @@ provide('loginState', loginState)
       img {
         position: absolute;
         top: 0;
-        width: 100%
+        width: 100%;
       }
     }
 

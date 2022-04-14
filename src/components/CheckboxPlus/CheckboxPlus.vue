@@ -21,7 +21,8 @@ function select(index: number) {
       @click="select(index)"
     >
       <span class="checkbox-plus-tick"></span>
-      <slot v-bind="item"></slot>
+      <slot :item="item"></slot>
+      <slot v-if="item.name" :name="item.name" :item="item"></slot>
     </div>
   </div>
 </template>
@@ -83,6 +84,17 @@ function select(index: number) {
           transform: rotate(45deg) scale(1) translate(-50%, -50%);
           opacity: 1;
         }
+      }
+    }
+  }
+
+  &.lime > .item {
+    &.selected {
+      background-color: #405858;
+      border-color: #a1efb7;
+
+      & > .checkbox-plus-tick {
+        background-color: #a1efb7;
       }
     }
   }

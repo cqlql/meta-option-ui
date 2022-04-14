@@ -4,7 +4,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
 <template>
   <div class="LayoutHeader">
     <div class="logo">
-      <img src="@/assets/logo-text-small.png" alt="" />
+      <img src="@/assets/logo/logo-text-small.png" alt="" />
     </div>
 
     <div class="right">
@@ -88,8 +88,8 @@ import Icon from '@/components/Icon/src/Icon.vue'
     .dummy {
       position: relative;
       display: block;
-      color: #fff;
       line-height: 40px;
+      color: #fff;
       text-align: center;
       font-style: normal;
       font-weight: 600;
@@ -137,9 +137,9 @@ import Icon from '@/components/Icon/src/Icon.vue'
     display: flex;
 
     .title {
+      line-height: 45px;
       padding: 0 36px;
       font-size: 18px;
-      line-height: 45px;
     }
 
     .icon {
@@ -157,9 +157,9 @@ import Icon from '@/components/Icon/src/Icon.vue'
     display: flex;
     align-items: center;
     height: 45px;
+    line-height: 57px;
     padding: 0 20px;
     color: #7889a2;
-    line-height: 57px;
     cursor: pointer;
     transition: background-color 0.2s;
     font-weight: 400;
