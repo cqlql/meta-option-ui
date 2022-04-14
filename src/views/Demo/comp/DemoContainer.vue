@@ -14,7 +14,7 @@
 
   .bg {
     position: fixed;
-    background-color: #0a0e37;
+    background-color: #262d3d;
     inset: 0;
   }
 

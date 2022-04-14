@@ -117,7 +117,7 @@
 // =================================
 .layout-main {
   .ant-input-affix-wrapper {
-    background-color: #0a0e37;
+    background-color: #21293a;
   }
   .ant-input {
     // box-sizing: border-box;
@@ -140,13 +140,13 @@
     // transition: all 0.3s;
 
     border: solid 2px #333d51;
-    background-color: #0a0e37;
+    background-color: #21293a;
     border-radius: 6px;
     color: #fff;
   }
   .ant-input-affix-wrapper {
     border: solid 2px #333d51;
-    background-color: #0a0e37;
+    background-color: #21293a;
     border-radius: 6px;
     color: #fff;
   }
@@ -214,6 +214,47 @@
 
     &:active {
       opacity: 1;
+    }
+
+    &.big {
+      font-size: 30px;
+      height: 48px;
+      line-height: 40px;
+    }
+  }
+}
+
+// =================================
+// ==============ant-modal==========
+// =================================
+.ant-modal {
+  .ant-modal-header {
+    background-color: #171e2d;
+    border: none;
+  }
+
+  .ant-modal-content {
+    background-color: #171e2d;
+    box-shadow: 0px 10px 58px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 6px;
+    color: #fff;
+  }
+  .ant-modal-footer {
+    border-top: none;
+  }
+  .ant-modal-title {
+    color: #fff;
+  }
+  .ant-modal-close-x {
+    font-size: 28px;
+    .anticon {
+      vertical-align: 0.15em;
+    }
+  }
+  .ant-modal-close {
+    color: #333d51;
+    &:hover {
+      // color: #333d51;
     }
   }
 }

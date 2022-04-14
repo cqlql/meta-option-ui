@@ -30,7 +30,7 @@ const list = [
   },
 ]
 
-const tabVal = ref('DepositView')
+const tabVal = ref('WithdrawalView')
 </script>
 <template>
   <div class="FinaceView">

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
-import LabelValue from '@/components/LabelValue.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import LabelInput from '@/components/LabelInput.vue'
+import TitleItem from './TitleItem.vue'
 
 const paymentList = [
   {
@@ -39,95 +39,86 @@ const amountList = [
   <div class="DepositView">
     <div class="chunk left enter-y">
       <div class="wrap">
-        <div class="item">
-          <h3>Choose payment system</h3>
-          <div class="content">
-            <CheckboxPlus :list="paymentList">
-              <template #default="{ value }">
-                <div>
-                  <img src="" alt="" />
-                </div>
-                <div>{{ value }}</div>
-              </template>
-            </CheckboxPlus>
+        <TitleItem title="Choose payment system">
+          <CheckboxPlus :list="paymentList">
+            <template #default="{ value }">
+              <div>
+                <img src="" alt="" />
+              </div>
+              <div>{{ value }}</div>
+            </template>
+          </CheckboxPlus>
+        </TitleItem>
+        <TitleItem title="Calculator">
+          <LabelInput title="$ USD" value="100,000"></LabelInput>
+          <div class="row-list">
+            <table>
+              <colgroup>
+                <col class="col1" />
+                <col class="col2" />
+                <col class="col3" />
+              </colgroup>
+              <tr v-for="v of 5" :key="v">
+                <td>INR</td>
+                <td>~</td>
+                <td>744315.00</td>
+              </tr>
+            </table>
           </div>
-        </div>
-        <div class="item">
-          <h3>Calculator</h3>
-          <div class="content">
-            <LabelInput title="$ USD" value="100,000"></LabelInput>
-            <div class="row-list">
-              <table>
-                <colgroup>
-                  <col class="col1" />
-                  <col class="col2" />
-                  <col class="col3" />
-                </colgroup>
-                <tr v-for="v of 5" :key="v">
-                  <td>INR</td>
-                  <td>~</td>
-                  <td>744315.00</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
+        </TitleItem>
       </div>
     </div>
     <div class="chunk right enter-y">
       <div class="wrap">
-        <div class="item">
-          <h3>
-            <span>Enter amount</span>
+        <TitleItem title="Enter amount">
+          <template #titleRight>
             <a-checkbox>Bonus</a-checkbox>
-          </h3>
-          <div class="content">
-            <CheckboxPlus :list="amountList">
-              <template #default="{ value, info, type }">
-                <div class="CheckboxType">
-                  <div :class="type">
-                    {{ value }}
-                  </div>
-                  <div v-if="info" class="info">{{ info }}</div>
+          </template>
+          <CheckboxPlus :list="amountList">
+            <template #default="{ value, info, type }">
+              <div class="CheckboxType">
+                <div :class="type">
+                  {{ value }}
                 </div>
-              </template>
-            </CheckboxPlus>
+                <div v-if="info" class="info">{{ info }}</div>
+              </div>
+            </template>
+          </CheckboxPlus>
 
-            <LabelInput title="$ USD" value="100,000"></LabelInput>
+          <LabelInput title="$ USD" value="100,000"></LabelInput>
 
-            <div class="one-data">
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <span> You pay </span>
-                    </th>
-                    <th>
-                      <span> Bonus </span>
-                      <Icon
-                        class="!text-sky-400 !text-2xl"
-                        icon="ant-design:info-circle-outlined"
-                      ></Icon>
-                    </th>
-                    <th>
-                      <span> You get </span>
-                      <span class="text-green-500">(20% Bonus)</span></th
-                    >
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>100,000</td>
-                    <td>20%</td>
-                    <td>120,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <a-button block type="primary2">CONTINUE</a-button>
+          <div class="one-data">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <span> You pay </span>
+                  </th>
+                  <th>
+                    <span> Bonus </span>
+                    <Icon
+                      class="!text-sky-400 !text-2xl"
+                      icon="ant-design:info-circle-outlined"
+                    ></Icon>
+                  </th>
+                  <th>
+                    <span> You get </span>
+                    <span class="text-green-500">(20% Bonus)</span></th
+                  >
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>100,000</td>
+                  <td>20%</td>
+                  <td>120,000</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+
+          <a-button block type="primary2">CONTINUE</a-button>
+        </TitleItem>
       </div>
     </div>
   </div>
@@ -149,7 +140,7 @@ const amountList = [
   }
 
   .left {
-    .item:first-child {
+    .TitleItem:first-child {
       margin-bottom: 80px;
     }
   }
@@ -164,29 +155,6 @@ const amountList = [
 
     .LabelInput {
       margin-top: 30px;
-    }
-  }
-
-  h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 20px;
-
-    &::v-deep(.ant-checkbox-inner) {
-      width: 24px;
-      height: 24px;
-
-      &::after {
-        width: 7.714286px;
-        height: 13.142857px;
-      }
-    }
-
-    &::v-deep(.ant-checkbox-wrapper) {
-      font-size: 24px;
     }
   }
 
