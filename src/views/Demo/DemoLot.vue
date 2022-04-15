@@ -14,9 +14,13 @@ import EnterAmout from '../Finance/comp/EnterAmout.vue'
 import CheckboxPayment from '../Finance/comp/CheckboxPayment.vue'
 import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
+import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="IconFont">
+      <IconFontDemo></IconFontDemo>
+    </BoxView>
     <BoxView title="IconSvg">
       <Icon class="text-8xl" icon="rise|svg"></Icon>
     </BoxView>

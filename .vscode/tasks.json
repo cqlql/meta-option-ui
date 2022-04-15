@@ -8,6 +8,13 @@
       "problemMatcher": [],
       "label": "npm: build",
       "detail": "vue-cli-service build --no-module"
+    },
+    {
+      "type": "npm",
+      "script": "download:iconfont",
+      "problemMatcher": [],
+      "label": "npm: download:iconfont",
+      "detail": "node build/iconfont-download.js"
     }
   ]
 }

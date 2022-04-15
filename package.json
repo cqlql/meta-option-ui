@@ -7,7 +7,8 @@
     "build": "vue-cli-service build --no-module",
     "build:report": "vue-cli-service build --no-module --report",
     "test:unit": "jest --clearCache && vue-cli-service test:unit --watch -i",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "download:iconfont": "node build/iconfont-download.js"
   },
   "dependencies": {
     "ant-design-vue": "3.1.1",

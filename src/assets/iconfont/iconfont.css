@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3331081 */
+  src: url('./iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-setting:before {
+  content: "\e616";
+}
+
+.icon-internet:before {
+  content: "\e615";
+}
+
+.icon-info:before {
+  content: "\e614";
+}
+
+.icon-rise:before {
+  content: "\e610";
+}
+
+.icon-deal:before {
+  content: "\e611";
+}
+
+.icon-finance:before {
+  content: "\e612";
+}
+
+.icon-home:before {
+  content: "\e613";
+}
+

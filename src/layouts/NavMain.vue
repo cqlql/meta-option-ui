@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import Icon from '@/components/Icon/src/Icon.vue'
 import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import IconFont from '@/components/IconFont/IconFont.vue'
 type ItemType = {
   name: string
   icon: string
@@ -15,17 +15,17 @@ const selectedRoute = ref(route.name)
 const list: ItemType[] = [
   {
     name: 'Trade',
-    icon: 'ant-design:rise-outlined',
+    icon: 'rise',
     routeName: 'trade',
   },
   {
     name: 'Finance',
-    icon: 'ri:money-dollar-circle-fill',
+    icon: 'finance',
     routeName: 'finance',
   },
   {
     name: 'Deal',
-    icon: 'fa6-solid:handshake',
+    icon: 'deal',
     routeName: 'deal',
   },
 ]
@@ -47,7 +47,7 @@ function to(item: ItemType) {
       href="javascript:;"
       @click="to(item)"
     >
-      <i> <Icon :icon="item.icon"></Icon> </i>
+      <i> <IconFont :name="item.icon"></IconFont> </i>
       <span class="name">{{ item.name }}</span>
     </a>
   </nav>
@@ -98,8 +98,12 @@ function to(item: ItemType) {
       // align-items: flex-end;
       // justify-content: center;
       // height: 60px;
-      font-size: 38px;
+
       padding-top: 2px;
+    }
+
+    .iconfont {
+      font-size: 32px;
     }
 
     .app-iconify {
