@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 defineProps<{
   value: string
-  title: string
+  title?: string
 }>()
 </script>
 <template>
   <div class="LabelInput">
-    <span class="label">{{ title }}</span>
+    <span class="label">
+      {{ title }}
+      <slot name="title"></slot>
+    </span>
     <span class="ipt">
       <a-input type="text" :value="value" />
     </span>

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import TabButtons from '@/components/TabButtons.vue'
+import BrokerCenter from './comp/BrokerCenter.vue'
+import CommissionView from './comp/CommissionView.vue'
 
 const list = [
   {
@@ -13,11 +15,13 @@ const list = [
   },
 ]
 
-const tabVal = ref('WithdrawalView')
+const tabVal = ref('BrokerCenter')
 </script>
 <template>
   <div class="mx-23 my-10">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
+    <BrokerCenter v-if="tabVal === 'BrokerCenter'"></BrokerCenter>
+    <CommissionView v-else-if="tabVal === 'Commission'"></CommissionView>
   </div>
 </template>
 
