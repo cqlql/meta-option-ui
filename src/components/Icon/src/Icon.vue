@@ -2,7 +2,7 @@
   <SvgIcon
     :name="getSvgIcon"
     v-if="isSvgIcon"
-    :class="[$attrs.class, type, 'anticon']"
+    :class="[$attrs.class, 'anticon']"
     :spin="spin"
     :type="type"
   />
@@ -27,6 +27,7 @@ import Iconify from '@purge-icons/generated'
 import propTypes from 'vue-types'
 const SVG_END_WITH_FLAG = '|svg'
 export default defineComponent({
+  inheritAttrs: false,
   name: 'IconVue',
   components: { SvgIcon },
   props: {

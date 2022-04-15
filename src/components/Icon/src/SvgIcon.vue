@@ -1,8 +1,5 @@
 <template>
-  <svg
-    :class="[prefixCls, $attrs.class, type, spin && 'svg-icon-spin']"
-    aria-hidden="true"
-  >
+  <svg :class="[prefixCls, type, spin && 'svg-icon-spin']" aria-hidden="true">
     <use :xlink:href="symbolId" />
   </svg>
 </template>
@@ -42,12 +39,11 @@ export default defineComponent({
   overflow: hidden;
   vertical-align: -0.15em;
   fill: currentcolor;
-
   width: 1em;
   height: 1em;
 
   &.line {
-    stroke: currentColor;
+    stroke: currentcolor;
   }
 }
 
