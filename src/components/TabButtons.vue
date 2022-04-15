@@ -67,11 +67,11 @@ function onSelect(index: number) {
     // }
 
     &:first-child {
-      border-radius: 5px 0 0 5px;
+      border-radius: @border-radius-base 0 0 @border-radius-base;
     }
 
     &:last-child {
-      border-radius: 0 5px 5px 0;
+      border-radius: 0 @border-radius-base @border-radius-base 0;
       margin-right: 0;
     }
 

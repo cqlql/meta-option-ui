@@ -129,7 +129,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
     height: 45px;
     line-height: 45px;
     background-color: #21293a;
-    border-radius: 5px;
+    border-radius: @border-radius-base;
     border: solid 1px #424b60;
   }
 

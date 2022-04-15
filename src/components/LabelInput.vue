@@ -18,7 +18,7 @@ defineProps<{
   display: flex;
   height: 60px;
   line-height: 56px;
-  border-radius: 6px;
+  border-radius: @border-radius-base;
   border: solid 2px #333d51;
   font-size: 24px;
 

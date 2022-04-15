@@ -36,7 +36,7 @@ const list = [
   text-align: center;
   background-color: #263042;
   box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 6px;
+  border-radius: @border-radius-base;
   border: solid 2px #333d51;
 
   .row {

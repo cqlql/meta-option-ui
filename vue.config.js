@@ -1,5 +1,9 @@
 const path = require('path')
 const getLessVariables = require('./build/getLessVariables')
+const cssVariate = getLessVariables(
+  path.relative(__dirname, 'src/style/variate.less'),
+)
+console.log('🚀 -- cssVariate', cssVariate)
 module.exports = {
   productionSourceMap: false,
   publicPath: '',
@@ -8,9 +12,8 @@ module.exports = {
     loaderOptions: {
       less: {
         lessOptions: {
-          globalVars: getLessVariables(
-            path.relative(__dirname, 'src/style/color.less'),
-          ),
+          modifyVars: cssVariate,
+          globalVars: cssVariate,
         },
       },
     },

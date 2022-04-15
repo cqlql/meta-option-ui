@@ -163,7 +163,7 @@ const amountList = [
     color: #fff;
     font-size: 18px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: @border-radius-base;
     border: solid 2px #333d51;
     margin-top: 20px;
 

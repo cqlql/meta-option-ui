@@ -30,7 +30,7 @@ const radioVal = ref('a')
   margin: 58px 0 0;
   background-color: #171e2d;
   box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 6px;
+  border-radius: @border-radius-base;
 
   .ant-radio-group {
     // margin: 20px auto 0;

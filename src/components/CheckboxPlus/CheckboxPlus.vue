@@ -67,7 +67,7 @@ function cancellableSelect(index: number) {
   & > .item {
     background-color: #263042;
     box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
+    border-radius: @border-radius-base;
     border: solid 2px #333d51;
     position: relative;
     // overflow: hidden;
@@ -84,7 +84,7 @@ function cancellableSelect(index: number) {
       direction: ltr;
       // background-color: #1890ff;
       // border: 1px solid #d9d9d9;
-      border-radius: 0 0 0 6px;
+      border-radius: 0 0 0 @border-radius-base;
       border-collapse: separate;
       transition: all 0.3s;
       // opacity: 0;
