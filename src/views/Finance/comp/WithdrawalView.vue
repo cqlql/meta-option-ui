@@ -26,13 +26,13 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
     <template #right>
       <BankAccount
         v-if="paymentType === 'bank'"
-        class="mt-8 enter-y"
+        class="enter-y mt-5"
       ></BankAccount>
       <USDTAccount
         v-else-if="paymentType === 'USDT'"
-        class="enter-y"
+        class="enter-y mt-5"
       ></USDTAccount>
-      <QuestionText v-else class="-mt-2 enter-y"></QuestionText>
+      <QuestionText v-else class="enter-y mt-5"></QuestionText>
     </template>
   </LayoutView>
 </template>

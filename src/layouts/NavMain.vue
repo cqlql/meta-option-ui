@@ -16,17 +16,37 @@ const list: ItemType[] = [
   {
     name: 'Trade',
     icon: 'rise',
-    routeName: 'trade',
+    routeName: 'Trade',
   },
   {
     name: 'Finance',
     icon: 'finance',
-    routeName: 'finance',
+    routeName: 'Finance',
   },
   {
     name: 'Deal',
     icon: 'deal',
-    routeName: 'deal',
+    routeName: 'Deal',
+  },
+  {
+    name: 'Home',
+    icon: 'home',
+    routeName: 'Home',
+  },
+  {
+    name: 'About us',
+    icon: 'info',
+    routeName: 'AboutUs',
+  },
+  {
+    name: 'News',
+    icon: 'internet',
+    routeName: 'News',
+  },
+  {
+    name: 'Setting',
+    icon: 'setting',
+    routeName: 'Setting',
   },
 ]
 

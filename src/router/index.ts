@@ -17,9 +17,9 @@ const routes: Array<AppRouteRecordRaw> = [
   // },
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: LAYOUT,
-    redirect: '/finance',
+    redirect: '/home',
     // component: HomeView,
     meta: {
       // title: 'home',
@@ -27,7 +27,7 @@ const routes: Array<AppRouteRecordRaw> = [
     children: [
       {
         path: 'trade',
-        name: 'trade',
+        name: 'Trade',
         component: () =>
           import(/* webpackChunkName: "index" */ '@/views/Trade/TradeView.vue'),
         meta: {
@@ -36,7 +36,7 @@ const routes: Array<AppRouteRecordRaw> = [
       },
       {
         path: 'finance',
-        name: 'finance',
+        name: 'Finance',
         component: () =>
           import(
             /* webpackChunkName: "index" */ '@/views/Finance/FinaceView.vue'
@@ -47,11 +47,49 @@ const routes: Array<AppRouteRecordRaw> = [
       },
       {
         path: 'deal',
-        name: 'deal',
+        name: 'Deal',
         component: () =>
           import(/* webpackChunkName: "index" */ '@/views/Deal/DealView.vue'),
         meta: {
           title: 'deal',
+        },
+      },
+      {
+        path: 'home',
+        name: 'Home',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/Home/HomeView.vue'),
+        meta: {
+          title: 'home',
+        },
+      },
+      {
+        path: 'aboutus',
+        name: 'AboutUs',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/AboutUS/AboutUS.vue'),
+        meta: {
+          title: 'about us',
+        },
+      },
+      {
+        path: 'news',
+        name: 'News',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/News/NewsView.vue'),
+        meta: {
+          title: 'News',
+        },
+      },
+      {
+        path: 'setting',
+        name: 'Setting',
+        component: () =>
+          import(
+            /* webpackChunkName: "index" */ '@/views/SettingView/SettingView.vue'
+          ),
+        meta: {
+          title: 'setting',
         },
       },
     ],
