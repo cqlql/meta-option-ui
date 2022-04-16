@@ -39,11 +39,11 @@ const data = [
 </script>
 <template>
   <a-modal
-    v-bind="$attrs"
     :footer="null"
     :class="$style.WithdrawDialog"
     width="726px"
     centered
+    v-bind="$attrs"
   >
     <template #title>
       <div class="flex justify-between">

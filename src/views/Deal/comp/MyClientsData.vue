@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { Table as ATable, Avatar as AAvatar } from 'ant-design-vue'
 import CardBox from '@/components/CardBox.vue'
+import { ref } from 'vue'
+import MyClientsDataDialog from './MyClientsDataDialog.vue'
 const columns = [
   {
     dataIndex: 'key',
@@ -38,6 +40,8 @@ const data = [
     date: '11/AUG',
   },
 ]
+
+const dialogVisible = ref(false)
 </script>
 <template>
   <CardBox title="My Clients" class="ml-10">
@@ -60,11 +64,17 @@ const data = [
     </a-table>
 
     <div class="text-right mt-8">
-      <a-button class="!px-10" type="primary" size="large"
+      <a-button
+        @click="dialogVisible = true"
+        class="!px-10"
+        type="primary"
+        size="large"
         >Share to friend</a-button
       >
     </div>
   </CardBox>
+
+  <MyClientsDataDialog v-model:visible="dialogVisible"></MyClientsDataDialog>
 </template>
 
 <style lang="scss" scoped></style>
