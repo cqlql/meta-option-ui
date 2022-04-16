@@ -4,6 +4,10 @@ import LabelInput from '@/components/LabelInput.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import CardValue from './CardValue.vue'
 import MyClientsData from './MyClientsData.vue'
+import { ref } from 'vue'
+import WithdrawDialog from './WithdrawDialog.vue'
+
+const withdrawDialogVisible = ref(false)
 </script>
 <template>
   <div class="BrokerCenter mt-20 flex">
@@ -26,9 +30,14 @@ import MyClientsData from './MyClientsData.vue'
           </LabelInput>
 
           <div class="text-right mt-8">
-            <a-button class="!px-10" type="primary" size="large"
-              >Withdraw</a-button
+            <a-button
+              class="!px-10"
+              type="primary"
+              size="large"
+              @click="withdrawDialogVisible = true"
             >
+              Withdraw
+            </a-button>
           </div>
         </CardBox>
 
@@ -81,6 +90,7 @@ import MyClientsData from './MyClientsData.vue'
       <MyClientsData />
     </div>
   </div>
+  <WithdrawDialog v-model:visible="withdrawDialogVisible"></WithdrawDialog>
 </template>
 
 <style lang="less" scoped>
