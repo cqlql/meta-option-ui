@@ -15,9 +15,16 @@ import CheckboxPayment from '../Finance/comp/CheckboxPayment.vue'
 import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
+import AvatarDemo from './comp/AvatarDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="avatar">
+      <AvatarDemo></AvatarDemo>
+    </BoxView>
+    <BoxView title="a-modal">
+      <ModalDemo></ModalDemo>
+    </BoxView>
     <BoxView title="IconFont">
       <IconFontDemo></IconFontDemo>
     </BoxView>
@@ -36,9 +43,7 @@ import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
     <BoxView title="QuestionText">
       <QuestionTextDemo></QuestionTextDemo>
     </BoxView>
-    <BoxView title="a-modal">
-      <ModalDemo></ModalDemo>
-    </BoxView>
+
     <BoxView title="LabelInput">
       <LabelInput title="label" value="100,000"> </LabelInput>
     </BoxView>
