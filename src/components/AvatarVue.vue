@@ -1,10 +1,12 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Avatar as AAvatar } from 'ant-design-vue'
+defineProps<{
+  src: string
+}>()
+</script>
 <template>
   <div class="avatar">
-    <a-avatar
-      src="https://img14.360buyimg.com/n5/jfs/t1/209043/5/5395/186082/616a7d37E53fcfa71/50fadc18181d41d1.jpg"
-    >
-    </a-avatar>
+    <a-avatar :src="src"> </a-avatar>
     <div class="info">xxxxxx</div>
   </div>
 </template>

@@ -15,7 +15,7 @@ const list = [
   },
 ]
 
-const tabVal = ref('Commission')
+const tabVal = ref('BrokerCenter')
 </script>
 <template>
   <div class="mx-23 my-10">

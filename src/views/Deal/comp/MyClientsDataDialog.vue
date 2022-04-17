@@ -4,7 +4,8 @@ import {
   Table as ATable,
   Avatar as AAvatar,
 } from 'ant-design-vue'
-import AvatarVue from '@/components/AvatarVue.vue'
+
+import AvatarUser from '@/components/AvatarUser.vue'
 const columns = [
   {
     dataIndex: 'key',
@@ -62,11 +63,11 @@ const data = [
     </template>
 
     <div class="top">
-      <div class="left-avatar -mt-2">
-        <AvatarVue></AvatarVue>
-        <div class="text-2xl text-center my-4">User Name</div>
-      </div>
-
+      <AvatarUser
+        src="https://img13.360buyimg.com/n5/jfs/t1/142098/4/23069/115054/616a7d31E11791773/7045a58e2d75eea4.jpg"
+        class="left-avatar -mt-2"
+        >User Name</AvatarUser
+      >
       <div class="right-info">
         <div class="info">
           <div class="item">
@@ -117,11 +118,6 @@ const data = [
 
       .left-avatar {
         padding-right: 30px;
-
-        .userName {
-          font-size: 24px;
-          text-align: center;
-        }
       }
 
       .right-info {

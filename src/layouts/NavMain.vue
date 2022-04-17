@@ -13,11 +13,11 @@ const route = useRoute()
 const selectedRoute = ref(route.name)
 
 const list: ItemType[] = [
-  {
-    name: 'Trade',
-    icon: 'rise',
-    routeName: 'Trade',
-  },
+  // {
+  //   name: 'Trade',
+  //   icon: 'rise',
+  //   routeName: 'Trade',
+  // },
   {
     name: 'Finance',
     icon: 'finance',
@@ -28,21 +28,21 @@ const list: ItemType[] = [
     icon: 'deal',
     routeName: 'Deal',
   },
-  {
-    name: 'Home',
-    icon: 'home',
-    routeName: 'Home',
-  },
-  {
-    name: 'About us',
-    icon: 'info',
-    routeName: 'AboutUs',
-  },
-  {
-    name: 'News',
-    icon: 'internet',
-    routeName: 'News',
-  },
+  // {
+  //   name: 'Home',
+  //   icon: 'home',
+  //   routeName: 'Home',
+  // },
+  // {
+  //   name: 'About us',
+  //   icon: 'info',
+  //   routeName: 'AboutUs',
+  // },
+  // {
+  //   name: 'News',
+  //   icon: 'internet',
+  //   routeName: 'News',
+  // },
   {
     name: 'Setting',
     icon: 'setting',

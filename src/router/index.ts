@@ -19,7 +19,7 @@ const routes: Array<AppRouteRecordRaw> = [
     path: '/',
     name: 'Home',
     component: LAYOUT,
-    redirect: '/home',
+    redirect: '/setting',
     // component: HomeView,
     meta: {
       // title: 'home',

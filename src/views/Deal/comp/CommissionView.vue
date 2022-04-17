@@ -71,9 +71,11 @@ const data = [
         :columns="columns"
         :data-source="data"
       >
-        <template #bodyCell="{ column, text }">
+        <template #bodyCell="{ column, text, index }">
           <template v-if="column.dataIndex === 'name'">
-            <a>{{ text }}</a>
+            <a :class="index % 2 ? 'text-rose-500' : 'text-lime-500'">{{
+              text
+            }}</a>
           </template>
         </template>
       </a-table>
