@@ -8,6 +8,7 @@ module.exports = {
   productionSourceMap: false,
   publicPath: '',
   css: {
+    sourceMap: process.env.NODE_ENV !== 'production',
     extract: false,
     loaderOptions: {
       less: {

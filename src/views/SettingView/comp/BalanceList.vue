@@ -14,10 +14,10 @@ function beforeEnter(el: HTMLDivElement) {
     listHeight = el.clientHeight
     el.style.display = 'none'
   }
-  el.style.height = '0'
 }
 
 function enter(el: HTMLDivElement, done: () => void) {
+  el.style.height = '0'
   setTimeout(() => {
     el.style.height = listHeight + 'px'
     setTimeout(() => {
@@ -31,6 +31,9 @@ function leave(el: HTMLDivElement, done: () => void) {
   setTimeout(() => {
     done()
   }, 300)
+}
+function afterLeave(el: HTMLDivElement) {
+  el.style.height = ''
 }
 </script>
 <template>
@@ -55,11 +58,12 @@ function leave(el: HTMLDivElement, done: () => void) {
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave"
+      @after-leave="afterLeave"
       :css="false"
     >
       <div class="list-transition" v-show="expanded">
         <div class="list">
-          <div class="item">
+          <div v-for="v of 3" :key="v" class="item">
             <div class="name">INR</div>
             <div class="wave">~</div>
             <div class="value">100.000</div>
@@ -125,6 +129,7 @@ function leave(el: HTMLDivElement, done: () => void) {
 
     .item {
       display: flex;
+      line-height: 46px;
     }
 
     .wave {
