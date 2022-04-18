@@ -28,7 +28,7 @@ const formState = reactive({
 
 <style lang="less" scoped>
 .PersonalInfo {
-  .input.ant-input {
+  .ant-input {
     line-height: 30px;
   }
 
