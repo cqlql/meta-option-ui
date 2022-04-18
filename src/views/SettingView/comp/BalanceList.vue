@@ -3,6 +3,35 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import { ref } from 'vue'
 
 const expanded = ref(false)
+
+// --------
+// 进入时
+// --------
+let listHeight = 0
+function beforeEnter(el: HTMLDivElement) {
+  if (!listHeight) {
+    el.style.display = 'block'
+    listHeight = el.clientHeight
+    el.style.display = 'none'
+  }
+  el.style.height = '0'
+}
+
+function enter(el: HTMLDivElement, done: () => void) {
+  setTimeout(() => {
+    el.style.height = listHeight + 'px'
+    setTimeout(() => {
+      done()
+    }, 300)
+  }, 1)
+}
+
+function leave(el: HTMLDivElement, done: () => void) {
+  el.style.height = '0'
+  setTimeout(() => {
+    done()
+  }, 300)
+}
 </script>
 <template>
   <div class="BalanceList">
@@ -22,17 +51,34 @@ const expanded = ref(false)
       </div>
       <div class="value">10,000.00</div>
     </div>
+    <transition
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+      :css="false"
+    >
+      <div class="list-transition" v-show="expanded">
+        <div class="list">
+          <div class="item">
+            <div class="name">INR</div>
+            <div class="wave">~</div>
+            <div class="value">100.000</div>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <style lang="less" scoped>
 .BalanceList {
+  border: solid 2px #333d51;
+  border-radius: @border-radius-base;
+
   .labelValue {
     display: flex;
     height: 87px;
     background-color: #263042;
-    border-radius: 0 @border-radius-base @border-radius-base 0;
-    border: solid 2px #333d51;
     font-size: 24px;
 
     .arrow {
@@ -65,6 +111,32 @@ const expanded = ref(false)
       align-items: center;
       justify-content: center;
       font-size: 30px;
+    }
+  }
+
+  .list-transition {
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+
+  .list {
+    text-align: center;
+    border-top: solid 2px #333d51;
+
+    .item {
+      display: flex;
+    }
+
+    .wave {
+      flex: 0;
+    }
+
+    .name {
+      flex: 1;
+    }
+
+    .value {
+      flex: 1;
     }
   }
 }
