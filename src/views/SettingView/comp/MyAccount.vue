@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import TitleItem from '@/views/Finance/comp/TitleItem.vue'
 import AccountBalance from './AccountBalance.vue'
-import BalanceList from './BalanceList.vue'
 import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 </script>
