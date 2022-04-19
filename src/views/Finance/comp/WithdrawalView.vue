@@ -38,16 +38,16 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
 .WithdrawalView {
   .left {
     .TitleItem:first-child {
-      // margin-bottom: 80px;
+      // margin-bottom: 60px;
     }
 
     .checkbox-plus > ::v-deep(.item:first-child) {
-      margin-right: 20px;
+      margin-right: 15px;
     }
   }
 
   & > ::v-deep(.left > .wrap) {
-    max-width: 600px;
+    max-width: 450px;
   }
 
   & > ::v-deep(.right) {
@@ -55,7 +55,7 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
   }
 
   & > ::v-deep(.right > .wrap) {
-    max-width: 680px;
+    max-width: 510px;
   }
 }
 </style>

@@ -12,7 +12,7 @@ defineProps<{
 </template>
 
 <style lang="less" scoped>
-@size: 90px;
+@size: 68px;
 
 .avatar {
   position: relative;
@@ -23,17 +23,17 @@ defineProps<{
 
   .info {
     position: absolute;
-    left: ((@size - 56px)/2);
-    bottom: -8px;
-    width: 56px;
-    height: 16px;
+    left: ((@size - 42px)/2);
+    bottom: -6px;
+    width: 42px;
+    height: 12px;
     line-height: 1;
-    line-height: 16px;
-    font-size: 14px;
+    line-height: 12px;
+    font-size: 11px;
     text-align: center;
     background: #fa3c47;
-    border-radius: 8px 0 8px 0;
-    text-indent: -2px;
+    border-radius: 6px 0 6px 0;
+    text-indent: -1px;
   }
 
   .ant-avatar {

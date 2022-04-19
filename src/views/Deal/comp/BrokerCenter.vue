@@ -14,7 +14,7 @@ const withdrawDialogVisible = ref(false)
     <div class="enter-y flex-[1.3]">
       <div class="max-w-250">
         <CardBox class="py-10 px-17">
-          <LabelInput class="!h-[80px]" value="5,000.00">
+          <LabelInput class="!h-[60px]" value="5,000.00">
             <template #title>
               <div class="flex items-center justify-center h-[100%]">
                 <Icon
@@ -22,7 +22,7 @@ const withdrawDialogVisible = ref(false)
                   icon="ri:money-dollar-circle-fill"
                 ></Icon>
 
-                <span class="align-middle leading-[24px] ml-2"
+                <span class="align-middle leading-[18px] ml-2"
                   >Total Commision</span
                 >
               </div>
@@ -102,8 +102,8 @@ const withdrawDialogVisible = ref(false)
   }
 
   .summary {
-    margin: 35px 0;
-    gap: 24px;
+    margin: 27px 0;
+    gap: 18px;
 
     .CardValue {
       // flex: 1;
@@ -114,24 +114,24 @@ const withdrawDialogVisible = ref(false)
     .cell {
       display: flex;
       background-color: #263042;
-      box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+      box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
       border-radius: 0 @border-radius-base @border-radius-base 0;
       border: solid 2px #333d51;
-      padding: 0 20px 0 30px;
+      padding: 0 15px 0 23px;
     }
 
     .cell + .cell {
-      margin-top: 30px;
+      margin-top: 23px;
     }
 
     .value {
-      line-height: 56px;
-      font-size: 24px;
+      line-height: 42px;
+      font-size: 18px;
       flex: 1;
     }
 
     .arrows {
-      line-height: 56px;
+      line-height: 42px;
       color: #389bf2;
     }
   }

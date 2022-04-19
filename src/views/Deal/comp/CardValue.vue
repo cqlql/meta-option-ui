@@ -21,16 +21,16 @@ defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 15px 0;
   background-color: #263042;
-  box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: @border-radius-base;
   border: solid 2px #333d51;
 
   .icon {
     color: #46aefc;
-    font-size: 50px;
-    margin-right: 20px;
+    font-size: 38px;
+    margin-right: 15px;
 
     ::v-deep(.anticon) {
       display: block;
@@ -46,7 +46,7 @@ defineProps<{
   }
 
   .value {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 </style>

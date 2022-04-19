@@ -38,7 +38,7 @@ import AvatarDemo from './comp/AvatarDemo.vue'
       <CardBox title="CardBox"> Content </CardBox>
     </BoxView>
     <BoxView title="EnterAmout">
-      <EnterAmout style="min-width: 500px"></EnterAmout>
+      <EnterAmout style="min-width: 375px"></EnterAmout>
     </BoxView>
     <BoxView title="QuestionText">
       <QuestionTextDemo></QuestionTextDemo>

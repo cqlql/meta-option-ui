@@ -21,22 +21,22 @@ import HeaderLayout from './HeaderLayout.vue'
 }
 
 .layout-header {
-  height: 80px;
+  height: 60px;
   background-color: #171e2d;
 }
 
 .layout-content {
   position: fixed;
   left: 0;
-  top: 80px;
+  top: 60px;
   right: 0;
   bottom: 0;
-  // height: calc(100% - 80px);
+  // height: calc(100% - 60px);
   display: flex;
 }
 
 .layout-aside {
-  width: 110px;
+  width: 83px;
   background-color: #171e2d;
 }
 

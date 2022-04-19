@@ -80,8 +80,8 @@ function to(item: ItemType) {
     display: block;
     display: flex;
     justify-content: center;
-    width: 110px;
-    height: 110px;
+    width: 83px;
+    height: 83px;
     color: #7d8da1;
     text-align: center;
     cursor: pointer;
@@ -89,10 +89,10 @@ function to(item: ItemType) {
 
     &::before {
       position: absolute;
-      left: -4px;
+      left: -3px;
       top: 0;
       display: block;
-      width: 4px;
+      width: 3px;
       height: 100%;
       content: '';
       opacity: 0;
@@ -117,13 +117,13 @@ function to(item: ItemType) {
       // display: flex;
       // align-items: flex-end;
       // justify-content: center;
-      // height: 60px;
+      // height: 45px;
 
       padding-top: 2px;
     }
 
     .iconfont {
-      font-size: 32px;
+      font-size: 24px;
     }
 
     .app-iconify {
@@ -132,7 +132,7 @@ function to(item: ItemType) {
 
     .name {
       display: block;
-      font-size: 14px;
+      font-size: 11px;
       transition: color 0.3s;
     }
   }

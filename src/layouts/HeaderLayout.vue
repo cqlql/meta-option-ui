@@ -46,12 +46,12 @@ import Icon from '@/components/Icon/src/Icon.vue'
   color: #fff;
 
   .logo {
-    padding-top: 13px;
-    padding-left: 26px;
+    padding-top: 10px;
+    padding-left: 20px;
 
     img {
-      width: 269px;
-      height: 54px;
+      width: 202px;
+      height: 41px;
     }
   }
 
@@ -60,19 +60,19 @@ import Icon from '@/components/Icon/src/Icon.vue'
     align-items: center;
 
     .item {
-      margin-right: 26px;
+      margin-right: 20px;
     }
   }
 
   .user {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 14px;
 
     .avatar {
       display: block;
-      width: 42px;
-      height: 42px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       overflow: hidden;
     }
@@ -88,12 +88,12 @@ import Icon from '@/components/Icon/src/Icon.vue'
     .dummy {
       position: relative;
       display: block;
-      line-height: 40px;
+      line-height: 30px;
       color: #fff;
       text-align: center;
       font-style: normal;
       font-weight: 600;
-      border-radius: 21px;
+      border-radius: 16px;
       background-color: #0871cd;
     }
 
@@ -106,7 +106,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
       height: 100%;
       content: '';
       background-color: hsla(0, 0%, 100%, 0.1);
-      border-radius: 0 21px 21px 0;
+      border-radius: 0 16px 16px 0;
     }
   }
 
@@ -115,19 +115,19 @@ import Icon from '@/components/Icon/src/Icon.vue'
     align-items: center;
 
     .label {
-      font-size: 25px;
-      margin-right: 20px;
+      font-size: 19px;
+      margin-right: 15px;
     }
 
     .value {
-      padding: 0 50px;
-      font-size: 18px;
+      padding: 0 38px;
+      font-size: 14px;
     }
   }
 
   .btn-box {
-    height: 45px;
-    line-height: 45px;
+    height: 34px;
+    line-height: 34px;
     background-color: #21293a;
     border-radius: @border-radius-base;
     border: solid 1px #424b60;
@@ -137,17 +137,17 @@ import Icon from '@/components/Icon/src/Icon.vue'
     display: flex;
 
     .title {
-      line-height: 45px;
-      padding: 0 36px;
-      font-size: 18px;
+      line-height: 34px;
+      padding: 0 27px;
+      font-size: 14px;
     }
 
     .icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      font-size: 24px;
+      width: 34px;
+      font-size: 18px;
       border-left: solid 1px #424b60;
     }
   }
@@ -156,9 +156,9 @@ import Icon from '@/components/Icon/src/Icon.vue'
     position: relative;
     display: flex;
     align-items: center;
-    height: 45px;
-    line-height: 57px;
-    padding: 0 20px;
+    height: 34px;
+    line-height: 43px;
+    padding: 0 15px;
     color: #7889a2;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -169,7 +169,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
     }
 
     .flag-icon {
-      margin-right: 12px;
+      margin-right: 9px;
     }
   }
 }

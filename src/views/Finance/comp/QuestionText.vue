@@ -39,13 +39,13 @@
   & > h3 {
     line-height: 1.2;
     color: #fff;
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 4px;
   }
 
   & > .text {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 14px;
+    margin-bottom: 23px;
   }
 }
 </style>

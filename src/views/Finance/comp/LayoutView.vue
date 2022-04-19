@@ -13,24 +13,24 @@
 <style lang="less" scoped>
 .LayoutView {
   display: flex;
-  // padding-top: 30px;
+  // padding-top: 23px;
 
   & > .chunk {
     flex: 1;
-    // padding: 10px 10px;
+    // padding: 8px 8px;
 
     & > .wrap {
-      max-width: 500px;
+      max-width: 375px;
     }
   }
 
   & > .left {
     .TitleItem:first-child {
-      // margin-bottom: 80px;
+      // margin-bottom: 60px;
     }
 
     // .checkbox-plus > ::v-deep(.item:first-child) {
-    //   margin-right: 20px;
+    //   margin-right: 15px;
     // }
   }
 
@@ -38,12 +38,12 @@
     // .checkbox-plus {
     //   display: grid;
     //   grid-template-columns: 1fr 1fr;
-    //   grid-row-gap: 20px;
-    //   grid-column-gap: 20px;
+    //   grid-row-gap: 15px;
+    //   grid-column-gap: 15px;
     // }
 
     // .LabelInput {
-    //   margin-top: 30px;
+    //   margin-top: 23px;
     // }
   }
 }

@@ -15,15 +15,15 @@ defineProps<{
 <style lang="less" scoped>
 .LabelValue {
   display: flex;
-  height: 60px;
-  line-height: 60px;
+  height: 45px;
+  line-height: 45px;
   background-color: #020220;
   border-radius: @border-radius-base;
   border: solid 2px #333d51;
-  font-size: 24px;
+  font-size: 18px;
 
   & > span {
-    padding: 0 30px;
+    padding: 0 23px;
     color: #fff;
 
     &:first-child {

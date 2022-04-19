@@ -31,20 +31,20 @@ const list = [
 
 <style lang="less" scoped>
 .EnterAmout {
-  padding: 20px 30px;
-  font-size: 18px;
+  padding: 15px 23px;
+  font-size: 14px;
   text-align: center;
   background-color: #263042;
-  box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: @border-radius-base;
   border: solid 2px #333d51;
 
   .row {
     display: flex;
-    line-height: 60px;
+    line-height: 45px;
 
     & > div {
-      padding: 0 20px;
+      padding: 0 15px;
     }
 
     & > div:first-child {
@@ -52,19 +52,19 @@ const list = [
     }
 
     & > div:last-child {
-      width: 140px;
+      width: 105px;
     }
 
     .tilde {
       width: 0;
       padding: 0;
-      // padding-right: 20px;
+      // padding-right: 15px;
     }
   }
 }
 
 .EnterAmout_header {
-  font-size: 24px;
+  font-size: 18px;
 
   .row {
     border: solid 2px #333d51;

@@ -129,7 +129,7 @@ const amountList = [
 .DepositView {
   .left {
     .checkbox-plus > ::v-deep(.item:first-child) {
-      margin-right: 20px;
+      margin-right: 15px;
     }
   }
 
@@ -137,35 +137,35 @@ const amountList = [
     .checkbox-plus {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-row-gap: 20px;
-      grid-column-gap: 20px;
+      grid-row-gap: 15px;
+      grid-column-gap: 15px;
     }
 
     .LabelInput {
-      margin-top: 30px;
+      margin-top: 23px;
     }
   }
 
   .CheckboxPayment_item {
-    padding: 10px 0;
+    padding: 8px 0;
     text-align: center;
 
     & > .label {
       line-height: 1;
       color: #a2a9bb;
-      font-size: 14px;
-      padding-top: 18px;
+      font-size: 11px;
+      padding-top: 14px;
     }
   }
 
   .row-list {
-    padding: 10px 0;
+    padding: 8px 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     border-radius: @border-radius-base;
     border: solid 2px #333d51;
-    margin-top: 20px;
+    margin-top: 15px;
 
     table {
       table-layout: fixed;
@@ -173,17 +173,17 @@ const amountList = [
     }
 
     td {
-      padding: 10px 0;
+      padding: 8px 0;
     }
 
     .col3 {
-      // min-width: 150px;
+      // min-width: 113px;
     }
   }
 
   .CheckboxType {
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
 
     .gold {
@@ -200,14 +200,14 @@ const amountList = [
 
     .info {
       color: #a2a9bb;
-      font-size: 18px;
+      font-size: 14px;
     }
   }
 
   .one-data {
-    padding: 30px 0 40px;
+    padding: 23px 0 30px;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
 
     table {
       table-layout: fixed;
@@ -216,7 +216,7 @@ const amountList = [
 
     th {
       color: #a2a9bb;
-      font-size: 18px;
+      font-size: 14px;
       text-align: left;
 
       span {
@@ -227,8 +227,8 @@ const amountList = [
   }
 
   .ant-btn-primary2 {
-    height: 78px;
-    font-size: 30px;
+    height: 59px;
+    font-size: 23px;
   }
 }
 </style>

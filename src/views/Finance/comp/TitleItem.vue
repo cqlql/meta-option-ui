@@ -25,8 +25,8 @@ defineProps<{
     justify-content: space-between;
     line-height: 1;
     color: #fff;
-    font-size: 24px;
-    margin-bottom: 28px;
+    font-size: 18px;
+    margin-bottom: 21px;
   }
 }
 </style>

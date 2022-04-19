@@ -89,14 +89,14 @@ const data = [
 <style lang="less" scoped>
 .CommissionView {
   background-color: #171e2d;
-  box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: @border-radius-base;
-  padding: 10px 35px 0;
-  // margin-top: 35px;
+  padding: 8px 27px 0;
+  // margin-top: 27px;
 }
 
 .CommissionView_footer {
-  padding: 16px 0;
+  padding: 12px 0;
   text-align: center;
 
   .ant-btn {

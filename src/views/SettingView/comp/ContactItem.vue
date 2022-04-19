@@ -19,8 +19,8 @@
   display: flex;
 
   .left {
-    width: 310px;
-    height: 220px;
+    width: 233px;
+    height: 165px;
   }
 
   .right {

@@ -54,7 +54,7 @@ const data = [
   <a-modal
     :footer="null"
     :class="$style.MyClientsDataDialog"
-    width="726px"
+    width="545px"
     centered
     v-bind="$attrs"
   >
@@ -109,7 +109,7 @@ const data = [
 .MyClientsDataDialog {
   :global {
     .ant-modal-body {
-      padding: 46px;
+      padding: 35px;
       padding-top: 0;
     }
 
@@ -117,7 +117,7 @@ const data = [
       display: flex;
 
       .left-avatar {
-        padding-right: 30px;
+        padding-right: 23px;
       }
 
       .right-info {
@@ -125,8 +125,8 @@ const data = [
 
         .info {
           display: flex;
-          width: 360px;
-          height: 86px;
+          width: 270px;
+          height: 65px;
           border: solid 2px #333d51;
           background-color: #21293a;
           border-radius: @border-radius-base;
@@ -134,9 +134,9 @@ const data = [
           .item {
             display: flex;
             justify-content: center;
-            // width: 181px;
-            // width: 180px;
-            padding: 0 20px;
+            // width: 136px;
+            // width: 135px;
+            padding: 0 15px;
             text-align: center;
             flex: 1;
             flex-direction: column;
@@ -157,8 +157,8 @@ const data = [
 
           .value {
             line-height: 1.4;
-            font-size: 24px;
-            padding-bottom: 4px;
+            font-size: 18px;
+            padding-bottom: 3px;
           }
         }
       }

@@ -36,7 +36,7 @@ provide('loginState', loginState)
   // left: 0;
   // right: 0;
   // bottom: 0;
-  // width: 550px;
+  // width: 413px;
   // margin: 0 auto;
   // display: flex;
   // // align-items: center;
@@ -50,16 +50,16 @@ provide('loginState', loginState)
   min-height: 100vh;
 
   .center {
-    height: 650px;
+    height: 488px;
   }
 
   .ant-form {
-    width: 580px;
+    width: 435px;
     margin: 0 auto;
 
     .ant-form-item-label > label {
       color: #fff;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     // .ant-radio-group-solid {
@@ -69,32 +69,32 @@ provide('loginState', loginState)
     // }
 
     .ant-form-item-control-input {
-      min-height: 34px;
+      min-height: 26px;
     }
 
     .ant-input {
-      font-size: 16px;
-      border-radius: 6px;
+      font-size: 12px;
+      border-radius: 5px;
     }
 
     .ant-input-password {
-      border-radius: 6px;
+      border-radius: 5px;
     }
 
     .ant-btn {
-      height: 38px;
+      height: 29px;
     }
   }
 
   .top {
     display: flex;
-    margin-bottom: 100px;
-    // margin-top: 100px;
+    margin-bottom: 75px;
+    // margin-top: 75px;
 
     .logo {
       position: relative;
-      width: 729px;
-      // margin-right: 54px;
+      width: 547px;
+      // margin-right: 41px;
       padding-top: 29.6%;
 
       img {
@@ -112,19 +112,19 @@ provide('loginState', loginState)
     // }
 
     // .logoText {
-    //   height: 50px;
+    //   height: 38px;
     // }
 
     // .des {
-    //   font-size: 29px;
+    //   font-size: 22px;
     //   letter-spacing: 1px;
-    //   line-height: 58px;
+    //   line-height: 44px;
     // }
   }
 
   a {
     color: #fff;
-    font-size: 14px;
+    font-size: 11px;
 
     &:hover {
       color: @primary-color;
@@ -142,11 +142,11 @@ provide('loginState', loginState)
 
   .ant-checkbox-wrapper {
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .ant-checkbox-inner {
-    border-radius: 50px;
+    border-radius: 38px;
   }
 
   .ant-checkbox-checked::after,
@@ -161,14 +161,14 @@ provide('loginState', loginState)
   }
 
   .ant-checkbox-checked .ant-checkbox-inner {
-    // width: 16px;
-    // height: 16px;
+    // width: 12px;
+    // height: 12px;
     border-color: @primary-color;
     background-color: @primary-color;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .LoginView {
     .top {
       margin-bottom: 10%;
@@ -177,13 +177,13 @@ provide('loginState', loginState)
       .logo {
         width: 100%;
         margin: 0 auto;
-        // margin-right: 54px;
+        // margin-right: 41px;
       }
     }
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 432px) {
   .LoginView {
     .ant-form {
       width: auto;

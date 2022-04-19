@@ -19,14 +19,14 @@ defineProps<{
 <style lang="less" scoped>
 .LabelInput {
   display: flex;
-  height: 60px;
-  line-height: 56px;
+  height: 45px;
+  line-height: 42px;
   border-radius: @border-radius-base;
   border: solid 2px #333d51;
-  font-size: 24px;
+  font-size: 18px;
 
   & > .label {
-    padding: 0 30px;
+    padding: 0 23px;
     color: #fff;
     color: #a2a9bb;
     border-right: solid 2px #333d51;
@@ -39,7 +39,7 @@ defineProps<{
 
     input {
       // width: 100%;
-      font-size: 24px;
+      font-size: 18px;
       border: none;
       background-color: #263042;
     }

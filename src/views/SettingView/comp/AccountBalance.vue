@@ -28,13 +28,13 @@ import Icon from '@/components/Icon/src/Icon.vue'
 <style lang="less" scoped>
 .AccountBalance {
   background-color: #263042;
-  box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 6px;
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
   border: solid 2px #333d51;
-  padding: 50px;
+  padding: 38px;
 
   & > .text {
-    line-height: 60px;
+    line-height: 45px;
 
     span {
       vertical-align: middle;
@@ -42,9 +42,9 @@ import Icon from '@/components/Icon/src/Icon.vue'
     }
 
     em {
-      margin-left: 26px;
+      margin-left: 20px;
       color: #7cc623;
-      font-size: 24px;
+      font-size: 18px;
       letter-spacing: 0;
       font-style: normal;
       vertical-align: middle;
@@ -55,7 +55,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
     // display: flex;
     // align-items: center;
     // justify-content: center;
-    height: 60px;
+    height: 45px;
     color: #183200;
     background-image: linear-gradient(
       184deg,
@@ -64,7 +64,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
       #357f01 100%
     );
     border: none;
-    font-size: 24px;
+    font-size: 18px;
 
     &:hover {
       opacity: 0.9;
@@ -76,7 +76,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
 
     .app-iconify {
       // display: block;
-      font-size: 30px;
+      font-size: 23px;
     }
 
     & > span {

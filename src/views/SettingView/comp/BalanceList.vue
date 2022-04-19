@@ -49,7 +49,7 @@ function afterLeave(el: HTMLDivElement) {
             icon="ri:money-dollar-circle-fill"
           ></Icon>
 
-          <span class="align-middle leading-[24px] ml-2">Balance</span>
+          <span class="align-middle leading-[18px] ml-2">Balance</span>
         </div>
       </div>
       <div class="value">10,000.00</div>
@@ -81,23 +81,23 @@ function afterLeave(el: HTMLDivElement) {
 
   .labelValue {
     display: flex;
-    height: 87px;
+    height: 66px;
     background-color: #263042;
-    font-size: 24px;
+    font-size: 18px;
 
     .arrow {
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 10px 10px 0 10px;
+      border-width: 8px 8px 0 8px;
       border-color: #fff transparent transparent transparent;
       transition: transform 0.2s;
-      margin-top: 5px;
-      margin-right: 20px;
+      margin-top: 4px;
+      margin-right: 15px;
     }
 
     .arrow.expanded {
-      // border-width: 0 10px 10px 10px;
+      // border-width: 0 8px 8px 8px;
       // border-color: transparent transparent #fff transparent;
       transform: rotate(180deg);
     }
@@ -114,7 +114,7 @@ function afterLeave(el: HTMLDivElement) {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
+      font-size: 23px;
     }
   }
 
@@ -129,7 +129,7 @@ function afterLeave(el: HTMLDivElement) {
 
     .item {
       display: flex;
-      line-height: 46px;
+      line-height: 35px;
     }
 
     .wave {

@@ -26,18 +26,18 @@ const radioVal = ref('a')
 
 <style lang="less" scoped>
 .PaymentHistory {
-  padding: 30px;
-  margin: 58px 0 0;
+  padding: 23px;
+  margin: 44px 0 0;
   background-color: #171e2d;
-  box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: @border-radius-base;
 
   .ant-radio-group {
-    // margin: 20px auto 0;
+    // margin: 15px auto 0;
   }
 
   .tabBtn {
-    margin: 20px 0 0;
+    margin: 15px 0 0;
     text-align: center;
   }
 

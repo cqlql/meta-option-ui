@@ -41,22 +41,22 @@ function change(item: { name?: string }) {
 .CheckboxImage {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
 
   & > ::v-deep(.item) {
-    padding: 20px;
+    padding: 15px;
   }
 }
 
 .CheckboxImage_item {
   display: flex;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
 
   & > .label {
-    line-height: 46px;
-    margin-left: 30px;
+    line-height: 35px;
+    margin-left: 23px;
   }
 }
 </style>

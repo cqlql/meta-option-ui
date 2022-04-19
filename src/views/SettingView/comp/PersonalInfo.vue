@@ -76,12 +76,12 @@ const formState = reactive({
 <style lang="less" scoped>
 .PersonalInfo {
   ::v-deep(.ant-input) {
-    line-height: 30px;
+    line-height: 23px;
   }
 
   .ant-picker {
     width: 100%;
-    height: 42px;
+    height: 32px;
   }
 }
 </style>

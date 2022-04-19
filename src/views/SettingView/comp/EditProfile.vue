@@ -150,10 +150,10 @@ const formState = reactive({
 .MyAccount {
   .UserInfoCard {
     // background-color: #263042;
-    box-shadow: 0 10px 58px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
     border-radius: @border-radius-base;
     border: solid 2px #333d51;
-    padding: 26px 0 4px 46px;
+    padding: 20px 0 3px 35px;
 
     .main-cont {
       display: flex;
@@ -164,7 +164,7 @@ const formState = reactive({
 
     .right {
       flex: 1;
-      margin-left: 26px;
+      margin-left: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -172,28 +172,28 @@ const formState = reactive({
 
     .name {
       line-height: 1;
-      font-size: 24px;
-      padding-bottom: 6px;
+      font-size: 18px;
+      padding-bottom: 5px;
     }
 
     .info {
       color: #75859c;
-      font-size: 14px;
+      font-size: 11px;
     }
 
     .setBtn {
-      margin-top: -10px;
+      margin-top: -7px;
     }
   }
 
   ::v-deep(.ant-input) {
-    line-height: 30px;
+    line-height: 23px;
   }
 
   .PersonalInfo {
     // .ant-picker {
     //   width: 100%;
-    //   height: 42px;
+    //   height: 32px;
     // }
   }
 

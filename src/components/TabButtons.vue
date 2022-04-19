@@ -44,7 +44,7 @@ function onSelect(index: number) {
   position: relative;
   // z-index: 1;
   display: flex;
-  // height: 60px;
+  // height: 45px;
 
   // background-color: #f8f8f8;
   color: #fff;
@@ -52,15 +52,15 @@ function onSelect(index: number) {
 
   & > .item {
     // position: relative;
-    width: 226px;
-    line-height: 58px;
-    font-size: 18px;
+    width: 170px;
+    line-height: 44px;
+    font-size: 14px;
     text-align: center;
     // flex: 1;
     border: solid 2px #424b60;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
-    margin-right: -2px;
+    margin-right: -1px;
 
     // & + .item {
     //   // border-left: none;
@@ -99,7 +99,7 @@ function onSelect(index: number) {
 
     // & > .item_smile {
     //   width: 100%;
-    //   height: 4px;
+    //   height: 3px;
     // }
   }
 }
@@ -113,16 +113,16 @@ function onSelect(index: number) {
 
   & > .item {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 8px;
   }
 }
 
 // .TabButtons.vertical {
 //   display: block;
 //   height: auto;
-//   // width: 80px;
+//   // width: 60px;
 //   // 滚动条
-//   // max-height: 80px;
+//   // max-height: 60px;
 //   overflow: auto;
 
 //   & > .item > .item_smile {

@@ -24,14 +24,14 @@ import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
 
 <style lang="less" scoped>
 .CheckboxPayment_item {
-  padding: 10px 0;
+  padding: 8px 0;
   text-align: center;
 
   & > .label {
     line-height: 1;
     color: #a2a9bb;
-    font-size: 14px;
-    padding-top: 18px;
+    font-size: 11px;
+    padding-top: 14px;
   }
 }
 </style>

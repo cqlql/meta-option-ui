@@ -66,59 +66,59 @@ import Icon from '@/components/Icon/src/Icon.vue'
 <style lang="less" scoped>
 .MyAccount {
   .Verification {
-    margin-top: -16px;
+    margin-top: -12px;
 
     & > .text {
     }
 
     & > .text-list {
-      margin-bottom: -6px;
+      margin-bottom: -4px;
 
       li::before {
         content: '';
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
         background-color: #389bf2;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 0 #389bf2;
-        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px 0 #389bf2;
+        margin-right: 15px;
       }
     }
 
     .Checkbox {
       // display: grid;
       // grid-template-columns: 1fr 1fr;
-      // grid-row-gap: 20px;
-      // grid-column-gap: 20px;
+      // grid-row-gap: 15px;
+      // grid-column-gap: 15px;
       display: block;
 
       & > ::v-deep(.item) {
-        padding: 20px;
-        margin-top: 32px;
+        padding: 15px;
+        margin-top: 24px;
       }
 
       // & > ::v-deep(.item + .item) {
-      //   margin-top: 32px;
+      //   margin-top: 24px;
       // }
     }
 
     .Checkbox_item {
       display: flex;
       color: #fff;
-      font-size: 18px;
+      font-size: 14px;
 
       .img {
-        font-size: 50px;
+        font-size: 38px;
       }
 
       .text {
-        margin-left: 30px;
+        margin-left: 23px;
       }
 
       .label {
-        line-height: 46px;
-        font-size: 24px;
+        line-height: 35px;
+        font-size: 18px;
       }
     }
   }

@@ -41,7 +41,7 @@ const data = [
   <a-modal
     :footer="null"
     :class="$style.WithdrawDialog"
-    width="726px"
+    width="545px"
     centered
     v-bind="$attrs"
   >
@@ -74,8 +74,8 @@ const data = [
     }
 
     .ant-modal-header {
-      padding-left: 36px;
-      padding-right: 36px;
+      padding-left: 27px;
+      padding-right: 27px;
     }
 
     .ant-modal-body {
@@ -87,12 +87,12 @@ const data = [
 
     th:first-child,
     td:first-child {
-      padding-left: 36px;
+      padding-left: 27px;
     }
 
     th:last-child,
     td:last-child {
-      padding-right: 36px;
+      padding-right: 27px;
     }
   }
 }

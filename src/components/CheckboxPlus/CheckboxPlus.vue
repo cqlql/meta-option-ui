@@ -66,12 +66,12 @@ function cancellableSelect(index: number) {
 
   & > .item {
     background-color: #263042;
-    box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
     border-radius: @border-radius-base;
     border: solid 2px #333d51;
     position: relative;
     // overflow: hidden;
-    padding: 10px 20px;
+    padding: 8px 15px;
     color: #a2a9bb;
 
     & > .checkbox-plus-tick {
@@ -79,8 +79,8 @@ function cancellableSelect(index: number) {
       top: 0;
       right: 0;
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 12px;
+      height: 12px;
       direction: ltr;
       // background-color: #1890ff;
       // border: 1px solid #d9d9d9;
@@ -94,8 +94,8 @@ function cancellableSelect(index: number) {
         left: 26.5%;
         top: 42%;
         display: table;
-        width: 5.71428571px;
-        height: 9.14285714px;
+        width: 5.53571429px;
+        height: 9.10714286px;
         content: '';
         border: 2px solid #27435e;
         border-top: 0;
