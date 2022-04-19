@@ -48,8 +48,8 @@ const data = [
     <template #title>
       <div class="flex justify-between">
         <div class="flex-1">Trade result</div>
-        <div class="flex-1 text-rose-500 mr-5 text-center">Profit 0</div>
-        <div class="flex-1 text-green-500 mr-5 text-center">Profit 0</div>
+        <div class="flex-1 text-rose-500 mr-4 text-center">Profit 0</div>
+        <div class="flex-1 text-green-500 mr-4 text-center">Profit 0</div>
       </div>
     </template>
     <a-table

@@ -18,7 +18,7 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
         <TitleItem title="Enter amount">
           <EnterAmout></EnterAmout>
         </TitleItem>
-        <TitleItem class="mt-8" title="Choose payment system">
+        <TitleItem class="mt-6" title="Choose payment system">
           <CheckboxPayment v-model="paymentType"></CheckboxPayment>
         </TitleItem>
       </div>

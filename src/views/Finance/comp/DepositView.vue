@@ -52,7 +52,7 @@ const amountList = [
             </template>
           </CheckboxPlus>
         </TitleItem>
-        <TitleItem class="mt-10" title="Calculator">
+        <TitleItem class="mt-8" title="Calculator">
           <LabelInput title="$ USD" value="100,000"></LabelInput>
           <div class="row-list">
             <table>

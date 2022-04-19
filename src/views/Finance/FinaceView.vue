@@ -33,7 +33,7 @@ const list = [
 const tabVal = ref('DepositView')
 </script>
 <template>
-  <div class="mx-23 my-10">
+  <div class="mx-18 my-8">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <component :is="tabVal"></component>
   </div>

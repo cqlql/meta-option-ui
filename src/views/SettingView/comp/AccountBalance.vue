@@ -10,7 +10,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
       >User1</AvatarUser
     >
 
-    <BalanceList class="mt-10"></BalanceList>
+    <BalanceList class="mt-8"></BalanceList>
     <div class="text">
       <span>Today get</span>
       <em>20,000</em>

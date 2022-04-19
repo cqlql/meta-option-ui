@@ -23,9 +23,9 @@ const list = [
 const tabVal = ref('EditProfile')
 </script>
 <template>
-  <div class="mx-23 my-10">
+  <div class="mx-18 my-8">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
-    <div class="mt-10">
+    <div class="mt-8">
       <MyAccount v-if="tabVal === 'MyAccount'"></MyAccount>
       <EditProfile v-else-if="tabVal === 'EditProfile'"></EditProfile>
       <ContactView v-else-if="tabVal === 'ContactView'"></ContactView>

@@ -44,12 +44,12 @@ const data = [
 const dialogVisible = ref(false)
 </script>
 <template>
-  <CardBox title="My Clients" class="ml-10">
+  <CardBox title="My Clients" class="ml-8">
     <a-table
       :showHeader="false"
       :columns="columns"
       :data-source="data"
-      class="ant-table-striped mt-8"
+      class="ant-table-striped mt-6"
       :pagination="{ hideOnSinglePage: true }"
     >
       <template #bodyCell="{ column, record }">
@@ -63,10 +63,10 @@ const dialogVisible = ref(false)
       </template>
     </a-table>
 
-    <div class="text-right mt-8">
+    <div class="text-right mt-6">
       <a-button
         @click="dialogVisible = true"
-        class="!px-10"
+        class="!px-8"
         type="primary"
         size="large"
         >Share to friend</a-button

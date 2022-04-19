@@ -64,7 +64,7 @@ const data = [
 </script>
 <template>
   <div>
-    <div class="CommissionView enter-y mt-15">
+    <div class="CommissionView enter-y mt-12">
       <a-table
         :pagination="{ hideOnSinglePage: true }"
         class="ant-table-striped"

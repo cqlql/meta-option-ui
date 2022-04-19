@@ -86,7 +86,7 @@ const data = [
       :showHeader="false"
       :columns="columns"
       :data-source="data"
-      class="ant-table-striped mt-6"
+      class="ant-table-striped mt-5"
       :pagination="{ hideOnSinglePage: true }"
     >
       <template #bodyCell="{ column, record }">
@@ -98,7 +98,7 @@ const data = [
           <div class="text-gray-400">{{ record.date }}</div>
         </template>
         <template v-else-if="column.dataIndex === 'level'">
-          <div class="text-[#389bf2] text-right pr-5">{{ record.level }}</div>
+          <div class="text-[#389bf2] text-right pr-4">{{ record.level }}</div>
         </template>
       </template>
     </a-table>

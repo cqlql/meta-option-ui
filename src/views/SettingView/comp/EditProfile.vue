@@ -46,7 +46,7 @@ const formState = reactive({
           </div>
         </div>
       </TitleItem>
-      <TitleItem class="mt-10" title="Personal info">
+      <TitleItem class="mt-8" title="Personal info">
         <div class="PersonalInfo">
           <a-form layout="vertical" :model="formState">
             <a-form-item label="Nickname" :rules="{ required: true }">
@@ -103,7 +103,7 @@ const formState = reactive({
         </div>
       </TitleItem>
     </div>
-    <div class="flex-[1.2] ml-20 enter-y">
+    <div class="flex-[1.2] ml-15 enter-y">
       <TitleItem title="Address">
         <div class="AddressInfo">
           <a-form layout="vertical" :model="formState">
@@ -137,7 +137,7 @@ const formState = reactive({
             </a-form-item>
 
             <a-form-item class="text-right">
-              <a-button type="primary" class="big !px-30">Save</a-button>
+              <a-button type="primary" class="big !px-23">Save</a-button>
             </a-form-item>
           </a-form>
         </div>

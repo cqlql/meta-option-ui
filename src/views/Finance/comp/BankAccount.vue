@@ -17,7 +17,7 @@ const formState: UnwrapRef<FormState> = reactive({
 <template>
   <CardBox class="BankAccount" title="Bank Account">
     <a-form
-      class="form-s2 !pt-6"
+      class="form-s2 !pt-5"
       :model="formState"
       :labelCol="{ span: 8 }"
       :wrapperCol="{ span: 16 }"
@@ -54,7 +54,7 @@ const formState: UnwrapRef<FormState> = reactive({
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
         <div class="flex justify-center">
-          <a-button type="primary" class="big mt-5 !w-6/10">Confirm</a-button>
+          <a-button type="primary" class="big mt-4 !w-6/10">Confirm</a-button>
         </div>
       </a-form-item>
     </a-form>

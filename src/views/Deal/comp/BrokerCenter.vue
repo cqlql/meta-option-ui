@@ -10,10 +10,10 @@ import WithdrawDialog from './WithdrawDialog.vue'
 const withdrawDialogVisible = ref(false)
 </script>
 <template>
-  <div class="BrokerCenter mt-15 flex">
+  <div class="BrokerCenter mt-12 flex">
     <div class="enter-y flex-[1.3]">
       <div class="max-w-250">
-        <CardBox class="py-10 px-17">
+        <CardBox class="py-8 px-13">
           <LabelInput class="!h-[60px]" value="5,000.00">
             <template #title>
               <div class="flex items-center justify-center h-[100%]">
@@ -29,9 +29,9 @@ const withdrawDialogVisible = ref(false)
             </template>
           </LabelInput>
 
-          <div class="text-right mt-8">
+          <div class="text-right mt-6">
             <a-button
-              class="!px-10"
+              class="!px-8"
               type="primary"
               size="large"
               @click="withdrawDialogVisible = true"

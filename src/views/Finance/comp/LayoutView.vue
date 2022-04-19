@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="LayoutView mt-10">
+  <div class="LayoutView mt-8">
     <div class="chunk left enter-y">
       <div class="wrap"> <slot name="left"></slot> </div>
     </div>

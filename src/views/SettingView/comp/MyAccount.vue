@@ -11,7 +11,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
         <AccountBalance />
       </TitleItem>
     </div>
-    <div class="flex-[1.2] ml-20 enter-y">
+    <div class="flex-[1.2] ml-15 enter-y">
       <TitleItem title="Verification">
         <div class="Verification">
           <div class="text"> By completing verification, you </div>
@@ -54,8 +54,8 @@ import Icon from '@/components/Icon/src/Icon.vue'
             </template>
           </CheckboxPlus>
 
-          <div class="text-right mt-10">
-            <a-button type="primary" class="big !px-20">Upload</a-button>
+          <div class="text-right mt-8">
+            <a-button type="primary" class="big !px-15">Upload</a-button>
           </div>
         </div>
       </TitleItem>

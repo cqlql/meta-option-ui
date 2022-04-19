@@ -18,7 +18,7 @@ const list = [
 const tabVal = ref('BrokerCenter')
 </script>
 <template>
-  <div class="mx-23 my-10">
+  <div class="mx-18 my-8">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <BrokerCenter v-if="tabVal === 'BrokerCenter'"></BrokerCenter>
     <CommissionView v-else-if="tabVal === 'Commission'"></CommissionView>
