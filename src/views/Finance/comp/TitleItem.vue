@@ -23,9 +23,10 @@ defineProps<{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 1;
     color: #fff;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 </style>

@@ -20,14 +20,16 @@ const list = [
   },
 ]
 
-const tabVal = ref('MyAccount')
+const tabVal = ref('EditProfile')
 </script>
 <template>
   <div class="mx-23 my-10">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
-    <MyAccount v-if="tabVal === 'MyAccount'"></MyAccount>
-    <EditProfile v-else-if="tabVal === 'EditProfile'"></EditProfile>
-    <ContactView v-else-if="tabVal === 'ContactView'"></ContactView>
+    <div class="mt-10">
+      <MyAccount v-if="tabVal === 'MyAccount'"></MyAccount>
+      <EditProfile v-else-if="tabVal === 'EditProfile'"></EditProfile>
+      <ContactView v-else-if="tabVal === 'ContactView'"></ContactView>
+    </div>
   </div>
 </template>
 

@@ -1,45 +1,147 @@
 <script lang="ts" setup>
 import TitleItem from '@/views/Finance/comp/TitleItem.vue'
-import AccountBalance from './AccountBalance.vue'
-import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import AvatarVue from '@/components/AvatarVue.vue'
-import PersonalInfo from './PersonalInfo.vue'
+import { Select as ASelect } from 'ant-design-vue'
+import { reactive } from 'vue'
+
+const formState = reactive({
+  nickname: '',
+  day: undefined,
+  month: undefined,
+  year: undefined,
+  phone: '',
+  email: '',
+  password: '',
+  newPassword: '',
+  country: '',
+  city: '',
+  ZIP: '',
+  street: '',
+})
 </script>
 <template>
-  <div>
-    <div class="MyAccount flex mt-5 enter-y">
-      <div class="flex-1">
-        <TitleItem title="Profile">
-          <div class="UserInfoCard">
-            <div class="main-cont">
-              <div class="left">
-                <AvatarVue
-                  src="https://img13.360buyimg.com/n5/jfs/t1/163526/38/27104/149048/616a7d2cE926d0a2c/1835b9f54cf90589.jpg"
-                ></AvatarVue>
-              </div>
-
-              <div class="right">
-                <div class="name">User Name</div>
-                <div class="info">Your ID: 168168 </div>
-              </div>
+  <div class="MyAccount flex">
+    <div class="flex-1 enter-y">
+      <TitleItem title="Profile">
+        <div class="UserInfoCard">
+          <div class="main-cont">
+            <div class="left">
+              <AvatarVue
+                src="https://img13.360buyimg.com/n5/jfs/t1/163526/38/27104/149048/616a7d2cE926d0a2c/1835b9f54cf90589.jpg"
+              ></AvatarVue>
             </div>
 
-            <div class="setBtn text-right">
-              <a-button type="link">
-                <Icon icon="ic:outline-add-a-photo"></Icon> Set New
-                Photo</a-button
-              >
+            <div class="right">
+              <div class="name">User Name</div>
+              <div class="info">Your ID: 168168 </div>
             </div>
           </div>
-        </TitleItem>
-        <TitleItem class="mt-5" title="Personal info">
-          <PersonalInfo></PersonalInfo>
-        </TitleItem>
-      </div>
-      <div class="flex-[1.2] ml-20">
-        <TitleItem title="Address"> 1 </TitleItem>
-      </div>
+
+          <div class="setBtn text-right">
+            <a-button type="link">
+              <Icon icon="ic:outline-add-a-photo"></Icon> Set New
+              Photo</a-button
+            >
+          </div>
+        </div>
+      </TitleItem>
+      <TitleItem class="mt-10" title="Personal info">
+        <div class="PersonalInfo">
+          <a-form layout="vertical" :model="formState">
+            <a-form-item label="Nickname" :rules="{ required: true }">
+              <a-input
+                v-model:value="formState.nickname"
+                placeholder="input placeholder"
+              />
+            </a-form-item>
+            <a-form-item label="Date of birth">
+              <a-row :gutter="12">
+                <a-col :span="8">
+                  <a-select v-model:value="formState.day" placeholder="Day">
+                    <a-select-option value="1">1</a-select-option>
+                    <a-select-option value="2">2</a-select-option>
+                  </a-select>
+                </a-col>
+                <a-col :span="8">
+                  <a-select v-model:value="formState.month" placeholder="Month">
+                    <a-select-option value="1">1</a-select-option>
+                    <a-select-option value="2">2</a-select-option>
+                  </a-select>
+                </a-col>
+                <a-col :span="8">
+                  <a-select v-model:value="formState.year" placeholder="Year">
+                    <a-select-option value="1">1</a-select-option>
+                    <a-select-option value="2">2</a-select-option>
+                  </a-select>
+                </a-col>
+              </a-row>
+            </a-form-item>
+            <a-form-item label="Phone" :rules="{ required: true }">
+              <a-input v-model:value="formState.phone" placeholder="" />
+            </a-form-item>
+            <a-form-item label="Email">
+              <a-input v-model:value="formState.email" placeholder="" />
+            </a-form-item>
+            <a-form-item label="Change Password">
+              <a-row :gutter="12">
+                <a-col :span="12">
+                  <a-input-password
+                    v-model:value="formState.password"
+                    placeholder="Old password"
+                  />
+                </a-col>
+                <a-col :span="12">
+                  <a-input-password
+                    v-model:value="formState.newPassword"
+                    placeholder="New password"
+                  />
+                </a-col>
+              </a-row>
+            </a-form-item>
+          </a-form>
+        </div>
+      </TitleItem>
+    </div>
+    <div class="flex-[1.2] ml-20 enter-y">
+      <TitleItem title="Address">
+        <div class="AddressInfo">
+          <a-form layout="vertical" :model="formState">
+            <a-form-item label="Country">
+              <a-input
+                v-model:value="formState.country"
+                placeholder="Cambodia"
+              />
+            </a-form-item>
+
+            <a-row :gutter="12">
+              <a-col :span="14">
+                <a-form-item label="City">
+                  <a-input
+                    v-model:value="formState.city"
+                    placeholder="Cambodia"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="10">
+                <a-form-item label="ZIP">
+                  <a-input
+                    v-model:value="formState.ZIP"
+                    placeholder="Cambodia"
+                  />
+                </a-form-item>
+              </a-col>
+            </a-row>
+            <a-form-item label="Street address">
+              <a-input v-model:value="formState.street" placeholder="" />
+            </a-form-item>
+
+            <a-form-item class="text-right">
+              <a-button type="primary" class="big !px-30">Save</a-button>
+            </a-form-item>
+          </a-form>
+        </div>
+      </TitleItem>
     </div>
   </div>
 </template>
@@ -82,6 +184,20 @@ import PersonalInfo from './PersonalInfo.vue'
     .setBtn {
       margin-top: -10px;
     }
+  }
+
+  ::v-deep(.ant-input) {
+    line-height: 30px;
+  }
+
+  .PersonalInfo {
+    // .ant-picker {
+    //   width: 100%;
+    //   height: 42px;
+    // }
+  }
+
+  .AddressInfo {
   }
 }
 </style>

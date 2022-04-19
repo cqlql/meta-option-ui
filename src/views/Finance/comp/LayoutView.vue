@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="LayoutView">
+  <div class="LayoutView mt-10">
     <div class="chunk left enter-y">
       <div class="wrap"> <slot name="left"></slot> </div>
     </div>
@@ -17,7 +17,7 @@
 
   & > .chunk {
     flex: 1;
-    padding: 10px 10px;
+    // padding: 10px 10px;
 
     & > .wrap {
       max-width: 500px;

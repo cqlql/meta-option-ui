@@ -4,6 +4,7 @@ import { DatePicker as ADatePicker, Select as ASelect } from 'ant-design-vue'
 
 const formState = reactive({
   nickname: '',
+  // birth: '',
   day: undefined,
   month: undefined,
   year: undefined,

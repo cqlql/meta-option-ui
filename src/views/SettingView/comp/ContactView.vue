@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div> ContactView </div>
+  <div class="ContactView"> ContactView </div>
 </template>
 
 <style lang="scss" scoped></style>

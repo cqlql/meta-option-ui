@@ -14,7 +14,7 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
 <template>
   <LayoutView class="WithdrawalView">
     <template #left>
-      <div class="left mt-5">
+      <div class="left">
         <TitleItem title="Enter amount">
           <EnterAmout></EnterAmout>
         </TitleItem>
@@ -24,15 +24,12 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
       </div>
     </template>
     <template #right>
-      <BankAccount
-        v-if="paymentType === 'bank'"
-        class="enter-y mt-5"
-      ></BankAccount>
+      <BankAccount v-if="paymentType === 'bank'" class="enter-y"></BankAccount>
       <USDTAccount
         v-else-if="paymentType === 'USDT'"
-        class="enter-y mt-5"
+        class="enter-y"
       ></USDTAccount>
-      <QuestionText v-else class="enter-y mt-5"></QuestionText>
+      <QuestionText v-else class="enter-y"></QuestionText>
     </template>
   </LayoutView>
 </template>

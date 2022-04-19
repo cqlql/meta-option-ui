@@ -10,7 +10,7 @@ import WithdrawDialog from './WithdrawDialog.vue'
 const withdrawDialogVisible = ref(false)
 </script>
 <template>
-  <div class="BrokerCenter mt-20 flex">
+  <div class="BrokerCenter mt-15 flex">
     <div class="enter-y flex-[1.3]">
       <div class="max-w-250">
         <CardBox class="py-10 px-17">
