@@ -124,7 +124,7 @@ provide('loginState', loginState)
 
   a {
     color: #fff;
-    font-size: 11px;
+    font-size: 12px;
 
     &:hover {
       color: @primary-color;

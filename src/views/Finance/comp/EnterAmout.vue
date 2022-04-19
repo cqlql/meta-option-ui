@@ -37,7 +37,7 @@ const list = [
   background-color: #263042;
   box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: @border-radius-base;
-  border: solid 2px #333d51;
+  border: solid 1px #333d51;
 
   .row {
     display: flex;
@@ -67,11 +67,11 @@ const list = [
   font-size: 18px;
 
   .row {
-    border: solid 2px #333d51;
+    border: solid 1px #333d51;
     border-radius: 3px;
 
     & > div:first-child {
-      border-right: solid 2px #333d51;
+      border-right: solid 1px #333d51;
     }
   }
 }

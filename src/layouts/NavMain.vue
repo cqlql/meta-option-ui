@@ -13,11 +13,11 @@ const route = useRoute()
 const selectedRoute = ref(route.name)
 
 const list: ItemType[] = [
-  // {
-  //   name: 'Trade',
-  //   icon: 'rise',
-  //   routeName: 'Trade',
-  // },
+  {
+    name: 'Trade',
+    icon: 'rise',
+    routeName: 'Trade',
+  },
   {
     name: 'Finance',
     icon: 'finance',
@@ -80,8 +80,8 @@ function to(item: ItemType) {
     display: block;
     display: flex;
     justify-content: center;
-    width: 83px;
-    height: 83px;
+    width: 80px;
+    height: 80px;
     color: #7d8da1;
     text-align: center;
     cursor: pointer;
@@ -132,8 +132,9 @@ function to(item: ItemType) {
 
     .name {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       transition: color 0.3s;
+      padding-top: 2px;
     }
   }
 }

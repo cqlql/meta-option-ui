@@ -22,14 +22,14 @@ defineProps<{
   height: 45px;
   line-height: 42px;
   border-radius: @border-radius-base;
-  border: solid 2px #333d51;
+  border: solid 1px #333d51;
   font-size: 18px;
 
   & > .label {
     padding: 0 23px;
     color: #fff;
     color: #a2a9bb;
-    border-right: solid 2px #333d51;
+    border-right: solid 1px #333d51;
     background-color: #21293a;
   }
 

@@ -14,7 +14,7 @@ const formState: UnwrapRef<FormState> = reactive({
 })
 </script>
 <template>
-  <CardBox class="USDTAccount text-5xl" title="USDT Account">
+  <CardBox class="USDTAccount" title="USDT Account">
     <a-form layout="vertical" class="!pt-5" :model="formState">
       <a-form-item>
         <template #label>

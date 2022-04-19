@@ -19,7 +19,7 @@ defineProps<{
   line-height: 45px;
   background-color: #020220;
   border-radius: @border-radius-base;
-  border: solid 2px #333d51;
+  border: solid 1px #333d51;
   font-size: 18px;
 
   & > span {
@@ -27,7 +27,7 @@ defineProps<{
     color: #fff;
 
     &:first-child {
-      border-right: solid 2px #333d51;
+      border-right: solid 1px #333d51;
       color: #a2a9bb;
     }
   }

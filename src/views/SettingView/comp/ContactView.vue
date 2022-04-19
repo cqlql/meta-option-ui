@@ -34,7 +34,7 @@ import ContactItem from './ContactItem.vue'
     background-color: #22293f;
     box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
     border-radius: 5px;
-    border: solid 2px #424b60;
+    border: solid 1px #424b60;
   }
 }
 </style>

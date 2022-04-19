@@ -58,9 +58,7 @@ const data = [
       :data-source="data"
     >
       <template #bodyCell="{ column, record }">
-        <span class="text-neutral-400 text-2xl">{{
-          record[column.dataIndex]
-        }}</span>
+        <span class="text-neutral-400">{{ record[column.dataIndex] }}</span>
       </template>
     </a-table>
   </a-modal>

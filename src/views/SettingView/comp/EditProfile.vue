@@ -152,7 +152,7 @@ const formState = reactive({
     // background-color: #263042;
     box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
     border-radius: @border-radius-base;
-    border: solid 2px #333d51;
+    border: solid 1px #333d51;
     padding: 20px 0 3px 35px;
 
     .main-cont {
@@ -178,7 +178,7 @@ const formState = reactive({
 
     .info {
       color: #75859c;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     .setBtn {

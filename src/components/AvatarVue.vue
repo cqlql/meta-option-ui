@@ -29,7 +29,7 @@ defineProps<{
     height: 12px;
     line-height: 1;
     line-height: 12px;
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
     background: #fa3c47;
     border-radius: 6px 0 6px 0;

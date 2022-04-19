@@ -99,7 +99,7 @@ const amountList = [
                 <th>
                   <span> Bonus </span>
                   <Icon
-                    class="!text-sky-400 !text-2xl"
+                    class="!text-sky-400 !text-lg"
                     icon="ant-design:info-circle-outlined"
                   ></Icon>
                 </th>
@@ -153,7 +153,7 @@ const amountList = [
     & > .label {
       line-height: 1;
       color: #a2a9bb;
-      font-size: 11px;
+      font-size: 12px;
       padding-top: 14px;
     }
   }
@@ -164,7 +164,7 @@ const amountList = [
     font-size: 14px;
     text-align: center;
     border-radius: @border-radius-base;
-    border: solid 2px #333d51;
+    border: solid 1px #333d51;
     margin-top: 15px;
 
     table {

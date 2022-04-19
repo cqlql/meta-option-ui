@@ -127,7 +127,7 @@ const data = [
           display: flex;
           width: 270px;
           height: 65px;
-          border: solid 2px #333d51;
+          border: solid 1px #333d51;
           background-color: #21293a;
           border-radius: @border-radius-base;
 

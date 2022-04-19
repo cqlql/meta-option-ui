@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <div class="AvatarUser">
     <AvatarVue :src="src"></AvatarVue>
-    <div class="text-2xl text-center my-3"><slot></slot></div>
+    <div class="text-center my-3"><slot></slot></div>
   </div>
 </template>
 

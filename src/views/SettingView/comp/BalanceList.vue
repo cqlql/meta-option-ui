@@ -45,7 +45,7 @@ function afterLeave(el: HTMLDivElement) {
           <!-- <i class="arrow expanded"></i> -->
 
           <Icon
-            class="align-middle !text-5xl"
+            class="align-middle !text-3xl"
             icon="ri:money-dollar-circle-fill"
           ></Icon>
 
@@ -76,7 +76,7 @@ function afterLeave(el: HTMLDivElement) {
 
 <style lang="less" scoped>
 .BalanceList {
-  border: solid 2px #333d51;
+  border: solid 1px #333d51;
   border-radius: @border-radius-base;
 
   .labelValue {
@@ -106,7 +106,7 @@ function afterLeave(el: HTMLDivElement) {
       flex: 1;
       background-color: #21293a;
       color: #75859c;
-      border-right: solid 2px #333d51;
+      border-right: solid 1px #333d51;
     }
 
     .value {
@@ -124,8 +124,9 @@ function afterLeave(el: HTMLDivElement) {
   }
 
   .list {
+    padding: 6px 0;
     text-align: center;
-    border-top: solid 2px #333d51;
+    border-top: solid 1px #333d51;
 
     .item {
       display: flex;

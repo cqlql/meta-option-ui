@@ -57,7 +57,7 @@ function onSelect(index: number) {
     font-size: 14px;
     text-align: center;
     // flex: 1;
-    border: solid 2px #424b60;
+    border: solid 1px #424b60;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
     margin-right: -1px;

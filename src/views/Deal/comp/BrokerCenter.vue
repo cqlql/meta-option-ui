@@ -18,7 +18,7 @@ const withdrawDialogVisible = ref(false)
             <template #title>
               <div class="flex items-center justify-center h-[100%]">
                 <Icon
-                  class="align-middle !text-5xl"
+                  class="align-middle !text-3xl"
                   icon="ri:money-dollar-circle-fill"
                 ></Icon>
 
@@ -116,7 +116,7 @@ const withdrawDialogVisible = ref(false)
       background-color: #263042;
       box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
       border-radius: 0 @border-radius-base @border-radius-base 0;
-      border: solid 2px #333d51;
+      border: solid 1px #333d51;
       padding: 0 15px 0 23px;
     }
 

@@ -30,7 +30,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
   background-color: #263042;
   box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
   border-radius: 5px;
-  border: solid 2px #333d51;
+  border: solid 1px #333d51;
   padding: 38px;
 
   & > .text {

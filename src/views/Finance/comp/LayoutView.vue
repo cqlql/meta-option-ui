@@ -19,8 +19,16 @@
     flex: 1;
     // padding: 8px 8px;
 
+    &:first-child {
+      padding-right: 10px;
+    }
+
+    &:last-child {
+      padding-left: 10px;
+    }
+
     & > .wrap {
-      max-width: 375px;
+      max-width: 500px;
     }
   }
 

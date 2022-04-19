@@ -30,7 +30,7 @@ import CheckboxPlus from '@/components/CheckboxPlus/CheckboxPlus.vue'
   & > .label {
     line-height: 1;
     color: #a2a9bb;
-    font-size: 11px;
+    font-size: 12px;
     padding-top: 14px;
   }
 }
