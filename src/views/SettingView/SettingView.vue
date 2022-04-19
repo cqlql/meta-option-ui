@@ -32,5 +32,3 @@ const tabVal = ref('EditProfile')
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

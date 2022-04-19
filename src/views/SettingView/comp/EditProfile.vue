@@ -5,6 +5,8 @@ import AvatarVue from '@/components/AvatarVue.vue'
 import { Select as ASelect } from 'ant-design-vue'
 import { reactive } from 'vue'
 
+const ASelectOption = ASelect.Option
+
 const formState = reactive({
   nickname: '',
   day: undefined,
@@ -188,6 +190,10 @@ const formState = reactive({
 
   ::v-deep(.ant-input) {
     line-height: 23px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 10px;
   }
 
   .PersonalInfo {
