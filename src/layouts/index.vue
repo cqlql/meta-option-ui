@@ -16,6 +16,8 @@ import HeaderLayout from './HeaderLayout.vue'
 </template>
 
 <style lang="less" scoped>
+@minWidth: 1024px;
+
 .layout {
   height: 100%;
 }
@@ -23,6 +25,7 @@ import HeaderLayout from './HeaderLayout.vue'
 .layout-header {
   height: 60px;
   background-color: #171e2d;
+  min-width: @minWidth;
 }
 
 .layout-content {
@@ -33,6 +36,7 @@ import HeaderLayout from './HeaderLayout.vue'
   bottom: 0;
   // height: calc(100% - 60px);
   display: flex;
+  min-width: @minWidth;
 }
 
 .layout-aside {
