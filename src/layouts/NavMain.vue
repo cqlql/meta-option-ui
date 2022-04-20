@@ -38,11 +38,11 @@ const list: ItemType[] = [
   //   icon: 'info',
   //   routeName: 'AboutUs',
   // },
-  // {
-  //   name: 'News',
-  //   icon: 'internet',
-  //   routeName: 'News',
-  // },
+  {
+    name: 'News',
+    icon: 'internet',
+    routeName: 'News',
+  },
   {
     name: 'Setting',
     icon: 'setting',
