@@ -20,7 +20,7 @@ const list = [
   },
 ]
 
-const tabVal = ref('EditProfile')
+const tabVal = ref('ContactView')
 </script>
 <template>
   <div class="mx-18 my-8">

@@ -2,13 +2,14 @@
 <template>
   <div class="ContactItem">
     <div class="left">
-      <img src="" alt="" />
+      <slot></slot>
     </div>
     <div class="right">
-      <div class="title">Contact me on telegram</div>
-      <div class="number"> (+00) 123 456 789 </div>
+      <div class="title"><slot name="title"></slot></div>
+      <div class="number"><slot name="number"></slot></div>
       <div class="btn text-right">
-        <a-button type="primary" class="!px-20">Go</a-button>
+        <slot name="btn"></slot>
+        <!-- <a-button type="primary" class="!px-20">Go</a-button> -->
       </div>
     </div>
   </div>
@@ -27,6 +28,11 @@
     background-color: #171e2d;
   }
 
+  ::v-deep(img) {
+    height: 100%;
+    margin: 0 auto;
+  }
+
   .right {
     position: relative;
     width: 398px;
@@ -43,12 +49,13 @@
     line-height: 40px;
   }
 
-  .ant-btn {
+  ::v-deep(.ant-btn) {
     position: absolute;
     right: 25px;
     bottom: 25px;
     height: 30px;
     line-height: 1;
+    padding: 0 70px;
   }
 }
 </style>
