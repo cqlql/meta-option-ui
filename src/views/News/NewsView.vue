@@ -17,7 +17,6 @@
         <div class="date-info"> NOVEMBER 15, 2021 VIA BBC </div>
         <h2>Joe Biden and Xi Jinping: What they want from talks</h2>
 
-        <b>What Biden wants</b>
         <div class="des">
           US President Joe Biden and Chinese President Xi Jinping will hold a
           virtual summit on Monday as tensions between the countries deepen. The
@@ -33,7 +32,7 @@
           as ways to work together where our interests align". The duo have
           spoken twice since Mr Biden took office
         </div>
-        <b>What Biden wants</b>
+        <h3>What Biden wants</h3>
         <div class="des">
           US President Joe Biden and Chinese President Xi Jinping will hold a
           virtual summit on Monday as tensions between the countries deepen. The
@@ -60,7 +59,6 @@
         <div class="date-info"> NOVEMBER 15, 2021 VIA BBC </div>
         <h2>Joe Biden and Xi Jinping: What they want from talks</h2>
 
-        <b>What Biden wants</b>
         <div class="des">
           US President Joe Biden and Chinese President Xi Jinping will hold a
           virtual summit on Monday as tensions between the countries deepen. The
@@ -76,7 +74,7 @@
           as ways to work together where our interests align". The duo have
           spoken twice since Mr Biden took office
         </div>
-        <b>What Biden wants</b>
+        <h3>What Biden wants</h3>
         <div class="des">
           US President Joe Biden and Chinese President Xi Jinping will hold a
           virtual summit on Monday as tensions between the countries deepen. The
@@ -151,6 +149,15 @@
       line-height: 42px;
       color: #fff;
       font-size: 28px;
+    }
+
+    h3 {
+      line-height: 26px;
+      // line-height: 42px;
+      color: #fff;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 0;
     }
 
     .date-info {
