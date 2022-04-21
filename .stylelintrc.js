@@ -29,6 +29,7 @@ module.exports = {
       { severity: 'warning' },
     ],
     'order/properties-order': [
+      'content',
       'position',
       'left',
       'top',

@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import TabButtons from '@/components/TabButtons.vue'
 import AboutUs from './comp/AboutUs.vue'
 import NewsHeader from '../News/comp/NewsHeader.vue'
+import FAQView from './comp/FAQView.vue'
+import TermsAndConditions from './comp/TermsAndConditions.vue'
 
 const list = [
   {
@@ -22,12 +24,16 @@ const list = [
 const tabVal = ref('AboutUs')
 </script>
 <template>
-  <NewsHeader />
-  <div class="mx-18 my-8 relative">
+  <NewsHeader v-if="tabVal === 'AboutUs'" />
+  <div class="mx-18 my-8 relative z-10">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
-    <AboutUs v-if="tabVal === 'AboutUs'"></AboutUs>
-    <AboutUs v-else-if="tabVal === 'FAQ'"></AboutUs>
-    <AboutUs v-else-if="tabVal === 'TermsAndConditions'"></AboutUs>
+    <div>
+      <AboutUs v-if="tabVal === 'AboutUs'"></AboutUs>
+      <FAQView v-else-if="tabVal === 'FAQ'"></FAQView>
+      <TermsAndConditions
+        v-else-if="tabVal === 'TermsAndConditions'"
+      ></TermsAndConditions>
+    </div>
   </div>
 </template>
 
