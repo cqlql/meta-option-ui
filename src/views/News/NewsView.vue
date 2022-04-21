@@ -1,11 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import NewsHeader from './comp/NewsHeader.vue'
+</script>
 <template>
   <div class="NewsView">
-    <div class="news-header">
-      <img src="@/assets/news-header-bg.jpg" />
-
+    <NewsHeader>
       <span>NEWS</span>
-    </div>
+    </NewsHeader>
     <div class="new-content">
       <div class="left">
         <div class="img">
@@ -98,19 +98,6 @@
 <style lang="less" scoped>
 .NewsView {
   .news-header {
-    position: relative;
-    // width: 1358px;
-    height: 400px;
-    color: #fff;
-    // background: url('@/assets/news-header-bg.jpg') no-repeat center center;
-    // background-size: auto 100%;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
     span {
       position: absolute;
       left: 62px;
@@ -138,7 +125,7 @@
     }
 
     .img {
-      border: 1px solid #ddd;
+      // border: 1px solid #ddd;
       padding: 10px;
       border: solid 1px #424b60;
       border-radius: @border-radius-base;

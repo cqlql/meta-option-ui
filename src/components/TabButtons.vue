@@ -46,7 +46,6 @@ function onSelect(index: number) {
   display: flex;
   // height: 45px;
 
-  // background-color: #f8f8f8;
   color: #fff;
   flex-wrap: wrap;
 
@@ -61,7 +60,7 @@ function onSelect(index: number) {
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
     margin-right: -1px;
-
+    background-color: #21293a;
     // & + .item {
     //   // border-left: none;
     // }

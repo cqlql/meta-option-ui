@@ -33,16 +33,17 @@ const list: ItemType[] = [
   //   icon: 'home',
   //   routeName: 'Home',
   // },
-  // {
-  //   name: 'About us',
-  //   icon: 'info',
-  //   routeName: 'AboutUs',
-  // },
+  {
+    name: 'About us',
+    icon: 'info',
+    routeName: 'AboutUs',
+  },
   {
     name: 'News',
     icon: 'internet',
     routeName: 'News',
   },
+
   {
     name: 'Setting',
     icon: 'setting',
