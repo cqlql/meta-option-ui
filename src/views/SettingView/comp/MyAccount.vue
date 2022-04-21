@@ -65,6 +65,9 @@ import Icon from '@/components/Icon/src/Icon.vue'
 
 <style lang="less" scoped>
 .MyAccount {
+  max-width: 1024px;
+  margin: 0 auto;
+
   .Verification {
     margin-top: -12px;
 

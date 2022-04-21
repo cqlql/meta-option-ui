@@ -1,31 +1,35 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="LayoutView mt-8">
+  <div class="LayoutView mt-8 mx-auto">
     <div class="chunk left enter-y">
       <div class="wrap"> <slot name="left"></slot> </div>
     </div>
-    <div class="chunk right enter-y">
+    <div class="chunk right ml-15 enter-y">
       <div class="wrap"> <slot name="right"></slot> </div>
     </div>
   </div>
 </template>
 
 <style lang="less" scoped>
+// @space: 30px;
+
 .LayoutView {
   display: flex;
+  max-width: 1024px;
+
   // padding-top: 23px;
 
   & > .chunk {
     flex: 1;
     // padding: 8px 8px;
 
-    &:first-child {
-      padding-right: 10px;
-    }
+    // &:first-child {
+    //   padding-right: @space;
+    // }
 
-    &:last-child {
-      padding-left: 10px;
-    }
+    // &:last-child {
+    //   padding-left: @space;
+    // }
 
     & > .wrap {
       max-width: 500px;

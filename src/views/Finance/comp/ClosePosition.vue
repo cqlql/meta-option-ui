@@ -107,6 +107,11 @@ const data = [
       </template>
     </template>
   </a-table>
+  <div class="text-center pt-5">
+    <a-button class="!text-gray-400" type="link"
+      >View more history orders</a-button
+    >
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

@@ -47,7 +47,7 @@ const paymentType = ref<'' | 'bank' | 'USDT'>('')
   }
 
   & > ::v-deep(.left > .wrap) {
-    max-width: 450px;
+    // max-width: 450px;
   }
 
   & > ::v-deep(.right) {

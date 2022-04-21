@@ -44,7 +44,7 @@ const data = [
 const dialogVisible = ref(false)
 </script>
 <template>
-  <CardBox title="My Clients" class="ml-8">
+  <CardBox title="My Clients">
     <a-table
       :showHeader="false"
       :columns="columns"

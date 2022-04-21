@@ -11,8 +11,12 @@ const radioVal = ref('a')
     <div class="PaymentHistory enter-y">
       <div class="tabBtn">
         <a-radio-group v-model:value="radioVal">
-          <a-radio-button value="a">Open Position</a-radio-button>
-          <a-radio-button value="b">Close Position</a-radio-button>
+          <a-radio-button class="!px-10 !h-12 !leading-12" value="a"
+            >Open Position</a-radio-button
+          >
+          <a-radio-button class="!px-10 !h-12 !leading-12" value="b"
+            >Close Position</a-radio-button
+          >
         </a-radio-group>
       </div>
 
@@ -37,7 +41,7 @@ const radioVal = ref('a')
   }
 
   .tabBtn {
-    margin: 15px 0 0;
+    margin: 15px 0 10px;
     text-align: center;
   }
 

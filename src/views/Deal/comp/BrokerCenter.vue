@@ -10,8 +10,8 @@ import WithdrawDialog from './WithdrawDialog.vue'
 const withdrawDialogVisible = ref(false)
 </script>
 <template>
-  <div class="BrokerCenter mt-12 flex">
-    <div class="enter-y flex-[1.3]">
+  <div class="BrokerCenter mt-12 mx-auto flex">
+    <div class="enter-y flex-[1.2]">
       <div class="max-w-250">
         <CardBox class="py-8 px-13">
           <LabelInput class="!h-[60px]" value="5,000.00">
@@ -86,7 +86,7 @@ const withdrawDialogVisible = ref(false)
         </div>
       </div>
     </div>
-    <div class="enter-y flex-1">
+    <div class="enter-y flex-1 ml-15">
       <MyClientsData />
     </div>
   </div>
@@ -95,6 +95,8 @@ const withdrawDialogVisible = ref(false)
 
 <style lang="less" scoped>
 .BrokerCenter {
+  max-width: 1300px;
+
   .LabelInput {
     & > ::v-deep(.ipt .ant-input) {
       text-align: center;

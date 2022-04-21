@@ -23,7 +23,7 @@ const formState = reactive({
 })
 </script>
 <template>
-  <div class="MyAccount flex">
+  <div class="EditProfile flex">
     <div class="flex-1 enter-y">
       <TitleItem title="Profile">
         <div class="UserInfoCard">
@@ -149,7 +149,10 @@ const formState = reactive({
 </template>
 
 <style lang="less" scoped>
-.MyAccount {
+.EditProfile {
+  max-width: 1024px;
+  margin: 0 auto;
+
   .UserInfoCard {
     // background-color: #263042;
     box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
@@ -188,9 +191,9 @@ const formState = reactive({
     }
   }
 
-  ::v-deep(.ant-input) {
-    line-height: 23px;
-  }
+  // ::v-deep(.ant-input) {
+  //   line-height: 23px;
+  // }
 
   .ant-form-item {
     margin-bottom: 10px;

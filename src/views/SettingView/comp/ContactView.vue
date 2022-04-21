@@ -41,7 +41,7 @@ import ContactItem from './ContactItem.vue'
         </template>
       </ContactItem>
     </div>
-    <div class="right enter-y">
+    <div class="right ml-15 enter-y">
       <div class="phone">
         <div class="img">
           <img src="@/assets/contact/service.png" />
@@ -64,13 +64,13 @@ import ContactItem from './ContactItem.vue'
     margin-top: 20px;
   }
 
-  .left {
-    padding-right: 30px;
-  }
+  // .left {
+  //   padding-right: 30px;
+  // }
 
-  .right {
-    padding-left: 30px;
-  }
+  // .right {
+  //   padding-left: 30px;
+  // }
 
   .phone {
     background-color: #22293f;

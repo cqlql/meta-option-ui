@@ -119,7 +119,9 @@ const amountList = [
           </table>
         </div>
 
-        <a-button block type="primary2">CONTINUE</a-button>
+        <a-button block type="primary" class="!h-15 !text-2xl"
+          >CONTINUE</a-button
+        >
       </TitleItem>
     </template>
   </LayoutView>
