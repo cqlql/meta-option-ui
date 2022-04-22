@@ -1,18 +1,24 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const props = defineProps<{
-  list: any[]
-  noTick?: boolean
-  cancellable?: boolean
-}>()
+const props = withDefaults(
+  defineProps<{
+    list: any[]
+    noTick?: boolean
+    cancellable?: boolean
+    modelValue?: number
+  }>(),
+  {
+    modelValue: -1,
+  },
+)
 
 const emit = defineEmits<{
   (e: 'select', item: any): void
   (e: 'change', item: any): void
 }>()
 
-let selectedIndex = ref(-1)
+let selectedIndex = ref(props.modelValue)
 function select(index: number) {
   if (props.cancellable) {
     cancellableSelect(index)
@@ -90,13 +96,13 @@ function cancellableSelect(index: number) {
       // opacity: 0;
 
       &::after {
+        content: '';
         position: absolute;
         left: 21%;
         top: 42%;
         display: table;
         width: 5.71428571px;
         height: 9.14285714px;
-        content: '';
         border: 2px solid #27435e;
         border-top: 0;
         border-left: 0;
