@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const props = withDefaults(
   defineProps<{
@@ -16,9 +16,22 @@ const props = withDefaults(
 const emit = defineEmits<{
   (e: 'select', item: any): void
   (e: 'change', item: any): void
+  (e: 'update:modelValue', index: number): void
 }>()
 
 let selectedIndex = ref(props.modelValue)
+
+watch(selectedIndex, (index) => {
+  emit('update:modelValue', index)
+})
+
+watch(
+  () => props.modelValue,
+  (index) => {
+    selectedIndex.value = index
+  },
+)
+
 function select(index: number) {
   if (props.cancellable) {
     cancellableSelect(index)
