@@ -28,11 +28,11 @@ const list: ItemType[] = [
     icon: 'deal',
     routeName: 'Deal',
   },
-  // {
-  //   name: 'Home',
-  //   icon: 'home',
-  //   routeName: 'Home',
-  // },
+  {
+    name: 'Home',
+    icon: 'home',
+    routeName: 'Home',
+  },
   {
     name: 'About us',
     icon: 'info',
@@ -89,13 +89,13 @@ function to(item: ItemType) {
     flex-direction: column;
 
     &::before {
+      content: '';
       position: absolute;
       left: -3px;
       top: 0;
       display: block;
       width: 3px;
       height: 100%;
-      content: '';
       opacity: 0;
       background-color: @primary-color;
       transition: opacity 0.3s, left 0.3s, right 0.3s;

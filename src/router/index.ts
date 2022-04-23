@@ -1,29 +1,17 @@
 import type { RouteRecordRaw } from 'vue-router'
 import type { AppRouteRecordRaw } from './types'
 import { createRouter, createWebHashHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/Home/HomeView.vue'
 import LAYOUT from '@/layouts/index.vue'
 import LoginView from '@/views/Login/LoginView.vue'
 
 const routes: Array<AppRouteRecordRaw> = [
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   redirect: '/login',
-  //   // component: HomeView,
-  //   meta: {
-  //     title: 'home',
-  //   },
-  // },
   {
     path: '/',
-    name: 'Home',
+    name: 'Trade',
     component: LAYOUT,
-    redirect: '/setting',
-    // component: HomeView,
-    meta: {
-      // title: 'home',
-    },
+    redirect: '/home',
+    meta: {},
     children: [
       {
         path: 'trade',
@@ -54,15 +42,15 @@ const routes: Array<AppRouteRecordRaw> = [
           title: 'deal',
         },
       },
-      {
-        path: 'home',
-        name: 'Home',
-        component: () =>
-          import(/* webpackChunkName: "index" */ '@/views/Home/HomeView.vue'),
-        meta: {
-          title: 'home',
-        },
-      },
+      // {
+      //   path: 'home',
+      //   name: 'Home',
+      //   component: () =>
+      //     import(/* webpackChunkName: "index" */ '@/views/Home/HomeView.vue'),
+      //   meta: {
+      //     title: 'home',
+      //   },
+      // },
       {
         path: 'aboutus',
         name: 'AboutUs',
@@ -93,6 +81,14 @@ const routes: Array<AppRouteRecordRaw> = [
         },
       },
     ],
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: HomeView,
+    meta: {
+      title: 'home',
+    },
   },
   {
     path: '/login',

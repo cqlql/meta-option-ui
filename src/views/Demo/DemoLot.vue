@@ -16,9 +16,13 @@ import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
 import AvatarDemo from './comp/AvatarDemo.vue'
+import MenuBtn from '@/components/MenuBtn.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="MenuBtn">
+      <MenuBtn></MenuBtn>
+    </BoxView>
     <BoxView title="avatar">
       <AvatarDemo></AvatarDemo>
     </BoxView>

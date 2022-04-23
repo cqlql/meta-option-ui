@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
+import CopyrightView from '@/layouts/CopyrightView.vue'
 </script>
 <template>
   <div class="aboutUs enter-y">
@@ -180,11 +181,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
         </div>
       </div>
     </div>
-
-    <div class="copyright">
-      <span class="info">© 2022 Meta Option.</span>
-      <span>All rights reserved.</span>
-    </div>
+    <CopyrightView></CopyrightView>
   </div>
 </template>
 
@@ -409,17 +406,6 @@ import Icon from '@/components/Icon/src/Icon.vue'
 
     .cont {
       line-height: 26px;
-    }
-  }
-
-  .copyright {
-    height: 145px;
-    text-align: center;
-    padding-top: 60px;
-
-    .info {
-      color: #30a4fb;
-      margin-right: 5px;
     }
   }
 }
