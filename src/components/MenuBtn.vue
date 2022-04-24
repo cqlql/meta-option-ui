@@ -1,10 +1,17 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-
-const active = ref(false)
+defineProps<{
+  active: boolean
+}>()
+defineEmits<{
+  (e: 'update:active', v: boolean): void
+}>()
 </script>
 <template>
-  <div class="MenuBtn" :class="{ active }" @click="active = !active">
+  <div
+    class="MenuBtn"
+    :class="{ active }"
+    @click="$emit('update:active', !active)"
+  >
     <span></span>
   </div>
 </template>
