@@ -1,15 +1,29 @@
 <script lang="ts" setup>
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   active: boolean
+  noStyle: boolean
 }>()
+
 defineEmits<{
   (e: 'update:active', v: boolean): void
 }>()
+
+const activeClass = computed(() => {
+  if (props.noStyle) {
+    return ''
+  }
+  if (props.active) {
+    return 'active'
+  }
+  return ''
+})
 </script>
 <template>
   <div
     class="MenuBtn"
-    :class="{ active }"
+    :class="activeClass"
     @click="$emit('update:active', !active)"
   >
     <span></span>

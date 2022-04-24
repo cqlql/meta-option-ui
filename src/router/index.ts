@@ -8,7 +8,7 @@ import LoginView from '@/views/Login/LoginView.vue'
 const routes: Array<AppRouteRecordRaw> = [
   {
     path: '/',
-    name: 'Trade',
+    name: 'Main',
     component: LAYOUT,
     redirect: '/home',
     meta: {},

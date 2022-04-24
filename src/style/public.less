@@ -38,28 +38,23 @@
 // =================================
 #nprogress {
   pointer-events: none;
-
+  background-color: rgba(48, 153, 245, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 2px;
   .bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
     height: 2px;
-    background-color: @primary-color;
-    opacity: 0.75;
+    background-color: #3099f5;
+    box-shadow: 0 0 10px rgb(48 153 245 / 70%);
   }
 
   // background-color: #3099f5;
   // width: 22%;
-  // -webkit-transition: width .2s;
-  // -moz-transition: width .2s;
-  // -o-transition: width .2s;
-  // -ms-transition: width .2s;
   // transition: width .2s;
   // opacity: 1;
-  // -ms-filter: none;
   // filter: none;
-  // -webkit-box-shadow: 0 0 10px rgb(48 153 245 / 70%);
   // box-shadow: 0 0 10px rgb(48 153 245 / 70%);
 }

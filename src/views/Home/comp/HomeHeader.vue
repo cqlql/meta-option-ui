@@ -15,10 +15,6 @@ onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
 })
 const topFixed = ref(false)
-function test(event: Event) {
-  topFixed.value = !topFixed.value
-  console.log('test')
-}
 
 const show = ref(false)
 </script>
@@ -26,7 +22,6 @@ const show = ref(false)
   <header class="HomeHeader" :class="{ topFixed }">
     <div class="logo">
       <img src="@/assets/logo/logo-text-small.png" />
-      <!-- <a-button @click="test">test</a-button> -->
     </div>
     <div class="right">
       <a-button
@@ -37,11 +32,11 @@ const show = ref(false)
       <a-button @click="$router.push({ name: 'Login' })" ghost
         >Sign In</a-button
       >
-      <MenuBtn v-model:active="show"></MenuBtn>
+      <MenuBtn v-model:active="show" noStyle></MenuBtn>
     </div>
   </header>
 
-  <HomeNav :visible="show"></HomeNav>
+  <HomeNav v-model:visible="show"></HomeNav>
 </template>
 
 <style lang="less" scoped>
