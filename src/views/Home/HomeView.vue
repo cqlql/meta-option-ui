@@ -4,11 +4,13 @@ import HomeTopBg from './comp/HomeTopBg.vue'
 import CopyrightView from '@/layouts/CopyrightView.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import IconFont from '@/components/IconFont/IconFont.vue'
+import BgImg from '@/components/BgImg.vue'
 </script>
 <template class>
-  <div class="HomeView_bg"></div>
+  <div class="HomeView_bg"> </div>
   <HomeTopBg></HomeTopBg>
   <div class="HomeView">
+    <BgImg></BgImg>
     <HomeHeader></HomeHeader>
     <div class="top">
       <h2> <div>Making your trading</div> <div>dream a reality</div> </h2>
@@ -199,6 +201,7 @@ import IconFont from '@/components/IconFont/IconFont.vue'
 
   .content {
     // padding: 0 285px;
+    position: relative;
     width: 870px;
     margin: 0 auto;
 

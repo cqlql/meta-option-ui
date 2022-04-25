@@ -5,6 +5,7 @@ import AboutUs from './comp/AboutUs.vue'
 import NewsHeader from '../News/comp/NewsHeader.vue'
 import FAQView from './comp/FAQView.vue'
 import TermsAndConditions from './comp/TermsAndConditions.vue'
+import BgImg from '@/components/BgImg.vue'
 
 const list = [
   {
@@ -24,8 +25,10 @@ const list = [
 const tabVal = ref('AboutUs')
 </script>
 <template>
-  <div>
+  <div class="relative">
+    <BgImg v-if="tabVal === 'AboutUs'"></BgImg>
     <NewsHeader v-if="tabVal === 'AboutUs'" />
+
     <div class="mx-18 py-8 relative z-10">
       <TabButtons :list="list" v-model="tabVal"> </TabButtons>
       <div>

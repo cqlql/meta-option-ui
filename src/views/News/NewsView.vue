@@ -90,6 +90,47 @@ import NewsHeader from './comp/NewsHeader.vue'
           as ways to work together where our interests align". The duo have
           spoken twice since Mr Biden took office
         </div>
+
+        <div class="img">
+          <img
+            src="https://img14.360buyimg.com/n0/jfs/t1/36024/5/16127/366575/6131b9f4E6fde8939/e9843d4e2d6ac2b0.jpg"
+            alt=""
+          />
+        </div>
+        <div class="date-info"> NOVEMBER 15, 2021 VIA BBC </div>
+        <h2>Joe Biden and Xi Jinping: What they want from talks</h2>
+
+        <div class="des">
+          US President Joe Biden and Chinese President Xi Jinping will hold a
+          virtual summit on Monday as tensions between the countries deepen. The
+          competing superpowers surprised many last week by issuing a joint
+          declaration to address climate change, at talks in Glasgow, Scotland.
+          But growing concerns of a military confrontation over Taiwan have
+          thrown their differences into sharp relief. The pair's third meeting
+          will address several thorny topics. Cybersecurity, trade and nuclear
+          non-proliferation are subjects on the table, sources familiar with the
+          negotiations told US media. In a statement released on Friday, the
+          White House said "the two leaders will discuss ways to responsibly
+          manage the competition between the United States and the PRC, as well
+          as ways to work together where our interests align". The duo have
+          spoken twice since Mr Biden took office
+        </div>
+        <h3>What Biden wants</h3>
+        <div class="des">
+          US President Joe Biden and Chinese President Xi Jinping will hold a
+          virtual summit on Monday as tensions between the countries deepen. The
+          competing superpowers surprised many last week by issuing a joint
+          declaration to address climate change, at talks in Glasgow, Scotland.
+          But growing concerns of a military confrontation over Taiwan have
+          thrown their differences into sharp relief. The pair's third meeting
+          will address several thorny topics. Cybersecurity, trade and nuclear
+          non-proliferation are subjects on the table, sources familiar with the
+          negotiations told US media. In a statement released on Friday, the
+          White House said "the two leaders will discuss ways to responsibly
+          manage the competition between the United States and the PRC, as well
+          as ways to work together where our interests align". The duo have
+          spoken twice since Mr Biden took office
+        </div>
       </div>
     </div>
   </div>
@@ -112,7 +153,7 @@ import NewsHeader from './comp/NewsHeader.vue'
     display: flex;
     line-height: 26px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
 
     .left {
       flex: 1;
@@ -130,6 +171,11 @@ import NewsHeader from './comp/NewsHeader.vue'
       border: solid 1px #424b60;
       border-radius: @border-radius-base;
       margin-bottom: 20px;
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     h2 {
@@ -150,6 +196,10 @@ import NewsHeader from './comp/NewsHeader.vue'
     .date-info {
       line-height: 28px;
       color: #039bdb;
+    }
+
+    .des {
+      color: #c4c6c9;
     }
   }
 }
