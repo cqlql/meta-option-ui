@@ -82,4 +82,4 @@ const loginState = inject('loginState') as Ref<LoginState>
   </a-form>
 </template>
 
-<style lang="scss" scoped></style>
+

@@ -73,7 +73,7 @@ provide('loginState', loginState)
     }
 
     .ant-input {
-      font-size: 12px;
+      // font-size: 12px;
       border-radius: 5px;
     }
 
@@ -81,9 +81,9 @@ provide('loginState', loginState)
       border-radius: 5px;
     }
 
-    .ant-btn {
-      height: 29px;
-    }
+    // .ant-btn {
+    //   height: 29px;
+    // }
   }
 
   .top {
@@ -183,7 +183,7 @@ provide('loginState', loginState)
   }
 }
 
-@media (max-width: 432px) {
+@media (max-width: 575px) {
   .LoginView {
     .ant-form {
       width: auto;
