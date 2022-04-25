@@ -43,7 +43,6 @@ const emit = defineEmits<{
 // })
 
 function close() {
-  console.log('🚀 -- close -- close', close)
   emit('update:visible', false)
 }
 </script>
@@ -53,6 +52,7 @@ function close() {
   </transition>
 
   <div class="NavList" :class="{ show_list: visible }">
+    <img class="logo" src="@/assets/logo/logo.png" />
     <div class="nav_header">
       <a @click="close"><Icon icon="ic:baseline-close"></Icon></a>
     </div>
@@ -154,6 +154,14 @@ function close() {
     a {
       color: #fff;
     }
+  }
+
+  .logo {
+    position: absolute;
+    top: 580px;
+    right: -38px;
+    opacity: 0.3;
+    filter: grayscale(100%);
   }
 }
 </style>
