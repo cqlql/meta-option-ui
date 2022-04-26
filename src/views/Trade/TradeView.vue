@@ -6,6 +6,8 @@ import InputNumber from './comp/InputNumber.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 
 const assetValue = ref('EUR/USD')
+const amount = ref('')
+const strike = ref('')
 const options = [
   {
     value: 'EUR/USD',
@@ -39,13 +41,13 @@ const options = [
           <div class="item">
             <div class="title">Amount</div>
             <div class="ipt">
-              <InputNumber> </InputNumber>
+              <InputNumber v-model="amount"> </InputNumber>
             </div>
           </div>
           <div class="item">
             <div class="title">Strike rate</div>
             <div class="ipt">
-              <InputNumber> </InputNumber>
+              <InputNumber v-model="strike" noInput> </InputNumber>
             </div>
           </div>
         </div>
@@ -250,6 +252,7 @@ const options = [
 
         .app-iconify {
           font-size: 42px;
+          margin-left: -16px;
         }
       }
 
