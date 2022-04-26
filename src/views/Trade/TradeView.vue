@@ -5,6 +5,7 @@ import IconFont from '@/components/IconFont/IconFont.vue'
 import InputNumber from './comp/InputNumber.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import DownUpBar from './comp/DownUpBar.vue'
+import ChartTypeDialog from './comp/ChartTypeDialog.vue'
 
 const assetValue = ref('EUR/USD')
 const amount = ref('0')
@@ -17,6 +18,11 @@ const options = [
     value: 'EUR/GBP',
   },
 ]
+const chartTypeDialogVisible = ref(false)
+function chartTypeSelect() {
+  chartTypeDialogVisible.value = true
+}
+function indicatorsSelect() {}
 </script>
 <template>
   <div class="TradeView">
@@ -28,10 +34,10 @@ const options = [
           :options="options"
         ></a-select>
       </div>
-      <div class="cell">
+      <div class="cell" @mousedown.prevent @click="chartTypeSelect">
         <IconFont name="setting"></IconFont>
       </div>
-      <div class="cell">
+      <div class="cell" @mousedown.prevent @click="indicatorsSelect">
         <IconFont name="setting"></IconFont>
       </div>
     </div>
@@ -98,6 +104,8 @@ const options = [
         </div>
       </div>
     </div>
+
+    <ChartTypeDialog v-model:visible="chartTypeDialogVisible"></ChartTypeDialog>
   </div>
 </template>
 
