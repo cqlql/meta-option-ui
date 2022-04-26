@@ -4,10 +4,11 @@ import { Select as ASelect } from 'ant-design-vue'
 import IconFont from '@/components/IconFont/IconFont.vue'
 import InputNumber from './comp/InputNumber.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
+import DownUpBar from './comp/DownUpBar.vue'
 
 const assetValue = ref('EUR/USD')
-const amount = ref('')
-const strike = ref('')
+const amount = ref('0')
+const strike = ref('1')
 const options = [
   {
     value: 'EUR/USD',
@@ -47,7 +48,7 @@ const options = [
           <div class="item">
             <div class="title">Strike rate</div>
             <div class="ipt">
-              <InputNumber v-model="strike" noInput> </InputNumber>
+              <DownUpBar v-model="strike" noInput> </DownUpBar>
             </div>
           </div>
         </div>
@@ -80,9 +81,9 @@ const options = [
           <div class="btn">
             <button
               ><Icon icon="ic:baseline-keyboard-arrow-down"></Icon>
-              <span>DOWN</span></button
-            >
-            <div class="info">95%</div>
+              <span>DOWN</span>
+              <span class="info">95%</span>
+            </button>
           </div>
         </div>
         <div class="item">
@@ -90,9 +91,9 @@ const options = [
           <div class="btn">
             <button class="up"
               ><Icon icon="ic:baseline-keyboard-arrow-up"></Icon>
-              <span>UP</span></button
-            >
-            <div class="info">95%</div>
+              <span>UP</span>
+              <span class="info">95%</span>
+            </button>
           </div>
         </div>
       </div>
@@ -217,18 +218,33 @@ const options = [
         //   padding-right: 6px;
         // }
 
-        // &:last-child {
-        //   padding-left: 6px;
-        // }
+        &:last-child {
+          .info {
+            left: 0;
+            right: auto;
+            border-radius: 0 4px 0 4px;
+          }
+        }
       }
 
-      .btn {
-      }
+      // .btn {
+      //   position: relative;
+      // }
 
       .info {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        line-height: 15px;
+        padding: 0 8px;
+        color: #fff;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px 0 4px 0;
       }
 
       button {
+        position: relative;
         width: 126px;
         height: 78px;
         color: rgba(0, 0, 0, 0.3);

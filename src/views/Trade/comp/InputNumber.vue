@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import Icon from '@/components/Icon/src/Icon.vue'
+import AddMinusBar from './AddMinusBar.vue'
+// import Icon from '@/components/Icon/src/Icon.vue'
 let reg = /^-?(\d+\.?\d*)?$/
 const min = 0
 const max = 1000
@@ -47,66 +48,24 @@ function input(e: Event) {
 }
 </script>
 <template>
-  <div class="InputNumber">
-    <div class="action left" @mousedown.prevent @click="minus">
-      <Icon icon="ic:baseline-minus"></Icon>
-    </div>
-    <div class="middle" :class="{ noInput }">
-      <span class="value" v-if="noInput">{{ modelValue }}</span>
-      <input v-else type="text" :value="modelValue" @input="input" />
-    </div>
-    <div class="action right" @mousedown.prevent @click="add">
-      <Icon icon="ic:baseline-add"></Icon>
-    </div>
-  </div>
+  <AddMinusBar class="InputNumber" @minus="minus" @add="add">
+    <template #middle>
+      <input type="text" :value="modelValue" @input="input" />
+    </template>
+  </AddMinusBar>
 </template>
 
 <style lang="less" scoped>
 .InputNumber {
-  display: flex;
-  border: 1px solid #424b60;
-  border-radius: 4px;
-
-  .action {
-    width: 46px;
+  input {
+    width: 100%;
     height: 46px;
-    line-height: 46px;
-    font-size: 22px;
     text-align: center;
-    cursor: pointer;
+    background: transparent;
+    border-radius: 0;
 
-    &:hover {
-      background-color: #2f3a52;
-    }
-  }
-
-  .left {
-  }
-
-  .right {
-  }
-
-  .middle {
-    flex: 1;
-    border: 1px solid #414a60;
-    border-top: none;
-    border-bottom: none;
-    text-align: center;
-
-    .value {
-      line-height: 46px;
-    }
-
-    input {
-      width: 100%;
-      height: 46px;
-      text-align: center;
-      background: transparent;
-      border-radius: 0;
-
-      &:focus {
-        outline: 1px solid #40a9ff;
-      }
+    &:focus {
+      outline: 1px solid #40a9ff;
     }
   }
 }
