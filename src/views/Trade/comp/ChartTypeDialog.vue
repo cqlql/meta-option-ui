@@ -2,7 +2,7 @@
 import { Modal as AModal } from 'ant-design-vue'
 import IconFont from '@/components/IconFont/IconFont.vue'
 import { ref } from 'vue'
-const props = defineProps<{
+defineProps<{
   visible: boolean
 }>()
 const emit = defineEmits<{
@@ -42,7 +42,6 @@ function handleOk() {}
     title="Chart type"
     :class="$style.dialog"
     okText="Apply"
-    cancelText=""
     @update:visible="(v:boolean) => emit('update:visible', v)"
     @ok="handleOk"
   >
@@ -69,6 +68,17 @@ function handleOk() {}
 <style lang="less" module>
 .dialog {
   :global {
+    .ant-btn {
+      // height: 38px;
+      // padding: 0 56px;
+      // font-size: 15px;
+      padding: 0 30px;
+    }
+
+    .ant-btn:first-child {
+      display: none;
+    }
+
     .chart-btns {
       display: flex;
       gap: 15px;
