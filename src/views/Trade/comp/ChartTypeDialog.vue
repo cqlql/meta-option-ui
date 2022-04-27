@@ -41,6 +41,8 @@ function handleOk() {}
     :visible="visible"
     title="Chart type"
     :class="$style.dialog"
+    okText="Apply"
+    cancelText=""
     @update:visible="(v:boolean) => emit('update:visible', v)"
     @ok="handleOk"
   >
@@ -54,7 +56,9 @@ function handleOk() {}
       >
         <div class="icon">
           <IconFont class="def" :name="item.icon"></IconFont>
-          <IconFont class="tick" name="chart-area"></IconFont>
+          <span class="tick">
+            <IconFont name="tick"></IconFont>
+          </span>
         </div>
         <div class="name">{{ item.name }}</div>
       </div>
@@ -108,12 +112,40 @@ function handleOk() {}
 
         .tick {
           position: absolute;
-          left: 0;
-          top: 0;
+          left: -5px;
+          top: -8px;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          background-color: #fff;
           transform: scale(0);
           opacity: 0;
           transition: 0.2s;
           transition-property: opacity, transform;
+          text-align: center;
+          // background-color: #fff;
+          // border-radius: 11em;
+
+          // &::after {
+          //   content: '';
+          //   position: absolute;
+          //   left: 29%;
+          //   top: 49%;
+          //   display: table;
+          //   width: 5.71428571em;
+          //   height: 9.14285714em;
+          //   font-size: 2.5px;
+          //   border: 1.7em solid #3099f5;
+          //   border-top: 0;
+          //   border-left: 0;
+          //   transform: rotate(45deg) scale(1) translate(-50%, -50%);
+          // }
+          .iconfont {
+            line-height: 50px;
+            color: #3099f5;
+            font-size: 18px;
+            font-weight: bold;
+          }
         }
 
         .iconfont {

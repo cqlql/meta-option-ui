@@ -11,6 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-tick:before {
+  content: "\e623";
+}
+
 .icon-chart-k-bar:before {
   content: "\e622";
 }
