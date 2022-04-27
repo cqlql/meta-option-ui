@@ -35,10 +35,10 @@ function indicatorsSelect() {}
         ></a-select>
       </div>
       <div class="cell" @mousedown.prevent @click="chartTypeSelect">
-        <IconFont name="setting"></IconFont>
+        <IconFont name="chart-area"></IconFont>
       </div>
       <div class="cell" @mousedown.prevent @click="indicatorsSelect">
-        <IconFont name="setting"></IconFont>
+        <IconFont name="chart-k-bar"></IconFont>
       </div>
     </div>
 

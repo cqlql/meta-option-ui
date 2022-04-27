@@ -50,15 +50,36 @@ import BgImg from '@/components/BgImg.vue'
 
     <div class="content">
       <h3>How it work</h3>
-      <div v-for="v of 3" :key="v" class="box">
+      <div class="box">
         <div class="title">
-          <IconFont name="internet"></IconFont>
+          <IconFont name="give-money"></IconFont>
           <span>Deposit</span>
         </div>
         <div class="text">
           Open an account and add funds. We work with trusted payment systems.
           Your safety and security is our priority first. Deposit funds and
           enable trading function.
+        </div>
+      </div>
+      <div class="box">
+        <div class="title">
+          <IconFont name="chart-up"></IconFont>
+          <span>Trade</span>
+        </div>
+        <div class="text">
+          Trade on global market products from commodities, to forex and
+          cryptocurrencies. Use technical analysis and trade the news.
+        </div>
+      </div>
+      <div class="box">
+        <div class="title">
+          <IconFont name="withdraw-money"></IconFont>
+          <span>Withdraw</span>
+        </div>
+        <div class="text">
+          Get funds easily to your bank card or bank account or e-wallet. Trade
+          with real-time assistance of our certified trade and market experts
+          for progressive earnings. Withdrawal convience
         </div>
       </div>
 

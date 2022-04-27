@@ -11,6 +11,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chart-k-bar:before {
+  content: "\e622";
+}
+
+.icon-chart-line:before {
+  content: "\e620";
+}
+
+.icon-chart-stick:before {
+  content: "\e621";
+}
+
+.icon-chart-area:before {
+  content: "\e61f";
+}
+
+.icon-chart-k-line:before {
+  content: "\e61e";
+}
+
+.icon-withdraw-money:before {
+  content: "\e619";
+}
+
+.icon-chart-up:before {
+  content: "\e618";
+}
+
+.icon-give-money:before {
+  content: "\e617";
+}
+
 .icon-setting:before {
   content: "\e616";
 }
