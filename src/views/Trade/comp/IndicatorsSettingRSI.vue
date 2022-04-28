@@ -11,54 +11,64 @@ import IndicatorsSetting from './IndicatorsSetting.vue'
 <template>
   <IndicatorsSetting v-bind="$attrs">
     <div class="row full">
-      <div v-for="v of 3" :key="v" class="cell">
+      <div class="cell">
         <div class="label"> Fast period </div>
         <div class="ipt">
-          <a-input-number :min="1" :max="10" />
+          <WidthSelect></WidthSelect>
         </div>
       </div>
-    </div>
-    <div class="title">MACD</div>
-    <div class="row">
       <div class="cell">
-        <div class="label"> Color </div>
+        <div class="label"> Fast period </div>
         <div class="ipt">
           <ColorSelect></ColorSelect>
         </div>
       </div>
       <div class="cell">
-        <div class="label"> Width </div>
+        <div class="label"> Fast period </div>
         <div class="ipt">
           <WidthSelect></WidthSelect>
         </div>
       </div>
     </div>
-    <div class="title">Signal line</div>
-    <div class="row">
+    <div class="title">Overbought</div>
+    <div class="row full">
       <div class="cell">
-        <div class="label"> Color </div>
+        <div class="label"> Fast period </div>
+        <div class="ipt">
+          <WidthSelect></WidthSelect>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="label"> Fast period </div>
         <div class="ipt">
           <ColorSelect></ColorSelect>
         </div>
       </div>
       <div class="cell">
-        <div class="label"> Width </div>
+        <div class="label"> Fast period </div>
         <div class="ipt">
           <WidthSelect></WidthSelect>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="title">Oversold</div>
+    <div class="row full">
       <div class="cell">
-        <div class="label"> Color ↑ </div>
+        <div class="label"> Fast period </div>
+        <div class="ipt">
+          <WidthSelect></WidthSelect>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="label"> Fast period </div>
         <div class="ipt">
           <ColorSelect></ColorSelect>
         </div>
       </div>
       <div class="cell">
-        <div class="label"> Color ↓ </div>
+        <div class="label"> Fast period </div>
         <div class="ipt">
-          <ColorSelect></ColorSelect>
+          <WidthSelect></WidthSelect>
         </div>
       </div>
     </div>

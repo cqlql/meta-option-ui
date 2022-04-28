@@ -20,5 +20,5 @@ const options = [
 ]
 </script>
 <template>
-  <a-select :options="options"> </a-select>
+  <a-select value="2px" :options="options"> </a-select>
 </template>

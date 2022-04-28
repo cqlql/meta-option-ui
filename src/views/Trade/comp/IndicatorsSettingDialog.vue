@@ -4,6 +4,8 @@ import { ref } from 'vue'
 import IndicatorsParams from './IndicatorsParams.vue'
 import IndicatorsSelect from './IndicatorsSelect.vue'
 import IndicatorsSettingMACD from './IndicatorsSettingMACD.vue'
+import IndicatorsSettingRSI from './IndicatorsSettingRSI.vue'
+import IndicatorsSettingMovingAverage from './IndicatorsSettingMovingAverage.vue'
 const ATabPane = ATabs.TabPane
 defineProps<{
   visible: boolean
@@ -26,14 +28,30 @@ const activeKey = ref('1')
   >
     <a-tabs v-model:activeKey="activeKey" animated>
       <a-tab-pane key="1" tab="New indicator">
-        <IndicatorsSelect
-          v-show="!indicatorType"
-          v-model="indicatorType"
-        ></IndicatorsSelect>
-        <IndicatorsSettingMACD
-          v-show="indicatorType === 'MACD'"
-          @cancel="indicatorType = ''"
-        ></IndicatorsSettingMACD>
+        <Transition name="slide-right">
+          <IndicatorsSelect
+            v-show="!indicatorType"
+            v-model="indicatorType"
+          ></IndicatorsSelect>
+        </Transition>
+        <Transition name="slide-left">
+          <IndicatorsSettingMACD
+            v-show="indicatorType === 'MACD'"
+            @cancel="indicatorType = ''"
+          ></IndicatorsSettingMACD>
+        </Transition>
+        <Transition name="slide-left">
+          <IndicatorsSettingMovingAverage
+            v-show="indicatorType === 'MovingAverage'"
+            @cancel="indicatorType = ''"
+          ></IndicatorsSettingMovingAverage>
+        </Transition>
+        <Transition name="slide-left">
+          <IndicatorsSettingRSI
+            v-show="indicatorType === 'RSI'"
+            @cancel="indicatorType = ''"
+          ></IndicatorsSettingRSI>
+        </Transition>
       </a-tab-pane>
       <a-tab-pane key="2" tab="Current indicators">
         <IndicatorsParams></IndicatorsParams>
@@ -45,16 +63,37 @@ const activeKey = ref('1')
 <style lang="less" module>
 .dialog {
   :global {
+    .slide-left-enter-active,
+    .slide-right-enter-active {
+      transition: transform 0.3s ease;
+    }
+
+    .slide-left-leave-active,
+    .slide-right-leave-active {
+      display: none;
+      // transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+
+    .slide-left-enter-from {
+      transform: translateX(100%);
+      // opacity: 0;
+    }
+
+    .slide-right-enter-from {
+      transform: translateX(-100%);
+      // opacity: 0;
+    }
+
     // =================================
     // ==============ant-modal==========
     // =================================
 
-    // .ant-btn {
-    //   // height: 38px;
-    //   // padding: 0 56px;
-    //   // font-size: 15px;
-    //   padding: 0 30px;
-    // }
+    .ant-btn {
+      // height: 38px;
+      // padding: 0 56px;
+      // font-size: 15px;
+      padding: 0 30px;
+    }
 
     // .ant-btn:first-child {
     //   display: none;

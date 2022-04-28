@@ -33,6 +33,7 @@ const options = [
     :class="$style.select"
     :dropdownClassName="$style.select"
     optionLabelProp="children"
+    value="rgb(240, 197, 47)"
   >
     <a-select-option
       v-for="item of options"
