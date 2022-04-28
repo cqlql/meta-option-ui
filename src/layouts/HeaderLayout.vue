@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
+import { Popover as APopover } from 'ant-design-vue'
+import LangList from './comp/LangList.vue'
 </script>
 <template>
   <div class="LayoutHeader">
@@ -25,15 +27,21 @@ import Icon from '@/components/Icon/src/Icon.vue'
           <Icon icon="ic:baseline-add"></Icon>
         </span>
       </div>
-      <div class="item btn-box select-locale">
-        <img
-          class="flag-icon"
-          width="23"
-          height="15"
-          src="https://static.expertoption.com/flags/languages/png/zh-Hans.png?v=1"
-        />
-        <span class="title">简体中文</span>
-      </div>
+      <a-popover placement="bottom" trigger="click">
+        <template #content>
+          <LangList></LangList>
+        </template>
+
+        <div class="item btn-box select-locale">
+          <img
+            class="flag-icon"
+            width="23"
+            height="15"
+            src="https://static.expertoption.com/flags/languages/png/zh-Hans.png?v=1"
+          />
+          <span class="title">简体中文</span>
+        </div>
+      </a-popover>
     </div>
   </div>
 </template>
@@ -98,13 +106,13 @@ import Icon from '@/components/Icon/src/Icon.vue'
     }
 
     .dummy::after {
+      content: '';
       position: absolute;
       left: 50%;
       top: 0;
       display: block;
       width: 50%;
       height: 100%;
-      content: '';
       background-color: hsla(0, 0%, 100%, 0.1);
       border-radius: 0 16px 16px 0;
     }
