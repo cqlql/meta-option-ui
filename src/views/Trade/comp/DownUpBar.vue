@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import AddMinusBar from './AddMinusBar.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
-const props = defineProps<{
+defineProps<{
   modelValue: string
 }>()
-const emit = defineEmits<{
+defineEmits<{
   (e: 'update:modelValue', v: string): void
 }>()
 

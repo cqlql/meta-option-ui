@@ -2,28 +2,47 @@
 import Icon from '@/components/Icon/src/Icon.vue'
 import IconFont from '@/components/IconFont/IconFont.vue'
 
+defineProps<{
+  modelValue: string
+}>()
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', v: string): void
+}>()
 const list = [
   {
-    name: 'MACD',
+    key: 'MACD',
+    // name: 'MACD',
     icon: 'MACD',
   },
   {
+    key: 'MovingAverage',
     name: 'Moving Average',
     icon: 'line',
   },
   {
-    name: 'RSI',
+    key: 'RSI',
+    // name: 'RSI',
     icon: 'RSI',
   },
 ]
+
+function select(key: string) {
+  emit('update:modelValue', key)
+}
 </script>
 <template>
   <div class="IndicatorsSelect">
-    <div v-for="item of list" :key="item.name" class="item">
+    <div
+      v-for="item of list"
+      :key="item.key"
+      class="item"
+      @click="select(item.key)"
+    >
       <div class="icon">
         <IconFont :name="item.icon"></IconFont>
       </div>
-      <div class="name">{{ item.name }}</div>
+      <div class="name">{{ item.name || item.key }}</div>
       <div class="arrow">
         <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
       </div>

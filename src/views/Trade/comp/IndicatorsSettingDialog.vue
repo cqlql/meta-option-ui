@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Modal as AModal, Tabs as ATabs } from 'ant-design-vue'
-import Icon from '@/components/Icon/src/Icon.vue'
 import { ref } from 'vue'
 import IndicatorsParams from './IndicatorsParams.vue'
 import IndicatorsSelect from './IndicatorsSelect.vue'
@@ -13,12 +12,8 @@ const emit = defineEmits<{
   (e: 'update:visible', v: boolean): void
 }>()
 
-const selectedIndex = ref(0)
+const indicatorType = ref('')
 const activeKey = ref('1')
-
-function select(index: number) {
-  selectedIndex.value = index
-}
 </script>
 <template>
   <a-modal
@@ -31,8 +26,14 @@ function select(index: number) {
   >
     <a-tabs v-model:activeKey="activeKey" animated>
       <a-tab-pane key="1" tab="New indicator">
-        <IndicatorsSelect></IndicatorsSelect>
-        <IndicatorsSettingMACD></IndicatorsSettingMACD>
+        <IndicatorsSelect
+          v-show="!indicatorType"
+          v-model="indicatorType"
+        ></IndicatorsSelect>
+        <IndicatorsSettingMACD
+          v-show="indicatorType === 'MACD'"
+          @cancel="indicatorType = ''"
+        ></IndicatorsSettingMACD>
       </a-tab-pane>
       <a-tab-pane key="2" tab="Current indicators">
         <IndicatorsParams></IndicatorsParams>
