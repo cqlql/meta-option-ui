@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const list = [
   {
-    icon: '/static/flags/languages/en.png',
+    icon: 'static/flags/languages/en.png',
     label: 'English',
   },
   {
-    icon: '/static/flags/languages/zh-Hans.png',
+    icon: 'static/flags/languages/zh-Hans.png',
     label: '简体中文',
   },
 ]

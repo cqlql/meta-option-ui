@@ -41,7 +41,7 @@ import LangList from './comp/LangList.vue'
             class="flag-icon"
             width="23"
             height="15"
-            src="/static/flags/languages/zh-Hans.png"
+            src="static/flags/languages/zh-Hans.png"
           />
           <span class="title">简体中文</span>
         </div>
