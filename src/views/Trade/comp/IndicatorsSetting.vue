@@ -56,11 +56,5 @@ defineEmits<{
       min-width: 122px;
     }
   }
-
-  footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-  }
 }
 </style>

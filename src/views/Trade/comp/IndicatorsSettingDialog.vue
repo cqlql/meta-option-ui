@@ -84,6 +84,12 @@ const activeKey = ref('1')
       // opacity: 0;
     }
 
+    footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+    }
+
     // =================================
     // ==============ant-modal==========
     // =================================

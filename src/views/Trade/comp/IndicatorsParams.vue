@@ -37,6 +37,10 @@ import Icon from '@/components/Icon/src/Icon.vue'
         </tr>
       </tbody>
     </table>
+
+    <footer>
+      <a-button @click="$emit('cancel')" type="info">Remove All</a-button>
+    </footer>
   </div>
 </template>
 
