@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-import ColorSelect from './ColorSelect.vue'
-import WidthSelect from './WidthSelect.vue'
-import { InputNumber as AInputNumber } from 'ant-design-vue'
-
 defineEmits<{
   (e: 'cancel'): void
 }>()
 </script>
 <template>
-  <div class="IndicatorsSettingMACD">
+  <div :class="$style.MACD">
     <slot></slot>
     <footer>
       <a-button @click="$emit('cancel')" type="info">Cancel</a-button>
@@ -17,11 +13,11 @@ defineEmits<{
   </div>
 </template>
 
-<style lang="less" scoped>
-.IndicatorsSettingMACD {
+<style lang="less" module>
+.MACD {
   padding: 15px 30px 0;
 
-  ::v-deep {
+  :global {
     .row {
       display: flex;
       margin-bottom: 15px;

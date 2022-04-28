@@ -1,13 +1,26 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const list = [
+  {
+    icon: '/static/flags/languages/en.png',
+    label: 'English',
+  },
+  {
+    icon: '/static/flags/languages/zh-Hans.png',
+    label: '简体中文',
+  },
+]
+</script>
 <template>
   <div class="langList">
-    <div v-for="v of 14" :key="v" :class="{ active: v === 1 }" class="langItem">
-      <img
-        class="flag-icon"
-        src="https://static.expertoption.com/flags/languages/png/zh-Hans.png?v=1"
-      />
+    <div
+      v-for="(item, index) of list"
+      :key="index"
+      :class="{ active: index === 1 }"
+      class="langItem"
+    >
+      <img class="flag-icon" :src="item.icon" />
 
-      <span>简体中文</span>
+      <span>{{ item.label }}</span>
     </div>
   </div>
 </template>

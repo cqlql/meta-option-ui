@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import ColorSelect from './ColorSelect.vue'
 import WidthSelect from './WidthSelect.vue'
-import { InputNumber as AInputNumber } from 'ant-design-vue'
 import IndicatorsSetting from './IndicatorsSetting.vue'
 
 // defineEmits<{

@@ -27,7 +27,11 @@ import LangList from './comp/LangList.vue'
           <Icon icon="ic:baseline-add"></Icon>
         </span>
       </div>
-      <a-popover placement="bottom" trigger="click">
+      <a-popover
+        :overlayClassName="$style.popover"
+        placement="bottom"
+        trigger="click"
+      >
         <template #content>
           <LangList></LangList>
         </template>
@@ -37,7 +41,7 @@ import LangList from './comp/LangList.vue'
             class="flag-icon"
             width="23"
             height="15"
-            src="https://static.expertoption.com/flags/languages/png/zh-Hans.png?v=1"
+            src="/static/flags/languages/zh-Hans.png"
           />
           <span class="title">简体中文</span>
         </div>
@@ -45,7 +49,15 @@ import LangList from './comp/LangList.vue'
     </div>
   </div>
 </template>
-
+<style lang="less" module>
+.popover {
+  :global {
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+  }
+}
+</style>
 <style lang="less" scoped>
 .LayoutHeader {
   display: flex;
