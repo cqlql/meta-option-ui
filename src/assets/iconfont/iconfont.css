@@ -11,6 +11,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-RSI:before {
+  content: "\e628";
+}
+
+.icon-line:before {
+  content: "\e627";
+}
+
+.icon-MACD:before {
+  content: "\e626";
+}
+
 .icon-tick:before {
   content: "\e623";
 }

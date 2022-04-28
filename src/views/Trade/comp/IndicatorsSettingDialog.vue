@@ -4,6 +4,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import { ref } from 'vue'
 import IndicatorsParams from './IndicatorsParams.vue'
 import IndicatorsSelect from './IndicatorsSelect.vue'
+import IndicatorsSettingMACD from './IndicatorsSettingMACD.vue'
 const ATabPane = ATabs.TabPane
 defineProps<{
   visible: boolean
@@ -31,6 +32,7 @@ function select(index: number) {
     <a-tabs v-model:activeKey="activeKey" animated>
       <a-tab-pane key="1" tab="New indicator">
         <IndicatorsSelect></IndicatorsSelect>
+        <IndicatorsSettingMACD></IndicatorsSettingMACD>
       </a-tab-pane>
       <a-tab-pane key="2" tab="Current indicators">
         <IndicatorsParams></IndicatorsParams>
@@ -46,16 +48,16 @@ function select(index: number) {
     // ==============ant-modal==========
     // =================================
 
-    .ant-btn {
-      // height: 38px;
-      // padding: 0 56px;
-      // font-size: 15px;
-      padding: 0 30px;
-    }
+    // .ant-btn {
+    //   // height: 38px;
+    //   // padding: 0 56px;
+    //   // font-size: 15px;
+    //   padding: 0 30px;
+    // }
 
-    .ant-btn:first-child {
-      display: none;
-    }
+    // .ant-btn:first-child {
+    //   display: none;
+    // }
 
     .ant-modal-body {
       padding: 0;

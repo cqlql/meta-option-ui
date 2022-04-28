@@ -5,12 +5,15 @@ import IconFont from '@/components/IconFont/IconFont.vue'
 const list = [
   {
     name: 'MACD',
+    icon: 'MACD',
   },
   {
     name: 'Moving Average',
+    icon: 'line',
   },
   {
     name: 'RSI',
+    icon: 'RSI',
   },
 ]
 </script>
@@ -18,7 +21,7 @@ const list = [
   <div class="IndicatorsSelect">
     <div v-for="item of list" :key="item.name" class="item">
       <div class="icon">
-        <IconFont name="setting"></IconFont>
+        <IconFont :name="item.icon"></IconFont>
       </div>
       <div class="name">{{ item.name }}</div>
       <div class="arrow">
