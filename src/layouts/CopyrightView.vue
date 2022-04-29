@@ -1,11 +1,10 @@
 <!-- <script lang="ts" setup></script> -->
 <template>
   <div class="copyright">
-    <span class="info">© 2022 Meta Option.</span>
+    <span class="info">© 2010-2022 Meta Option.</span>
     <span>All rights reserved.</span>
   </div>
 </template>
-
 <style lang="less" scoped>
 .copyright {
   height: 145px;
