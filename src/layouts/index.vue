@@ -29,7 +29,7 @@ import HeaderLayout from './HeaderLayout.vue'
 }
 
 .layout-content {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 60px;
   right: 0;
