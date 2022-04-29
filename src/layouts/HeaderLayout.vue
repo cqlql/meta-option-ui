@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
-import { Popover as APopover } from 'ant-design-vue'
-import LangList from './comp/LangList.vue'
 </script>
 <template>
   <div class="LayoutHeader">
@@ -27,37 +25,19 @@ import LangList from './comp/LangList.vue'
           <Icon icon="ic:baseline-add"></Icon>
         </span>
       </div>
-      <a-popover
-        :overlayClassName="$style.popover"
-        placement="bottom"
-        trigger="click"
-      >
-        <template #content>
-          <LangList></LangList>
-        </template>
-
-        <div class="item btn-box select-locale">
-          <img
-            class="flag-icon"
-            width="23"
-            height="15"
-            src="static/flags/languages/zh-Hans.png"
-          />
-          <span class="title">简体中文</span>
-        </div>
-      </a-popover>
+      <div class="item btn-box select-locale">
+        <img
+          class="flag-icon"
+          width="23"
+          height="15"
+          src="static/flags/languages/en.png"
+        />
+        <span class="title">English</span>
+      </div>
     </div>
   </div>
 </template>
-<style lang="less" module>
-.popover {
-  :global {
-    .ant-popover-inner-content {
-      padding: 0;
-    }
-  }
-}
-</style>
+
 <style lang="less" scoped>
 .LayoutHeader {
   display: flex;
