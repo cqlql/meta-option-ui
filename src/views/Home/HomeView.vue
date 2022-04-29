@@ -7,153 +7,155 @@ import IconFont from '@/components/IconFont/IconFont.vue'
 import BgImg from '@/components/BgImg.vue'
 </script>
 <template class>
-  <div class="HomeView_bg"> </div>
-  <HomeTopBg></HomeTopBg>
-  <div class="HomeView">
-    <BgImg></BgImg>
-    <HomeHeader></HomeHeader>
-    <div class="top">
-      <h2> <div>Making your trading</div> <div>dream a reality</div> </h2>
-      <div class="des">Shine on the global markets</div>
+  <div>
+    <div class="HomeView_bg"> </div>
+    <HomeTopBg></HomeTopBg>
+    <div class="HomeView">
+      <BgImg></BgImg>
+      <HomeHeader></HomeHeader>
+      <div class="top">
+        <h2> <div>Making your trading</div> <div>dream a reality</div> </h2>
+        <div class="des">Shine on the global markets</div>
 
-      <div class="join-btn">
-        <a-button type="primary">Join Now</a-button>
+        <div class="join-btn">
+          <a-button type="primary">Join Now</a-button>
+        </div>
       </div>
-    </div>
-    <div class="market-bar">
-      <div class="item">
-        <span class="label">USDJPY : </span>
-        <span class="value down">109.8472</span>
-      </div>
-      <div class="item">
-        <span class="label">GBPUSD : </span>
-        <span class="value">1.3928</span>
-      </div>
+      <div class="market-bar">
+        <div class="item">
+          <span class="label">USDJPY : </span>
+          <span class="value down">109.8472</span>
+        </div>
+        <div class="item">
+          <span class="label">GBPUSD : </span>
+          <span class="value">1.3928</span>
+        </div>
 
-      <div class="item">
-        <span class="label">EURJPY : </span>
-        <span class="value">129.8579</span>
-      </div>
-      <div class="item">
-        <span class="label">USDJPY : </span>
-        <span class="value">129.8579</span>
-      </div>
-      <div class="item">
-        <span class="label">GBPUSD : </span>
-        <span class="value">129.8579</span>
-      </div>
-      <div class="item">
-        <span class="label">EURJPY : </span>
-        <span class="value">129.8579</span>
-      </div>
-    </div>
-
-    <div class="content">
-      <h3>How it work</h3>
-      <div class="box">
-        <div class="title">
-          <IconFont name="give-money"></IconFont>
-          <span>Deposit</span>
+        <div class="item">
+          <span class="label">EURJPY : </span>
+          <span class="value">129.8579</span>
         </div>
-        <div class="text">
-          Open an account and add funds. We work with trusted payment systems.
-          Your safety and security is our priority first. Deposit funds and
-          enable trading function.
+        <div class="item">
+          <span class="label">USDJPY : </span>
+          <span class="value">129.8579</span>
         </div>
-      </div>
-      <div class="box">
-        <div class="title">
-          <IconFont name="chart-up"></IconFont>
-          <span>Trade</span>
+        <div class="item">
+          <span class="label">GBPUSD : </span>
+          <span class="value">129.8579</span>
         </div>
-        <div class="text">
-          Trade on global market products from commodities, to forex and
-          cryptocurrencies. Use technical analysis and trade the news.
-        </div>
-      </div>
-      <div class="box">
-        <div class="title">
-          <IconFont name="withdraw-money"></IconFont>
-          <span>Withdraw</span>
-        </div>
-        <div class="text">
-          Get funds easily to your bank card or bank account or e-wallet. Trade
-          with real-time assistance of our certified trade and market experts
-          for progressive earnings. Withdrawal convience
+        <div class="item">
+          <span class="label">EURJPY : </span>
+          <span class="value">129.8579</span>
         </div>
       </div>
 
-      <div class="Feautures">
-        <div class="title">
-          <Icon icon="clarity:favorite-line"></Icon>
-          Feautures</div
-        >
-        <div class="cont">
-          We provide fastest trading using modern technologies. No delays in
-          order executions and most accurate quotes. Our trading platform is
-          available around the clock and on weekends. Meta Option customer
-          service is available 24/7. We are continuously adding new financial
-          instruments.
+      <div class="content">
+        <h3>How it work</h3>
+        <div class="box">
+          <div class="title">
+            <IconFont name="give-money"></IconFont>
+            <span>Deposit</span>
+          </div>
+          <div class="text">
+            Open an account and add funds. We work with trusted payment systems.
+            Your safety and security is our priority first. Deposit funds and
+            enable trading function.
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">
+            <IconFont name="chart-up"></IconFont>
+            <span>Trade</span>
+          </div>
+          <div class="text">
+            Trade on global market products from commodities, to forex and
+            cryptocurrencies. Use technical analysis and trade the news.
+          </div>
+        </div>
+        <div class="box">
+          <div class="title">
+            <IconFont name="withdraw-money"></IconFont>
+            <span>Withdraw</span>
+          </div>
+          <div class="text">
+            Get funds easily to your bank card or bank account or e-wallet.
+            Trade with real-time assistance of our certified trade and market
+            experts for progressive earnings. Withdrawal convience
+          </div>
         </div>
 
-        <div class="list-box">
-          <ul>
-            <li>
-              Technical analysis tools : 4 chart types, 8 indicators, trend
-              lines
-            </li>
-            <li>
-              Social trading: watch deals across the globe or trade with your
-              friends Chart presentation, Technical analysis, and trade
-              oparations
-            </li>
-            <li>
-              Our traders can : Order, close out and view reports and analysis
-              data. Traders can also set stopping points and profit points, in
-              order to maintain all-day market monitoring and ensure maximum
-              profit.
-            </li>
-          </ul>
-        </div>
-      </div>
+        <div class="Feautures">
+          <div class="title">
+            <Icon icon="clarity:favorite-line"></Icon>
+            Feautures</div
+          >
+          <div class="cont">
+            We provide fastest trading using modern technologies. No delays in
+            order executions and most accurate quotes. Our trading platform is
+            available around the clock and on weekends. Meta Option customer
+            service is available 24/7. We are continuously adding new financial
+            instruments.
+          </div>
 
-      <div class="Feautures">
-        <div class="title">
-          <Icon icon="ant-design:safety-outlined"></Icon>
-          Trusted</div
-        >
-        <div class="cont">
-          Meta Option is the new generation in online trading industry. Steady,
-          secured and trusted software recognized by certified experts. Powerful
-          yet user-friendly interface. Easy to use platform, Be assured of using
-          a complicated-free interface.
+          <div class="list-box">
+            <ul>
+              <li>
+                Technical analysis tools : 4 chart types, 8 indicators, trend
+                lines
+              </li>
+              <li>
+                Social trading: watch deals across the globe or trade with your
+                friends Chart presentation, Technical analysis, and trade
+                oparations
+              </li>
+              <li>
+                Our traders can : Order, close out and view reports and analysis
+                data. Traders can also set stopping points and profit points, in
+                order to maintain all-day market monitoring and ensure maximum
+                profit.
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="btm">
-        <div class="title"> Global trading platform </div>
-        <div class="text">
-          <div> People from different countries trade at Meta Option </div>
-          <div>
-            New generation trading platform. Most popular international trading
-            platform for investment.
+
+        <div class="Feautures">
+          <div class="title">
+            <Icon icon="ant-design:safety-outlined"></Icon>
+            Trusted</div
+          >
+          <div class="cont">
+            Meta Option is the new generation in online trading industry.
+            Steady, secured and trusted software recognized by certified
+            experts. Powerful yet user-friendly interface. Easy to use platform,
+            Be assured of using a complicated-free interface.
+          </div>
+        </div>
+        <div class="btm">
+          <div class="title"> Global trading platform </div>
+          <div class="text">
+            <div> People from different countries trade at Meta Option </div>
+            <div>
+              New generation trading platform. Most popular international
+              trading platform for investment.
+            </div>
           </div>
         </div>
       </div>
+      <footer class="home-footer">
+        <div class="box">
+          Trading and investing involves significant level of risk and is not
+          suitable and/or appropriate for all clients. Please make sure you
+          carefully consider your investment objectives, level of experience and
+          risk appetite before buying or selling. Buying or selling entails
+          financial risks and could result in a partial or complete loss of your
+          funds, therefore, you should not invest funds you cannot afford to
+          lose. You should be aware of and fully understand all the risks
+          associated with trading and investing, and seek advice from an
+          independent financial advisor if you have any doubts.
+        </div>
+      </footer>
+      <CopyrightView></CopyrightView>
     </div>
-    <footer class="home-footer">
-      <div class="box">
-        Trading and investing involves significant level of risk and is not
-        suitable and/or appropriate for all clients. Please make sure you
-        carefully consider your investment objectives, level of experience and
-        risk appetite before buying or selling. Buying or selling entails
-        financial risks and could result in a partial or complete loss of your
-        funds, therefore, you should not invest funds you cannot afford to lose.
-        You should be aware of and fully understand all the risks associated
-        with trading and investing, and seek advice from an independent
-        financial advisor if you have any doubts.
-      </div>
-    </footer>
-    <CopyrightView></CopyrightView>
   </div>
 </template>
 
