@@ -60,7 +60,7 @@ function close() {
       <ul>
         <li v-for="item of list" :key="item.name">
           <router-link
-            class="font-medium transition hover:opacity-80 focus:outline-none focus-visible:underline"
+            class="font-medium transition"
             :to="{ name: item.name }"
             >{{ item.title }}</router-link
           >
@@ -102,7 +102,7 @@ function close() {
   bottom: 0;
   z-index: 2;
   // left: (380px/2);
-  width: 380px;
+  width: 260px;
   height: 100vh;
   line-height: 28px;
   font-size: 20px;
@@ -147,12 +147,21 @@ function close() {
     // text-align: center;
   }
 
-  &::v-deep(li) {
-    margin: 32px 0;
-    padding-left: 20px;
+  li {
+    // padding: 10px 0;
+    margin: 12px 0;
 
     a {
+      display: block;
+      height: 48px;
+      line-height: 48px;
       color: #fff;
+      padding-left: 20px;
+      transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background-color: #009aff;
+      }
     }
   }
 

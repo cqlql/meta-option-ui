@@ -42,7 +42,7 @@ import HeaderLayout from './HeaderLayout.vue'
 .layout-aside {
   position: relative;
   z-index: 1;
-  width: 83px;
+  // width: 83px;
   background-color: #171e2d;
   box-shadow: 0 10px 58px 0 rgb(0 0 0 / 24%);
 }

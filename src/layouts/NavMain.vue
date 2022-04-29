@@ -103,6 +103,7 @@ function to(item: ItemType) {
 
     &.active {
       color: @primary-color;
+      background-color: #242c3d;
 
       &::before {
         opacity: 1;
