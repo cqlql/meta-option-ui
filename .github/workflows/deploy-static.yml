@@ -35,7 +35,7 @@ jobs:
       - name: 构建静态页
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm run build:no-clean
+        run: pnpm run build
 
       - name: 部署
         uses: JamesIves/github-pages-deploy-action@v4

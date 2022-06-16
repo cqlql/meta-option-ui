@@ -5,7 +5,6 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --no-module",
-    "build:no-clean": "vue-cli-service build --no-module --no-clean",
     "build:report": "vue-cli-service build --no-module --report",
     "test:unit": "jest --clearCache && vue-cli-service test:unit --watch -i",
     "lint": "vue-cli-service lint",
