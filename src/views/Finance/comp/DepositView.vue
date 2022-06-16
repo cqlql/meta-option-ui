@@ -4,6 +4,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import TitleItem from './TitleItem.vue'
 import LayoutView from './LayoutView.vue'
+import { ref } from 'vue'
 
 const amountList = [
   {
@@ -27,6 +28,9 @@ const amountList = [
     type: 'white',
   },
 ]
+
+const calculatorAmount = ref('100,000')
+const enterAmount = ref('100,000')
 </script>
 <template>
   <LayoutView class="DepositView">
@@ -53,7 +57,10 @@ const amountList = [
           </CheckboxPlus>
         </TitleItem>
         <TitleItem class="mt-8" title="Calculator">
-          <LabelInput title="$ USD" value="100,000"></LabelInput>
+          <LabelInput
+            v-model:value="calculatorAmount"
+            title="$ USD"
+          ></LabelInput>
           <div class="row-list">
             <table>
               <colgroup>
@@ -87,7 +94,7 @@ const amountList = [
           </template>
         </CheckboxPlus>
 
-        <LabelInput title="$ USD" value="100,000"></LabelInput>
+        <LabelInput v-model:value="enterAmount" title="$ USD"></LabelInput>
 
         <div class="one-data">
           <table>

@@ -3,6 +3,9 @@ defineProps<{
   value: string
   title?: string
 }>()
+defineEmits<{
+  (e: 'update:value', v: string): void
+}>()
 </script>
 <template>
   <div class="LabelInput">
@@ -11,7 +14,11 @@ defineProps<{
       <slot name="title"></slot>
     </span>
     <span class="ipt">
-      <a-input type="text" :value="value" />
+      <a-input
+        type="text"
+        :value="value"
+        @update:value="(v:string) => $emit('update:value', v)"
+      />
     </span>
   </div>
 </template>
