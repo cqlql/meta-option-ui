@@ -90,5 +90,3 @@ const data = [
     <a-button class="!text-gray-400" type="link">No more details...</a-button>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

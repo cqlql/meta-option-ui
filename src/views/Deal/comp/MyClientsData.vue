@@ -77,4 +77,3 @@ const dialogVisible = ref(false)
   <MyClientsDataDialog v-model:visible="dialogVisible"></MyClientsDataDialog>
 </template>
 
-<style lang="scss" scoped></style>
