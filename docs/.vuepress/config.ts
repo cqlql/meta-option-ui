@@ -1,9 +1,9 @@
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { defineUserConfig, UserConfig, viteBundler } from 'vuepress'
+import { UserConfig, viteBundler } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import theme from './theme'
 
-interface Config extends UserConfig {
+interface Config extends Omit<UserConfig, 'base'> {
   base: string
 }
 
