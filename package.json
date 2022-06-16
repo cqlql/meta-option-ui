@@ -4,14 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --no-module",
+    "build": "vue-cli-service build --no-module --no-clean",
     "build:report": "vue-cli-service build --no-module --report",
     "test:unit": "jest --clearCache && vue-cli-service test:unit --watch -i",
     "lint": "vue-cli-service lint",
-    "download:iconfont": "node build/iconfont-download.js",
-    "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "vuepress dev docs"
+    "download:iconfont": "node build/iconfont-download.js"
   },
   "dependencies": {
     "ant-design-vue": "3.2.7",
