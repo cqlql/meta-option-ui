@@ -1,15 +1,23 @@
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { defineUserConfig, viteBundler } from 'vuepress'
+import { defineUserConfig, UserConfig, viteBundler } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import theme from './theme'
 
-export default defineUserConfig({
+interface Config extends UserConfig {
+  base: string
+}
+
+function defineConfig(config: Config) {
+  return config
+}
+
+export default defineConfig({
   port: 3002,
   lang: 'zh-CN',
   title: '开发文档',
   // description: 'welcome',
 
-  base: '/',
+  base: `/docs`,
 
   head: [
     [
