@@ -2,6 +2,9 @@
 import AvatarUser from '@/components/AvatarUser.vue'
 import BalanceList from './BalanceList.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
+import { inject } from 'vue'
+import { TabVal } from '../types'
+const tabVal = inject<TabVal>('tabVal')
 </script>
 <template>
   <div class="AccountBalance">
@@ -17,7 +20,7 @@ import Icon from '@/components/Icon/src/Icon.vue'
     </div>
 
     <div class="btn">
-      <a-button block>
+      <a-button @click="tabVal = 'BankCard'" block>
         <Icon icon="ant-design:plus-circle-outlined"></Icon>
         <span>ADD YOUR BANK CARD</span>
       </a-button>
