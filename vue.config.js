@@ -1,4 +1,5 @@
 const path = require('path')
+const { getThemeVariables } = require('ant-design-vue/dist/theme')
 const getLessVariables = require('./build/getLessVariables')
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -13,8 +14,15 @@ module.exports = {
     loaderOptions: {
       less: {
         lessOptions: {
-          modifyVars: cssVariate,
           globalVars: cssVariate,
+
+          modifyVars: {
+            ...getThemeVariables({
+              dark: true, // 开启暗黑模式
+            }),
+            ...cssVariate,
+          },
+          javascriptEnabled: true,
         },
       },
     },

@@ -147,6 +147,7 @@ provide('loginState', loginState)
 
   .ant-checkbox-inner {
     border-radius: 38px;
+    background-color: #fff;
   }
 
   .ant-checkbox-checked::after,
