@@ -15,7 +15,7 @@ const list = [
     <div
       v-for="(item, index) of list"
       :key="index"
-      :class="{ active: index === 1 }"
+      :class="{ active: index === 0 }"
       class="langItem"
     >
       <img class="flag-icon" :src="item.icon" />
