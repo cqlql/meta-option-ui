@@ -83,9 +83,14 @@ const amount = ref('Min.100')
   .row {
     border: solid 1px #333d51;
     border-radius: 3px;
+    color: #a2a9bb;
 
     & > div:first-child {
       border-right: solid 1px #333d51;
+    }
+
+    & > div:last-child {
+      background-color: #21293a;
     }
   }
 }
