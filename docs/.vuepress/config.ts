@@ -27,7 +27,7 @@ export default defineConfig({
         href: '//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css',
       },
     ],
-    ['link', { rel: 'icon', href: 'http://meta.cqlql.top/favicon.ico' }],
+    ['link', { rel: 'icon', href: 'https://meta.cqlql.top/favicon.ico' }],
   ],
   alias: {
     '@': __dirname,
