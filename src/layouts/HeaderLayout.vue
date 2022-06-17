@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
 import { Popover as APopover } from 'ant-design-vue'
+import { reactive } from 'vue'
 import LangList from './comp/LangList.vue'
+import SignOutDialog from '@/views/Login/SignOutDialog.vue'
+
+const signOutModal = reactive({
+  visible: false,
+})
 </script>
 <template>
   <div class="LayoutHeader">
@@ -10,7 +16,7 @@ import LangList from './comp/LangList.vue'
     </div>
 
     <div class="right">
-      <div class="item user">
+      <div @click="signOutModal.visible = true" class="item user">
         <div class="avatar mr-3">
           <i class="image dummy"></i>
           <!-- <img src="http://www.wenzizhan.com/Img/header/ASQW12546.jpg" alt="" /> -->
@@ -56,6 +62,7 @@ import LangList from './comp/LangList.vue'
         </div>
       </a-popover>
     </div>
+    <SignOutDialog v-model:visible="signOutModal.visible"></SignOutDialog>
   </div>
 </template>
 <style lang="less" module>

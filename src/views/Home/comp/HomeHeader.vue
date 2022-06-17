@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import MenuBtn from '@/components/MenuBtn.vue'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, reactive, ref } from 'vue'
 import HomeNav from './HomeNav.vue'
+import UserInfoBar from './UserInfoBar.vue'
+import SignOutDialog from '@/views/Login/SignOutDialog.vue'
 
 function onScroll() {
   topFixed.value = scrollY > 70
@@ -17,6 +19,10 @@ onUnmounted(() => {
 const topFixed = ref(false)
 
 const show = ref(false)
+
+const signOutDialog = reactive({
+  visible: false,
+})
 </script>
 <template>
   <header class="HomeHeader" :class="{ topFixed }">
@@ -32,11 +38,13 @@ const show = ref(false)
       <a-button @click="$router.push({ name: 'Login' })" ghost
         >Sign In</a-button
       >
+      <UserInfoBar @click="signOutDialog.visible = true"></UserInfoBar>
       <MenuBtn v-model:active="show" noStyle></MenuBtn>
     </div>
   </header>
 
   <HomeNav v-model:visible="show"></HomeNav>
+  <SignOutDialog v-model:visible="signOutDialog.visible"></SignOutDialog>
 </template>
 
 <style lang="less" scoped>
@@ -59,10 +67,15 @@ const show = ref(false)
     align-items: center;
     justify-content: flex-end;
 
-    .ant-btn + .ant-btn,
-    .MenuBtn {
+    & > * {
       margin-left: 20px;
     }
+
+    // .ant-btn + .ant-btn,
+    // .MenuBtn,
+    // .UserInfoBar {
+    //   margin-left: 20px;
+    // }
 
     .MenuBtn {
       margin-right: 20px;
