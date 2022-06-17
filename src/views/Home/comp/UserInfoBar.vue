@@ -1,8 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import AvatarDefault from '@/components/AvatarDefault.vue'
+</script>
 <template>
   <div class="UserInfoBar">
     <div class="avatar">
-      <img src="http://www.wenzizhan.com/Img/header/ASQW12546.jpg" alt="" />
+      <AvatarDefault></AvatarDefault>
+      <!-- <img src="http://www.wenzizhan.com/Img/header/ASQW12546.jpg" alt="" /> -->
     </div>
     <div class="name"> Nickname </div>
   </div>

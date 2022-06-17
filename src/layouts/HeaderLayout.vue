@@ -4,6 +4,7 @@ import { Popover as APopover } from 'ant-design-vue'
 import { reactive } from 'vue'
 import LangList from './comp/LangList.vue'
 import SignOutDialog from '@/views/Login/SignOutDialog.vue'
+import AvatarDefault from '@/components/AvatarDefault.vue'
 
 const signOutModal = reactive({
   visible: false,
@@ -18,7 +19,7 @@ const signOutModal = reactive({
     <div class="right">
       <div @click="signOutModal.visible = true" class="item user">
         <div class="avatar mr-3">
-          <i class="image dummy"></i>
+          <AvatarDefault></AvatarDefault>
           <!-- <img src="http://www.wenzizhan.com/Img/header/ASQW12546.jpg" alt="" /> -->
         </div>
         <div class="name">user</div>
@@ -113,37 +114,37 @@ const signOutModal = reactive({
       overflow: hidden;
     }
 
-    .image {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-color: #0d1424;
-    }
+    // .image {
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-size: cover;
+    //   background-color: #0d1424;
+    // }
 
-    .dummy {
-      position: relative;
-      display: block;
-      line-height: 30px;
-      color: #fff;
-      text-align: center;
-      font-style: normal;
-      font-weight: 600;
-      border-radius: 16px;
-      background-color: #0871cd;
-    }
+    // .dummy {
+    //   position: relative;
+    //   display: block;
+    //   line-height: 30px;
+    //   color: #fff;
+    //   text-align: center;
+    //   font-style: normal;
+    //   font-weight: 600;
+    //   border-radius: 16px;
+    //   background-color: #0871cd;
+    // }
 
-    .dummy::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      display: block;
-      width: 50%;
-      height: 100%;
-      background-color: hsla(0, 0%, 100%, 0.1);
-      border-radius: 0 16px 16px 0;
-    }
+    // .dummy::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 50%;
+    //   top: 0;
+    //   display: block;
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: hsla(0, 0%, 100%, 0.1);
+    //   border-radius: 0 16px 16px 0;
+    // }
   }
 
   .label-value {
