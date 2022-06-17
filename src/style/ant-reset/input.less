@@ -1,0 +1,84 @@
+// =================================
+// ==============ant-input==========
+// =================================
+
+body {
+  .ant-input-affix-wrapper {
+    background-color: #21293a;
+  }
+  .ant-input {
+    border: solid 1px #333d51;
+    background-color: #21293a;
+    color: #fff;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  .ant-input-affix-wrapper {
+    border: solid 1px #333d51;
+    background-color: #21293a;
+    color: #fff;
+  }
+  .anticon.ant-input-clear-icon {
+    color: #75859c;
+    &:hover {
+      color: #9cb0cd;
+    }
+  }
+
+  .ant-form-item-has-error
+    :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+  .ant-form-item-has-error
+    :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+  .ant-form-item-has-error
+    :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+    background-color: #21293a;
+  }
+  .ant-form-item-has-error
+    :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+  .ant-form-item-has-error
+    :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+  .ant-form-item-has-error
+    :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper,
+  .ant-form-item-has-error
+    :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+  .ant-form-item-has-error
+    :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+  .ant-form-item-has-error
+    :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover {
+    background-color: #21293a;
+  }
+
+  .ant-input-password-icon {
+    color: #8b949e;
+  }
+  .ant-input-password-icon:hover {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+// =================================
+// ==============ant-input-number===
+// =================================
+[data-theme='dark'] body {
+  .ant-input-number {
+    background-color: #21293a;
+    border: 1px solid #333d51;
+  }
+}
+
+// =================================
+// ==============ant-input-select===
+// =================================
+// [data-theme='dark'] .ant-select-selector {
+//   background-color: #21293a;
+//   border: 1px solid #333d51;
+// }
+[data-theme='dark'] {
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: #21293a;
+    border: 1px solid #333d51;
+  }
+}
