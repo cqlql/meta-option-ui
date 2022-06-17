@@ -14,6 +14,7 @@ export default {
 <script lang="ts" setup>
 import { ref } from 'vue'
 import TabButtons from '@/components/TabButtons.vue'
+import { useRoute } from 'vue-router'
 
 const list = [
   {
@@ -29,8 +30,11 @@ const list = [
     value: 'WithdrawalView',
   },
 ]
+const route = useRoute()
 
-const tabVal = ref('DepositView')
+const tabVal = ref(
+  (route.query.tab as string) ? (route.query.tab as string) : 'DepositView',
+)
 </script>
 <template>
   <div class="mx-18 my-8">

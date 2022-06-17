@@ -4,10 +4,10 @@ import LabelInput from '@/components/LabelInput.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import CardValue from './CardValue.vue'
 import MyClientsData from './MyClientsData.vue'
-import { ref } from 'vue'
-import WithdrawDialog from './WithdrawDialog.vue'
+// import { ref } from 'vue'
+// import WithdrawDialog from './WithdrawDialog.vue'
 
-const withdrawDialogVisible = ref(false)
+// const withdrawDialogVisible = ref(false)
 </script>
 <template>
   <div class="BrokerCenter mt-12 mx-auto flex">
@@ -34,7 +34,12 @@ const withdrawDialogVisible = ref(false)
               class="!px-8"
               type="primary"
               size="large"
-              @click="withdrawDialogVisible = true"
+              @click="
+                $router.push({
+                  name: 'Finance',
+                  query: { tab: 'WithdrawalView' },
+                })
+              "
             >
               Withdraw
             </a-button>
@@ -90,7 +95,7 @@ const withdrawDialogVisible = ref(false)
       <MyClientsData />
     </div>
   </div>
-  <WithdrawDialog v-model:visible="withdrawDialogVisible"></WithdrawDialog>
+  <!-- <WithdrawDialog v-model:visible="withdrawDialogVisible"></WithdrawDialog> -->
 </template>
 
 <style lang="less" scoped>
