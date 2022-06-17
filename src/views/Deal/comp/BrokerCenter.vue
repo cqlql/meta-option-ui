@@ -4,10 +4,22 @@ import LabelInput from '@/components/LabelInput.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import CardValue from './CardValue.vue'
 import MyClientsData from './MyClientsData.vue'
+import { reactive } from 'vue'
+import MyClientsDataDialog from './MyClientsDataDialog.vue'
+import RecordDialog from './RecordDialog.vue'
+
 // import { ref } from 'vue'
 // import WithdrawDialog from './WithdrawDialog.vue'
 
 // const withdrawDialogVisible = ref(false)
+
+const clientsDialog = reactive({
+  visible: false,
+})
+
+const recordDialog = reactive({
+  visible: false,
+})
 </script>
 <template>
   <div class="BrokerCenter mt-12 mx-auto flex">
@@ -70,19 +82,19 @@ import MyClientsData from './MyClientsData.vue'
               <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
             </span>
           </div>
-          <div class="cell">
+          <!-- <div class="cell">
             <span class="value">Commision Detail</span>
             <span class="arrows">
               <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
             </span>
-          </div>
-          <div class="cell">
+          </div> -->
+          <div class="cell" @click="clientsDialog.visible = true">
             <span class="value">Clients</span>
             <span class="arrows">
               <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
             </span>
           </div>
-          <div class="cell">
+          <div class="cell" @click="recordDialog.visible = true">
             <span class="value">Clients transaction record</span>
             <span class="arrows">
               <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
@@ -96,6 +108,10 @@ import MyClientsData from './MyClientsData.vue'
     </div>
   </div>
   <!-- <WithdrawDialog v-model:visible="withdrawDialogVisible"></WithdrawDialog> -->
+  <MyClientsDataDialog
+    v-model:visible="clientsDialog.visible"
+  ></MyClientsDataDialog>
+  <RecordDialog v-model:visible="recordDialog.visible"></RecordDialog>
 </template>
 
 <style lang="less" scoped>
@@ -125,6 +141,11 @@ import MyClientsData from './MyClientsData.vue'
       border-radius: 0 @border-radius-base @border-radius-base 0;
       border: solid 1px #333d51;
       padding: 0 15px 0 23px;
+      cursor: pointer;
+
+      &:hover {
+        color: #389bf2;
+      }
     }
 
     .cell + .cell {
