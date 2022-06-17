@@ -76,11 +76,11 @@ const recordDialog = reactive({
           </CardValue>
         </div>
         <div class="cell-list">
-          <div class="cell">
-            <span class="value">My Introducer</span>
-            <span class="arrows">
+          <div class="cell noClick">
+            <span class="value">My Introducer : Jimmy M</span>
+            <!-- <span class="arrows">
               <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
-            </span>
+            </span> -->
           </div>
           <!-- <div class="cell">
             <span class="value">Commision Detail</span>
@@ -145,6 +145,11 @@ const recordDialog = reactive({
 
       &:hover {
         color: #389bf2;
+      }
+
+      &.noClick {
+        color: inherit;
+        cursor: default;
       }
     }
 

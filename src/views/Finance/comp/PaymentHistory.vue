@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import OpenPosition from './OpenPosition.vue'
-import ClosePosition from './ClosePosition.vue'
 import OpenAndClosePosition from './OpenAndClosePosition.vue'
-
-const radioVal = ref('a')
 </script>
 <template>
   <!-- 多的根元素是为了不延迟 enter-y -->
