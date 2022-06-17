@@ -1,7 +1,9 @@
 <template>
-  <Transition name="slide-right">
-    <router-view />
-  </Transition>
+  <router-view v-slot="{ Component }">
+    <transition name="slide-right">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <!-- <script lang="ts" setup></script> -->

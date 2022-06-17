@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
+
 const list = [
   {
     name: 'INR',
@@ -9,12 +11,17 @@ const list = [
   { name: 'AUD', value: '' },
   { name: 'EUR', value: '' },
 ]
+
+const amount = ref('Min.100')
 </script>
 <template>
   <div class="EnterAmout">
     <div class="EnterAmout_header">
       <div class="row">
-        <div>Min.100 </div>
+        <div>
+          <input v-model="amount" />
+          <!-- <a-input v-model:value="amount"></a-input> -->
+        </div>
         <div class="tilde"></div>
         <div>$ USD</div>
       </div>
@@ -59,6 +66,13 @@ const list = [
       width: 0;
       padding: 0;
       // padding-right: 15px;
+    }
+
+    input {
+      background-color: transparent;
+      outline: none;
+      width: 100%;
+      text-align: center;
     }
   }
 }
