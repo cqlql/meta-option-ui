@@ -2,12 +2,14 @@
 import DepositView from './comp/DepositView.vue'
 import PaymentHistory from './comp/PaymentHistory.vue'
 import WithdrawalView from './comp/WithdrawalView.vue'
+import WithdrawalView2 from './comp/WithdrawalView2.vue'
 
 export default {
   components: {
     DepositView,
     PaymentHistory,
     WithdrawalView,
+    WithdrawalView2,
   },
 }
 </script>
@@ -28,6 +30,10 @@ const list = [
   {
     label: 'Withdrawal',
     value: 'WithdrawalView',
+  },
+  {
+    label: 'Withdrawal2',
+    value: 'WithdrawalView2',
   },
 ]
 const route = useRoute()
