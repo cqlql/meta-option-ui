@@ -4,7 +4,8 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import LabelInput from '@/components/LabelInput.vue'
 import TitleItem from './TitleItem.vue'
 import LayoutView from './LayoutView.vue'
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
+import BankCardDialog from './BankCardDialog.vue'
 
 const amountList = [
   {
@@ -31,13 +32,26 @@ const amountList = [
 
 const calculatorAmount = ref('100,000')
 const enterAmount = ref('100,000')
+
+function onSelectPayment(item: { name: string }) {
+  if (item.name === 'bank') {
+    bankCardDialog.visible = true
+  }
+}
+
+const bankCardDialog = reactive({
+  visible: false,
+})
 </script>
 <template>
   <LayoutView class="DepositView">
     <template #left>
       <div class="left">
         <TitleItem title="Choose payment system">
-          <CheckboxPlus :list="[{ name: 'bank' }, { name: 'USDT' }]">
+          <CheckboxPlus
+            @select="onSelectPayment"
+            :list="[{ name: 'bank' }, { name: 'USDT' }]"
+          >
             <template #bank>
               <div class="CheckboxPayment_item">
                 <div class="img">
@@ -132,6 +146,8 @@ const enterAmount = ref('100,000')
       </TitleItem>
     </template>
   </LayoutView>
+
+  <BankCardDialog v-model:visible="bankCardDialog.visible"></BankCardDialog>
 </template>
 
 <style lang="less" scoped>

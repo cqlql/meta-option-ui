@@ -13,9 +13,13 @@ const formState: UnwrapRef<FormState> = reactive({
   fieldA: 'ABA Bank',
   fieldB: '',
 })
+
+defineProps<{
+  noTitle: boolean
+}>()
 </script>
 <template>
-  <CardBox class="BankAccount" title="Bank Account">
+  <CardBox class="BankAccount" noTitle title="Bank Account">
     <a-form
       class="form-s2 !pt-5"
       :model="formState"
@@ -23,34 +27,19 @@ const formState: UnwrapRef<FormState> = reactive({
       :wrapperCol="{ span: 16 }"
     >
       <a-form-item label="ABA Bank">
-        <a-input
-          v-model:value="formState.fieldA"
-          placeholder="input placeholder"
-        />
+        <a-input v-model:value="formState.fieldA" />
       </a-form-item>
       <a-form-item label="Account Name">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
-        />
+        <a-input v-model:value="formState.fieldB" />
       </a-form-item>
       <a-form-item label="Account No.">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
-        />
+        <a-input v-model:value="formState.fieldB" />
       </a-form-item>
       <a-form-item label="Type">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
-        />
+        <a-input v-model:value="formState.fieldB" />
       </a-form-item>
       <a-form-item label="IFSC code ">
-        <a-input
-          v-model:value="formState.fieldB"
-          placeholder="input placeholder"
-        />
+        <a-input v-model:value="formState.fieldB" />
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
         <div class="flex justify-center">

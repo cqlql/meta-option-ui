@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 defineProps<{
   title: string
+  noTitle: boolean
 }>()
 </script>
 <template>
   <div class="CardBox">
-    <div class="title">{{ title }}</div>
+    <div v-if="!noTitle" class="title">{{ title }}</div>
     <div class="content"> <slot></slot> </div>
   </div>
 </template>
