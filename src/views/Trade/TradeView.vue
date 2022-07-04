@@ -170,7 +170,7 @@ function indicatorsSelect() {
     width: 740px;
     // height: 80px;
     padding: 6px 15px;
-    margin-left: -262.5px;
+    margin-left: -(740px / 2);
     border-radius: 5px;
     background-color: rgba(28, 35, 51, 0.6);
     box-sizing: border-box;
