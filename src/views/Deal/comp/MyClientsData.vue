@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { Table as ATable, Avatar as AAvatar } from 'ant-design-vue'
 import CardBox from '@/components/CardBox.vue'
-import { ref } from 'vue'
-import MyClientsDataDialog from './MyClientsDataDialog.vue'
+import { reactive } from 'vue'
+// import MyClientsDataDialog from './MyClientsDataDialog.vue'
+import ShareDialog from './ShareDialog.vue'
 const columns = [
   {
     dataIndex: 'key',
@@ -41,7 +42,9 @@ const data = [
   },
 ]
 
-const dialogVisible = ref(false)
+const shareDialog = reactive({
+  visible: false,
+})
 </script>
 <template>
   <CardBox title="My Clients">
@@ -65,7 +68,7 @@ const dialogVisible = ref(false)
 
     <div class="text-right mt-6">
       <a-button
-        @click="dialogVisible = true"
+        @click="shareDialog.visible = true"
         class="!px-8"
         type="primary"
         size="large"
@@ -74,6 +77,6 @@ const dialogVisible = ref(false)
     </div>
   </CardBox>
 
-  <MyClientsDataDialog v-model:visible="dialogVisible"></MyClientsDataDialog>
+  <!-- <MyClientsDataDialog v-model:visible="dialogVisible"></MyClientsDataDialog> -->
+  <ShareDialog v-model:visible="shareDialog.visible"></ShareDialog>
 </template>
-

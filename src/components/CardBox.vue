@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 defineProps<{
   title: string
-  noTitle: boolean
+  noTitle?: boolean
 }>()
 </script>
 <template>
