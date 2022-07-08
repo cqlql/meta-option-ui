@@ -46,7 +46,17 @@ function indicatorsSelect() {
       </div>
     </div>
 
-    <div class="deal-controller">
+    <div v-if="'s2' in route.query" class="deal-info">
+      <div class="item">
+        <div class="label"> Estimate profit </div>
+        <div class="value green">91.50</div>
+      </div>
+      <div class="item">
+        <div class="label"> Expiration time </div>
+        <div class="value"> 00:18 </div>
+      </div>
+    </div>
+    <div v-else class="deal-controller">
       <div class="left">
         <div class="row-top">
           <div class="item">
@@ -294,6 +304,36 @@ function indicatorsSelect() {
 
     .title {
       color: #424b60;
+    }
+  }
+
+  .deal-info {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    z-index: 10;
+    display: flex;
+    padding: 25px 40px 20px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: rgba(28, 35, 51, 0.6);
+    box-sizing: border-box;
+    transition: width 0.2s, margin 0.2s;
+    gap: 50px;
+
+    .label {
+      line-height: 1;
+      color: #949eb9;
+      font-size: 18px;
+    }
+
+    .value {
+      color: #fff;
+      font-size: 27px;
+    }
+
+    .green {
+      color: #04af58;
     }
   }
 }
