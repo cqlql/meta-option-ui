@@ -46,7 +46,7 @@ function indicatorsSelect() {
       </div>
     </div>
 
-    <div v-if="'s2' in route.query" class="deal-info">
+    <div v-if="'s2' in $route.query" class="deal-info">
       <div class="item">
         <div class="label"> Estimate profit </div>
         <div class="value green">91.50</div>
