@@ -1,34 +1,34 @@
 <script lang="ts" setup>
-import Icon from '@/components/Icon/src/Icon.vue'
 import IconFont from '@/components/IconFont/IconFont.vue'
+import { reactive } from 'vue'
 
 defineProps<{
   modelValue: string
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:modelValue', v: string): void
-}>()
-const list = [
+const list = reactive([
   {
     key: 'MACD',
     // name: 'MACD',
     icon: 'MACD',
+    checked: false,
   },
   {
     key: 'MovingAverage',
     name: 'Moving Average',
     icon: 'line',
+    checked: false,
   },
   {
     key: 'RSI',
     // name: 'RSI',
     icon: 'RSI',
+    checked: false,
   },
-]
+])
 
-function select(key: string) {
-  emit('update:modelValue', key)
+function select(item: { checked: boolean }) {
+  item.checked = !item.checked
 }
 </script>
 <template>
@@ -37,14 +37,14 @@ function select(key: string) {
       v-for="item of list"
       :key="item.key"
       class="item"
-      @click="select(item.key)"
+      @click="select(item)"
     >
       <div class="icon">
         <IconFont :name="item.icon"></IconFont>
       </div>
       <div class="name">{{ item.name || item.key }}</div>
       <div class="arrow">
-        <Icon icon="ic:baseline-arrow-forward-ios"></Icon>
+        <a-checkbox v-model:checked="item.checked" />
       </div>
     </div>
   </div>

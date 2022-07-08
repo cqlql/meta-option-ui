@@ -3,15 +3,13 @@ import { Modal as AModal, Tabs as ATabs } from 'ant-design-vue'
 import { ref } from 'vue'
 import IndicatorsParams from './IndicatorsParams.vue'
 import IndicatorsSelect from './IndicatorsSelect.vue'
-import IndicatorsSettingMACD from './IndicatorsSettingMACD.vue'
-import IndicatorsSettingRSI from './IndicatorsSettingRSI.vue'
-import IndicatorsSettingMovingAverage from './IndicatorsSettingMovingAverage.vue'
 const ATabPane = ATabs.TabPane
 defineProps<{
   visible: boolean
 }>()
 const emit = defineEmits<{
   (e: 'update:visible', v: boolean): void
+  (e: 'cancel'): void
 }>()
 
 const indicatorType = ref('')
@@ -28,30 +26,14 @@ const activeKey = ref('1')
   >
     <a-tabs v-model:activeKey="activeKey" animated>
       <a-tab-pane key="1" tab="New indicator">
-        <Transition name="slide-right">
-          <IndicatorsSelect
-            v-show="!indicatorType"
-            v-model="indicatorType"
-          ></IndicatorsSelect>
-        </Transition>
-        <Transition name="slide-left">
-          <IndicatorsSettingMACD
-            v-show="indicatorType === 'MACD'"
-            @cancel="indicatorType = ''"
-          ></IndicatorsSettingMACD>
-        </Transition>
-        <Transition name="slide-left">
-          <IndicatorsSettingMovingAverage
-            v-show="indicatorType === 'MovingAverage'"
-            @cancel="indicatorType = ''"
-          ></IndicatorsSettingMovingAverage>
-        </Transition>
-        <Transition name="slide-left">
-          <IndicatorsSettingRSI
-            v-show="indicatorType === 'RSI'"
-            @cancel="indicatorType = ''"
-          ></IndicatorsSettingRSI>
-        </Transition>
+        <IndicatorsSelect
+          v-show="!indicatorType"
+          v-model="indicatorType"
+        ></IndicatorsSelect>
+        <footer>
+          <a-button @click="$emit('cancel')" type="info">Cancel</a-button>
+          <a-button type="primary">Apply</a-button>
+        </footer>
       </a-tab-pane>
       <a-tab-pane key="2" tab="Current indicators">
         <IndicatorsParams></IndicatorsParams>
@@ -63,27 +45,6 @@ const activeKey = ref('1')
 <style lang="less" module>
 .dialog {
   :global {
-    .slide-left-enter-active,
-    .slide-right-enter-active {
-      transition: transform 0.3s ease;
-    }
-
-    .slide-left-leave-active,
-    .slide-right-leave-active {
-      display: none;
-      // transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-    }
-
-    .slide-left-enter-from {
-      transform: translateX(100%);
-      // opacity: 0;
-    }
-
-    .slide-right-enter-from {
-      transform: translateX(-100%);
-      // opacity: 0;
-    }
-
     footer {
       display: flex;
       justify-content: space-around;
