@@ -20,32 +20,33 @@ import BgImg from '@/components/BgImg.vue'
         <div class="join-btn">
           <a-button type="primary">Join Now</a-button>
         </div>
-      </div>
-      <div class="market-bar">
-        <div class="item">
-          <span class="label">USDJPY : </span>
-          <span class="value down">109.8472</span>
-        </div>
-        <div class="item">
-          <span class="label">GBPUSD : </span>
-          <span class="value">1.3928</span>
-        </div>
 
-        <div class="item">
-          <span class="label">EURJPY : </span>
-          <span class="value">129.8579</span>
-        </div>
-        <div class="item">
-          <span class="label">USDJPY : </span>
-          <span class="value">129.8579</span>
-        </div>
-        <div class="item">
-          <span class="label">GBPUSD : </span>
-          <span class="value">129.8579</span>
-        </div>
-        <div class="item">
-          <span class="label">EURJPY : </span>
-          <span class="value">129.8579</span>
+        <div class="market-bar">
+          <div class="item">
+            <span class="label">USDJPY : </span>
+            <span class="value down">109.8472</span>
+          </div>
+          <div class="item">
+            <span class="label">GBPUSD : </span>
+            <span class="value">1.3928</span>
+          </div>
+
+          <div class="item">
+            <span class="label">EURJPY : </span>
+            <span class="value">129.8579</span>
+          </div>
+          <div class="item">
+            <span class="label">USDJPY : </span>
+            <span class="value">129.8579</span>
+          </div>
+          <div class="item">
+            <span class="label">GBPUSD : </span>
+            <span class="value">129.8579</span>
+          </div>
+          <div class="item">
+            <span class="label">EURJPY : </span>
+            <span class="value">129.8579</span>
+          </div>
         </div>
       </div>
 
@@ -174,7 +175,13 @@ import BgImg from '@/components/BgImg.vue'
   position: relative;
   min-width: 1024px;
 
+  .bgImg {
+    z-index: -1;
+  }
+
   .top {
+    position: relative;
+    height: 100vh;
     padding: 240px 72px 0;
 
     h2 {
@@ -201,17 +208,28 @@ import BgImg from '@/components/BgImg.vue'
   }
 
   .market-bar {
+    position: absolute;
+    left: 38px;
+    right: 38px;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 52px;
-    margin: 0 38px;
+    // height: 52px;
+    padding: 10px 10px 0;
+    // margin: 0 38px;
+    font-size: 18px;
+    flex-wrap: wrap;
     background-color: #171e2d;
     box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.24);
     border-radius: 5px;
     border: solid 2px #424b60;
-    font-size: 18px;
-    margin-top: 145px;
+    // margin-top: 145px + 240px + 320px;
+
+    .item {
+      padding: 10px;
+      padding-top: 0;
+    }
 
     .value {
       color: #fa4642;
@@ -225,7 +243,7 @@ import BgImg from '@/components/BgImg.vue'
   .content {
     // padding: 0 285px;
     position: relative;
-    width: 870px;
+    max-width: 870px;
     margin: 0 auto;
 
     h3 {

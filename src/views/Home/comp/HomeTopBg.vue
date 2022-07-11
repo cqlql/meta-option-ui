@@ -11,7 +11,8 @@
 .HomeTopBg {
   position: absolute;
   width: 100%;
-  height: 732px;
+  height: 98vh;
+  height: calc(100vh - 25px);
   color: #fff;
   // background: url('@/assets/news-header-bg.jpg') no-repeat center center;
   // background-size: auto 100%;

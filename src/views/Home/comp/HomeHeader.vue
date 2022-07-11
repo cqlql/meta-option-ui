@@ -61,6 +61,10 @@ const signOutDialog = reactive({
   transition: 0.4s;
   transition-property: background, transform;
 
+  .logo {
+    min-width: 269px;
+  }
+
   .right {
     flex: 1;
     display: flex;
