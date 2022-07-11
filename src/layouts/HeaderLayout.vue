@@ -28,12 +28,12 @@ const signOutModal = reactive({
         <span class="label">Balance</span>
         <span class="btn-box value">10,000.00</span>
       </div>
-      <div class="item btn-box add-btn">
+      <router-link to="/finance" class="item btn-box add-btn">
         <span class="title">Top Up</span>
         <span class="icon">
           <Icon icon="ic:baseline-add"></Icon>
         </span>
-      </div>
+      </router-link>
       <a-popover
         :overlayClassName="$style.popover"
         placement="bottom"
@@ -172,6 +172,11 @@ const signOutModal = reactive({
 
   .add-btn {
     display: flex;
+    color: #fff;
+
+    &:hover {
+      color: #c1c1c1;
+    }
 
     .title {
       line-height: 34px;
