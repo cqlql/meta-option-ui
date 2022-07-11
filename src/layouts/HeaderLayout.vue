@@ -5,6 +5,7 @@ import { reactive } from 'vue'
 import LangList from './comp/LangList.vue'
 import SignOutDialog from '@/views/Login/SignOutDialog.vue'
 import AvatarDefault from '@/components/AvatarDefault.vue'
+import HeaderLogo from './comp/HeaderLogo.vue'
 
 const signOutModal = reactive({
   visible: false,
@@ -13,7 +14,8 @@ const signOutModal = reactive({
 <template>
   <div class="LayoutHeader">
     <div class="logo">
-      <img src="@/assets/logo/logo-text-small.png" alt="" />
+      <!-- <img src="@/assets/logo/logo-text-small.png" alt="" /> -->
+      <HeaderLogo></HeaderLogo>
     </div>
 
     <div class="right">
@@ -86,10 +88,14 @@ const signOutModal = reactive({
     padding-top: 10px;
     padding-left: 20px;
 
-    img {
-      width: 202px;
-      height: 41px;
+    .HeaderLogo {
+      font-size: 75px;
     }
+
+    // img {
+    //   width: 202px;
+    //   height: 41px;
+    // }
   }
 
   .right {

@@ -4,6 +4,7 @@ import { onMounted, onUnmounted, reactive, ref } from 'vue'
 import HomeNav from './HomeNav.vue'
 import UserInfoBar from './UserInfoBar.vue'
 import SignOutDialog from '@/views/Login/SignOutDialog.vue'
+import HeaderLogo from '@/layouts/comp/HeaderLogo.vue'
 
 function onScroll() {
   topFixed.value = scrollY > 70
@@ -27,7 +28,8 @@ const signOutDialog = reactive({
 <template>
   <header class="HomeHeader" :class="{ topFixed }">
     <div class="logo">
-      <img src="@/assets/logo/logo-text-small.png" />
+      <HeaderLogo></HeaderLogo>
+      <!-- <img src="@/assets/logo/logo-text-small.png" /> -->
     </div>
     <div class="right">
       <a-button
