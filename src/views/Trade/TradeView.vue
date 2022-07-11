@@ -52,6 +52,10 @@ function indicatorsSelect() {
         <div class="value green">91.50</div>
       </div>
       <div class="item">
+        <div class="label"> Deal Price </div>
+        <div class="value">91.50</div>
+      </div>
+      <div class="item">
         <div class="label"> Expiration time </div>
         <div class="value"> 00:18 </div>
       </div>
