@@ -11,7 +11,7 @@
     "download:iconfont": "node build/iconfont-download.js"
   },
   "dependencies": {
-    "ant-design-vue": "3.2.7",
+    "ant-design-vue": "3.2.10",
     "core-js": "^3.23.1",
     "nprogress": "^0.2.0",
     "vue": "^3.2.37",

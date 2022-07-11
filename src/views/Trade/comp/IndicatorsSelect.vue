@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import IconFont from '@/components/IconFont/IconFont.vue'
+import { Switch as ASwitch } from 'ant-design-vue'
 import { reactive } from 'vue'
 
 defineProps<{
@@ -43,8 +44,8 @@ function select(item: { checked: boolean }) {
         <IconFont :name="item.icon"></IconFont>
       </div>
       <div class="name">{{ item.name || item.key }}</div>
-      <div class="arrow">
-        <a-checkbox v-model:checked="item.checked" />
+      <div class="arrow" @click.stop>
+        <a-switch v-model:checked="item.checked" />
       </div>
     </div>
   </div>
@@ -76,7 +77,7 @@ function select(item: { checked: boolean }) {
     }
 
     .arrow {
-      font-size: 18px;
+      // font-size: 18px;
     }
   }
 }
