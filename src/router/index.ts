@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/Home/HomeView.vue'
 import LAYOUT from '@/layouts/index.vue'
 import LoginView from '@/views/Login/LoginView.vue'
+import LoadingView from '@/views/LoadingView.vue'
 
 const routes: Array<AppRouteRecordRaw> = [
   {
@@ -96,6 +97,14 @@ const routes: Array<AppRouteRecordRaw> = [
     component: LoginView,
     meta: {
       title: '登录',
+    },
+  },
+  {
+    path: '/loading',
+    name: 'Loading',
+    component: LoadingView,
+    meta: {
+      title: 'loading',
     },
   },
 ]
