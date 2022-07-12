@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import IconFont from '@/components/IconFont/IconFont.vue'
 type ItemType = {
@@ -9,8 +9,6 @@ type ItemType = {
 }
 const router = useRouter()
 const route = useRoute()
-
-const selectedRoute = ref(route.name)
 
 const list: ItemType[] = [
   {
@@ -52,11 +50,14 @@ const list: ItemType[] = [
 ]
 
 function to(item: ItemType) {
-  selectedRoute.value = item.routeName
   router.push({
     name: item.routeName,
   })
 }
+
+const selectedRoute = computed(() => {
+  return route.name
+})
 </script>
 <template>
   <nav class="nav-main">
