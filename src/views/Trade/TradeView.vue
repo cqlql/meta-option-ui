@@ -19,6 +19,7 @@ const options = [
     value: 'EUR/GBP',
   },
 ]
+const crosshairsActive = ref(false)
 const chartTypeDialogVisible = ref(false)
 const indicatorsSettingDialogVisible = ref(false)
 function chartTypeSelect() {
@@ -26,6 +27,10 @@ function chartTypeSelect() {
 }
 function indicatorsSelect() {
   indicatorsSettingDialogVisible.value = true
+}
+
+function crosshairsChange() {
+  crosshairsActive.value = !crosshairsActive.value
 }
 </script>
 <template>
@@ -44,7 +49,12 @@ function indicatorsSelect() {
       <div class="cell" @mousedown.prevent @click="indicatorsSelect">
         <IconFont name="chart-k-bar"></IconFont>
       </div>
-      <div class="cell" @mousedown.prevent @click="indicatorsSelect">
+      <div
+        class="cell"
+        :class="{ disabled: !crosshairsActive }"
+        @mousedown.prevent
+        @click="crosshairsChange"
+      >
         <IconFont name="crosshair"></IconFont>
       </div>
     </div>
@@ -161,6 +171,10 @@ function indicatorsSelect() {
 
       &:hover {
         background-color: #2b3345;
+      }
+
+      &.disabled {
+        color: #999;
       }
     }
 
