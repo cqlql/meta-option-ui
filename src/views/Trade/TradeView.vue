@@ -44,6 +44,9 @@ function indicatorsSelect() {
       <div class="cell" @mousedown.prevent @click="indicatorsSelect">
         <IconFont name="chart-k-bar"></IconFont>
       </div>
+      <div class="cell" @mousedown.prevent @click="indicatorsSelect">
+        <IconFont name="crosshair"></IconFont>
+      </div>
     </div>
 
     <div v-if="'s2' in $route.query" class="deal-info">
