@@ -25,7 +25,7 @@ const tabVal = inject<TabVal>('tabVal')
       </a>
     </div>
 
-    <CardBox class="BankCardBox enter-y" title="Bank Card">
+    <CardBox class="max-w-500px mt-3 mx-auto enter-y" title="Bank Card">
       <a-form
         class="form-s2 !pt-5"
         :model="formState"
@@ -71,10 +71,3 @@ const tabVal = inject<TabVal>('tabVal')
     </CardBox>
   </div>
 </template>
-
-<style lang="less" scoped>
-.BankCardBox {
-  max-width: 500px;
-  margin: 10px auto 0;
-}
-</style>

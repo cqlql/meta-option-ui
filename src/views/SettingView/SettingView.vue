@@ -6,6 +6,7 @@ import EditProfile from './comp/EditProfile.vue'
 import ContactView from './comp/ContactView.vue'
 import BankCard from './comp/BankCard.vue'
 import { TabVal } from './types'
+import GoogleAuth from './comp/GoogleAuth.vue'
 
 const list = [
   {
@@ -22,7 +23,7 @@ const list = [
   },
 ]
 
-const tabVal = ref<TabVal>('BankCard')
+const tabVal = ref<TabVal>('MyAccount')
 
 provide('tabVal', tabVal)
 </script>
@@ -30,16 +31,17 @@ provide('tabVal', tabVal)
   <div class="mx-18 my-8">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <div class="mt-8">
-      <MyAccount
-        @add="tabVal = 'BankCard'"
-        v-if="tabVal === 'MyAccount'"
-      ></MyAccount>
+      <MyAccount v-if="tabVal === 'MyAccount'"></MyAccount>
       <EditProfile v-else-if="tabVal === 'EditProfile'"></EditProfile>
       <ContactView v-else-if="tabVal === 'ContactView'"></ContactView>
       <BankCard
         @back="tabVal = 'MyAccount'"
         v-else-if="tabVal === 'BankCard'"
       ></BankCard>
+      <GoogleAuth
+        @back="tabVal = 'MyAccount'"
+        v-else-if="tabVal === 'GoogleAuth'"
+      ></GoogleAuth>
     </div>
   </div>
 </template>

@@ -1,1 +1,6 @@
-export type TabVal = 'MyAccount' | 'EditProfile' | 'ContactView' | 'BankCard'
+export type TabVal =
+  | 'MyAccount'
+  | 'EditProfile'
+  | 'ContactView'
+  | 'BankCard'
+  | 'GoogleAuth'

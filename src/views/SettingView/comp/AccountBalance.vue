@@ -25,6 +25,12 @@ const tabVal = inject<TabVal>('tabVal')
         <span>ADD YOUR BANK CARD</span>
       </a-button>
     </div>
+    <div class="btn mt-3">
+      <a-button @click="tabVal = 'GoogleAuth'" block>
+        <Icon icon="ant-design:plus-circle-outlined"></Icon>
+        <span>ADD YOUR GOOGLE AUTH</span>
+      </a-button>
+    </div>
   </div>
 </template>
 
