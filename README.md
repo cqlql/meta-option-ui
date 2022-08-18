@@ -39,3 +39,10 @@ pw:112233Ss
 字体参考：
 
 Roboto, -apple-system, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+    align-items: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-columns: auto;
+    grid-gap: 8px;
+    grid-auto-flow: column;
