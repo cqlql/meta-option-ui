@@ -24,6 +24,17 @@ const routes: Array<AppRouteRecordRaw> = [
         },
       },
       {
+        path: 'aitrading',
+        name: 'AITrading',
+        component: () =>
+          import(
+            /* webpackChunkName: "index" */ '@/views/AITrading/AITrading.vue'
+          ),
+        meta: {
+          title: 'Trade',
+        },
+      },
+      {
         path: 'finance',
         name: 'Finance',
         component: () =>

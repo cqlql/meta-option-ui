@@ -17,11 +17,17 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
 import AvatarDemo from './comp/AvatarDemo.vue'
 import MenuBtn from '@/components/MenuBtn.vue'
+import TitleBox from '@/components/TitleBox.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="TitleBox">
+      <TitleBox title="Currency">
+        <input style="background: #000" />
+      </TitleBox>
+    </BoxView>
     <BoxView title="MenuBtn">
-      <MenuBtn></MenuBtn>
+      <MenuBtn :active="false"></MenuBtn>
     </BoxView>
     <BoxView title="avatar">
       <AvatarDemo></AvatarDemo>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import IconFont from '@/components/IconFont/IconFont.vue'
 type ItemType = {
@@ -15,6 +15,11 @@ const list: ItemType[] = [
     name: 'Trade',
     icon: 'rise',
     routeName: 'Trade',
+  },
+  {
+    name: 'AI trading',
+    icon: 'rise',
+    routeName: 'AITrading',
   },
   {
     name: 'Finance',

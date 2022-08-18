@@ -5,14 +5,22 @@ defineProps<{
 </script>
 <template>
   <div class="BoxView">
-    <div v-if="title" style="margin: 8px 0 5px">{{ title }}</div>
+    <div class="BoxView_title" v-if="title">{{ title }}</div>
     <div class="BoxView_container"> <slot></slot> </div>
   </div>
 </template>
 
 <style lang="less">
 .BoxView {
-  margin: 15px;
+  // margin: -1px;
+  border: 1px solid #ffffff21;
+}
+
+.BoxView_title {
+  padding: 0 10px 5px;
+  color: #ffffff91;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff21;
 }
 
 .BoxView_container {

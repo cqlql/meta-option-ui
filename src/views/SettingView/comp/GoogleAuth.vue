@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon/src/Icon.vue'
-import { inject, reactive, ref, UnwrapRef } from 'vue'
+import { inject, ref } from 'vue'
 
 import CardBox from '@/components/CardBox.vue'
 import { TabVal } from '../types'
