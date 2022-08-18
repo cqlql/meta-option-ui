@@ -8,7 +8,10 @@
     "build:report": "vue-cli-service build --no-module --report",
     "test:unit": "jest --clearCache && vue-cli-service test:unit --watch -i",
     "lint": "vue-cli-service lint",
-    "download:iconfont": "node build/iconfont-download.js"
+    "download:iconfont": "node build/iconfont-download.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "ant-design-vue": "3.2.10",
@@ -35,6 +38,7 @@
     "babel-plugin-import": "^1.13.3",
     "eslint": "^8.13.0",
     "eslint-plugin-vue": "^8.6.0",
+    "front-matter": "^4.0.2",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "postcss": "^8.4.12",
@@ -46,6 +50,7 @@
     "stylelint-order": "^5.0.0",
     "svg-sprite-loader": "^6.0.11",
     "typescript": "~4.6.3",
-    "vue-cli-plugin-windicss": "^1.1.4"
+    "vue-cli-plugin-windicss": "^1.1.4",
+    "vuepress-webpack": "^2.0.0-beta.49"
   }
 }

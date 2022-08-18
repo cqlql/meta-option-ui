@@ -15,6 +15,13 @@
       "problemMatcher": [],
       "label": "npm: download:iconfont",
       "detail": "node build/iconfont-download.js"
+    },
+    {
+      "type": "npm",
+      "script": "serve",
+      "problemMatcher": [],
+      "label": "npm: serve",
+      "detail": "vue-cli-service serve"
     }
   ]
 }
