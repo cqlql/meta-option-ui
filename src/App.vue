@@ -10,7 +10,7 @@
 
 <style lang="less" scoped>
 .slide-right-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   transition-property: opacity, transform;
 }
 
