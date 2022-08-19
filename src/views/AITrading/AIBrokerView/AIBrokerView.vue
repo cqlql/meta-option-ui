@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {Table as ATable} from 'ant-design-vue'
+import { Table as ATable } from 'ant-design-vue'
 const dataSource = [
   {
     key: '1',
@@ -34,10 +34,15 @@ const columns = [
 ]
 </script>
 <template>
-  <div
-    ><div class="enter-y">
-      <a-table :dataSource="dataSource" :columns="columns" /> </div
-  ></div>
+  <div>
+    <div class="AIBrokerView enter-y">
+      <a-table :dataSource="dataSource" :columns="columns" />
+    </div>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.AIBrokerView {
+  background-color: #171e2d;
+}
+</style>
