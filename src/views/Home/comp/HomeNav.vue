@@ -11,6 +11,10 @@ const list = [
     title: 'Trade',
     name: 'Trade',
   },
+    {
+    title: 'AI trading',
+    name: 'AITrading',
+  },
   {
     title: 'Finance',
     name: 'Finance',
