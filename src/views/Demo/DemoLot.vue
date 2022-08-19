@@ -20,6 +20,7 @@ import MultiText from '../AITrading/components/MultiText.vue'
 import TextTag from '../AITrading/components/TextTag.vue'
 import TitleBox from '@/components/TitleBox.vue'
 import MenuBtn from '@/components/MenuBtn.vue'
+import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
@@ -27,6 +28,8 @@ import MenuBtn from '@/components/MenuBtn.vue'
       <MultiText no="1" text="Fx Scalpers">
         <TextTag color="yellow">BTC</TextTag>
         <TextTag color="green">USDT</TextTag>
+        <TextTag>i</TextTag>
+        <SvgIcon name="trading-history" style="font-size: 18px"></SvgIcon>
       </MultiText>
       <p><span class="green-color">+57.63%</span></p>
       <p><span class="red-color">+57.63%</span></p>

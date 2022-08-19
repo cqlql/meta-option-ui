@@ -11,7 +11,9 @@ defineProps<{
       <div class="text">
         {{ text }}
       </div>
-      <slot></slot>
+      <div class="tags">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +26,15 @@ defineProps<{
   }
 
   .r {
+  }
+
+  .tags {
+    display: grid;
+    align-items: center;
+    grid-template-rows: auto;
+    grid-auto-columns: auto;
+    grid-gap: 8px;
+    grid-auto-flow: column;
   }
 }
 </style>
