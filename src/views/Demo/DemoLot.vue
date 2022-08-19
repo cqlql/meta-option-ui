@@ -16,7 +16,7 @@ import CheckboxPaymentCard from '../Finance/comp/CheckboxPaymentCard.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 import IconFontDemo from '@/components/IconFont/IconFontDemo.vue'
 import AvatarDemo from './comp/AvatarDemo.vue'
-import MultiText from '../AITrading/components/MultiText.vue'
+import ValueMulti from '../AITrading/components/ValueMulti.vue'
 import TextTag from '../AITrading/components/TextTag.vue'
 import TitleBox from '@/components/TitleBox.vue'
 import MenuBtn from '@/components/MenuBtn.vue'
@@ -25,12 +25,13 @@ import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
 <template>
   <DemoContainer class="layout-main">
     <BoxView title="Ai Trading 小组件">
-      <MultiText no="1" text="Fx Scalpers">
+      <ValueMulti no="1" text="Fx Scalpers">
         <TextTag color="yellow">BTC</TextTag>
         <TextTag color="green">USDT</TextTag>
         <TextTag>i</TextTag>
         <SvgIcon name="trading-history" style="font-size: 18px"></SvgIcon>
-      </MultiText>
+      </ValueMulti>
+      <ValueDes></ValueDes>
       <p><span class="green-color">+57.63%</span></p>
       <p><span class="red-color">+57.63%</span></p>
     </BoxView>
