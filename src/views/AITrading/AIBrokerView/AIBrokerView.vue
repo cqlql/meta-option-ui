@@ -4,6 +4,7 @@ import ValueMulti from '../components/ValueMulti.vue'
 import TextTag from '../components/TextTag.vue'
 import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
 import ValueDes from '../components/ValueDes.vue'
+import Icon from '@/components/Icon/src/Icon.vue'
 
 const dataSource = [
   {
@@ -63,6 +64,26 @@ const columns = [
 <template>
   <div>
     <div class="AIBrokerView enter-y">
+      <div class="operation">
+        <div>
+          <a-button size="large" type="link">Reset</a-button>
+        </div>
+        <div class="mid">
+          <a-button class="active" size="large">
+            <template #icon>
+              <Icon icon="material-symbols:bookmark-outline"></Icon>
+            </template>
+          </a-button>
+          <a-button size="large">
+            <template #icon>
+              <Icon icon="majesticons:adjustments"></Icon>
+            </template>
+          </a-button>
+        </div>
+        <div>
+          <a-button size="large">Withdraw</a-button>
+        </div>
+      </div>
       <a-table
         :dataSource="dataSource"
         :columns="columns"
@@ -110,9 +131,69 @@ const columns = [
 
 <style lang="less" scoped>
 .AIBrokerView {
-  background-color: #171e2d;
+  position: relative;
   padding: 20px;
   margin: 44px 0 0;
+  background-color: #171e2d;
+
+  .operation {
+    position: absolute;
+    top: -90px;
+    right: 0;
+    display: flex;
+    line-height: 31px;
+    font-size: 22px;
+
+    .ant-btn-link {
+      line-height: 30px;
+      font-size: 22px;
+    }
+
+    .ant-btn {
+      height: 46px;
+
+      &:not([disabled]):hover {
+        z-index: 1;
+      }
+
+      &.active {
+        z-index: 1;
+        color: #55a8e8;
+        background: transparent;
+        border-color: #55a8e8;
+      }
+    }
+
+    .mid {
+      margin-right: 10px;
+
+      .app-iconify {
+        display: inline;
+        font-size: 27px;
+
+        ::v-deep(svg) {
+          margin: 0 auto;
+        }
+      }
+
+      .ant-btn {
+        // padding-top: 8px;
+        line-height: 31px;
+        text-align: center;
+      }
+
+      .ant-btn:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .ant-btn:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -1px;
+      }
+    }
+  }
 
   .ant-table-cell-row-hover {
     background: #394b70;

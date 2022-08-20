@@ -60,7 +60,11 @@ import { Rate as ARate } from 'ant-design-vue'
       <IconFontDemo></IconFontDemo>
     </BoxView>
     <BoxView title="IconSvg">
-      <Icon class="text-8xl" icon="rise|svg"></Icon>
+      <Icon class="text-8xl" icon="trading-history|svg"></Icon>
+    </BoxView>
+    <BoxView title="Icon">
+      <Icon class="text-8xl" icon="material-symbols:bookmark-outline"></Icon>
+      <Icon class="text-8xl" icon="majesticons:adjustments"></Icon>
     </BoxView>
     <BoxView title="BankAccount">
       <BankAccount></BankAccount>
