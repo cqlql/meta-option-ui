@@ -1,20 +1,26 @@
 <script lang="ts" setup>
 defineProps<{
-  color?: string
+  color?: 'yellow' | 'green'
+  shape?: 'round'
 }>()
 </script>
 <template>
-  <div class="TextTag" :class="color"> <slot></slot> </div>
+  <div class="TextTag" :class="[color, shape]"> <slot></slot> </div>
 </template>
 
 <style lang="less" scoped>
 .TextTag {
   line-height: 18px;
-  padding: 0 8px;
+  padding: 1px 4px;
   font-size: 12px;
   text-align: center;
-  border-radius: 10px;
   background-color: #424b60;
+  border-radius: 4px;
+
+  &.round {
+    padding: 0 8px;
+    border-radius: 10px;
+  }
 
   &.yellow {
     color: #ffce25;

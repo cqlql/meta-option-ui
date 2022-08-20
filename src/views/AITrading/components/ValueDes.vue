@@ -13,9 +13,9 @@ defineProps<{
 
 <style lang="less" scoped>
 .ValueDes {
+  display: inline-block;
   line-height: 1.2;
   text-align: right;
-  font-family: OpenSans-Regular;
 
   .v {
   }

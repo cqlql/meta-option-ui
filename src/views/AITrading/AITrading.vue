@@ -31,10 +31,14 @@ const tabVal = ref(
 )
 </script>
 <template>
-  <div class="mx-18 my-8">
+  <div class="mx-18 my-8 AITrading">
     <TabButtons :list="list" v-model="tabVal"> </TabButtons>
     <component :is="tabVal"></component>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<!-- <style lang="less" scoped>
+.AITrading {
+  font-family: OpenSans-Regular;
+}
+</style> -->

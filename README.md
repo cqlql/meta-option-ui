@@ -32,9 +32,7 @@ npm run lint
 
 https://zh-cn.expertoption.com
 
-https://primexbt.com/my/covesting/rating  
-id:oocen9981@gmail.com  
-pw:112233Ss
+https://primexbt.com/my/covesting/rating
 
 字体参考：
 
