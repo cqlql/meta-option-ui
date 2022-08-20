@@ -63,10 +63,10 @@ const columns = [
 </script>
 <template>
   <div>
-    <div class="AIBrokerView enter-y">
+    <div class="AIBrokerView mt-12 enter-y">
       <div class="operation">
         <div>
-          <a-button size="large" type="link">Reset</a-button>
+          <a-button type="link">Reset</a-button>
         </div>
         <div class="mid">
           <a-button class="active" size="large">
@@ -81,7 +81,7 @@ const columns = [
           </a-button>
         </div>
         <div>
-          <a-button size="large">Withdraw</a-button>
+          <a-button>Withdraw</a-button>
         </div>
       </div>
       <a-table
@@ -133,7 +133,6 @@ const columns = [
 .AIBrokerView {
   position: relative;
   padding: 20px;
-  margin: 44px 0 0;
   background-color: #171e2d;
 
   .operation {
