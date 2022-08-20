@@ -21,6 +21,8 @@ import TextTag from '../AITrading/components/TextTag.vue'
 import TitleBox from '@/components/TitleBox.vue'
 import MenuBtn from '@/components/MenuBtn.vue'
 import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
+import ValueDes from '../AITrading/components/ValueDes.vue'
+import { Rate as ARate } from 'ant-design-vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
@@ -31,9 +33,14 @@ import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
         <TextTag>i</TextTag>
         <SvgIcon name="trading-history" style="font-size: 18px"></SvgIcon>
       </ValueMulti>
-      <ValueDes></ValueDes>
+
+      <ValueDes v="0.21048199 BTC" d="≈ 6,838 USD"> </ValueDes>
+      <ValueDes v="3.0106927 BTC" d="≈ 97,808 USD"></ValueDes>
+
       <p><span class="green-color">+57.63%</span></p>
       <p><span class="red-color">+57.63%</span></p>
+
+      <a-rate class="rate-blue" :value="2" />
     </BoxView>
     <BoxView title="TitleBox">
       <TitleBox title="Currency">
