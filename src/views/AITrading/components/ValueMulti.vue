@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 defineProps<{
-  no: string
+  no?: string
   text: string
 }>()
 </script>
 <template>
   <div class="MultiText">
-    <div class="no">{{ no }}.</div>
+    <div v-if="no" class="no">{{ no }}.</div>
     <div class="r">
       <div class="text">
         {{ text }}

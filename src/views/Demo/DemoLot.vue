@@ -37,8 +37,9 @@ import { Rate as ARate } from 'ant-design-vue'
       <ValueDes v="0.21048199 BTC" d="≈ 6,838 USD"> </ValueDes>
       <ValueDes v="3.0106927 BTC" d="≈ 97,808 USD"></ValueDes>
 
-      <p><span class="green-color">+57.63%</span></p>
-      <p><span class="red-color">+57.63%</span></p>
+      <span class="green-color">+57.63%</span>
+
+      <span class="red-color">+57.63%</span>
 
       <a-rate class="rate-blue" :value="2" />
     </BoxView>
@@ -65,6 +66,9 @@ import { Rate as ARate } from 'ant-design-vue'
     <BoxView title="Icon">
       <Icon class="text-8xl" icon="material-symbols:bookmark-outline"></Icon>
       <Icon class="text-8xl" icon="majesticons:adjustments"></Icon>
+      <Icon class="text-8xl" icon="ant-design:share-alt-outlined"></Icon>
+      <Icon class="text-8xl" icon="ant-design:wechat-outlined"></Icon>
+      <Icon class="text-8xl" icon="bxl:telegram"></Icon>
     </BoxView>
     <BoxView title="BankAccount">
       <BankAccount></BankAccount>

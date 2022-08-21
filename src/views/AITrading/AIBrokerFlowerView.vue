@@ -2,6 +2,11 @@
 import { ref } from 'vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 
+import StrategyList from './components/StrategyList.vue'
+import TradingHistory from './components/TradingHistory.vue'
+import LineStatistic from './components/LineStatistic.vue'
+import DescriptionBox from './components/DescriptionBox.vue'
+
 const tabVal = ref('')
 </script>
 <template>
@@ -11,31 +16,16 @@ const tabVal = ref('')
         <Icon icon="ic:baseline-keyboard-arrow-left"></Icon> back
       </a>
     </div>
-    <div class="max-w-500px mt-3 mx-auto enter-y columns-3 gap-4">
-      <div>
-        <div class="strategy-list">
-          <div class="strategy-list__header">
-            <div class="l"> strategy </div>
-            <div class="r">
-              <a-button></a-button>
-              <div class="mid-line"></div>
-              <a-button></a-button>
-            </div>
-          </div>
-          <div class="strategy-list__body">
-            <div class="row">
-              <div class="l"></div>
-              <div class="r"></div>
-            </div>
-            <div class="row">
-              <div class="l"></div>
-              <div class="r"></div>
-            </div>
-          </div>
-        </div>
+    <div class="max-w-1200px mt-3 mx-auto enter-y flex gap-4">
+      <div class="flex-1">
+        <StrategyList></StrategyList>
+        <TradingHistory></TradingHistory>
       </div>
-      <div>2</div>
-      <div>3</div>
+      <div class="flex-1">
+        <LineStatistic></LineStatistic>
+        <DescriptionBox></DescriptionBox>
+      </div>
+      <div class="flex-1">3</div>
     </div>
   </div>
 </template>
@@ -45,6 +35,11 @@ const tabVal = ref('')
   .cont {
     // column-count: 3;
     // column-gap: 10px;
+  }
+
+  .TradingHistory,
+  .DescriptionBox {
+    margin-top: 34px;
   }
 }
 </style>
