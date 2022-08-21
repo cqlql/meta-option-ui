@@ -6,7 +6,7 @@ const config = [
   {
     // css url
     cssUrl: `
-    //at.alicdn.com/t/font_3331081_mcf46a9nurb.css
+    //at.alicdn.com/t/c/font_3331081_3cx7ihq34l.css
     `,
     // 目标位置
     dir: 'src/assets/iconfont',

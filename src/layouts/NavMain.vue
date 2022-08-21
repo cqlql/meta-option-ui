@@ -18,7 +18,7 @@ const list: ItemType[] = [
   },
   {
     name: 'AI trading',
-    icon: 'rise',
+    icon: 'aitrading',
     routeName: 'AITrading',
   },
   {
