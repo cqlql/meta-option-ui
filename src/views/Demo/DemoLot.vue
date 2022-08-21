@@ -23,9 +23,25 @@ import MenuBtn from '@/components/MenuBtn.vue'
 import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
 import ValueDes from '../AITrading/components/ValueDes.vue'
 import { Rate as ARate } from 'ant-design-vue'
+import LabelValueLine from '@/components/LabelValueLine.vue'
+import Logo from '@/components/Logo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="LabelValueLine">
+      <LabelValueLine label="Available Balance">
+        <span class="red-color">$20,367</span>
+      </LabelValueLine>
+
+      <LabelValueLine label="Trading">
+        <span class="red-color">$20,367</span>
+      </LabelValueLine>
+    </BoxView>
+
+    <BoxView title="Logo">
+      <Logo></Logo>
+    </BoxView>
+
     <BoxView title="Ai Trading 小组件">
       <ValueMulti no="1" text="Fx Scalpers">
         <TextTag color="yellow">BTC</TextTag>
@@ -33,14 +49,16 @@ import { Rate as ARate } from 'ant-design-vue'
         <TextTag>i</TextTag>
         <SvgIcon name="trading-history" style="font-size: 18px"></SvgIcon>
       </ValueMulti>
-
+      <p></p>
       <ValueDes v="0.21048199 BTC" d="≈ 6,838 USD"> </ValueDes>
+      <p></p>
       <ValueDes v="3.0106927 BTC" d="≈ 97,808 USD"></ValueDes>
-
+      <p></p>
       <span class="green-color">+57.63%</span>
+      <p></p>
 
       <span class="red-color">+57.63%</span>
-
+      <p></p>
       <a-rate class="rate-blue" :value="2" />
     </BoxView>
     <BoxView title="TitleBox">
@@ -112,7 +130,9 @@ import { Rate as ARate } from 'ant-design-vue'
       <a-textarea allowClear placeholder="请输入"></a-textarea>
     </BoxView>
     <BoxView title="LabelValue">
-      <LabelValue title="label">value</LabelValue>
+      <div class="min-w-300px">
+        <LabelValue title="label">value</LabelValue>
+      </div>
     </BoxView>
 
     <BoxView title="ant-checkbox">
