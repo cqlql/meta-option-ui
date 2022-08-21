@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { inject, Ref } from 'vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 
 import StrategyList from './components/StrategyList.vue'
@@ -8,13 +8,14 @@ import LineStatistic from './components/LineStatistic.vue'
 import DescriptionBox from './components/DescriptionBox.vue'
 import IndicatorsBox from './components/IndicatorsBox.vue'
 import ProfitabilityStatistic from './components/ProfitabilityStatistic.vue'
+import { TabVal } from './types'
 
-const tabVal = ref('')
+const tabVal = inject('tabVal') as Ref<TabVal>
 </script>
 <template>
   <div class="AIBrokerFlowerView mt-8">
     <div class="enter-y">
-      <a @click="tabVal = 'MyAccount'">
+      <a @click="tabVal = 'AIBrokerView'">
         <Icon icon="ic:baseline-keyboard-arrow-left"></Icon> back
       </a>
     </div>

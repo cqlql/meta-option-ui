@@ -6,6 +6,7 @@ import {
   TableColumnsType,
 } from 'ant-design-vue'
 import { ref } from 'vue'
+import PortfolioWithdrawDialog from './components/PortfolioWithdrawDialog.vue'
 const provinceData = ['All', 'Jiangsu']
 const province = ref('All')
 
@@ -40,10 +41,21 @@ const data: DataItem[] = [
     margin: '-5.51%',
   },
 ]
+
+const withdrawDialogVisible = ref(false)
+
+function openWithdraw() {
+  withdrawDialogVisible.value = true
+}
 </script>
 <template>
   <div>
-    <div class="PortfolioView mt-12 enter-y">
+    <div class="PortfolioView max-w-1200px mx-auto mt-12 enter-y">
+      <div class="operation">
+        <div>
+          <a-button @click="openWithdraw">Withdraw</a-button>
+        </div>
+      </div>
       <div class="box">
         <div class="tit">Current holdings</div>
         <div class="select">
@@ -93,6 +105,9 @@ const data: DataItem[] = [
         </div>
       </div>
     </div>
+    <PortfolioWithdrawDialog
+      v-model:visible="withdrawDialogVisible"
+    ></PortfolioWithdrawDialog>
   </div>
 </template>
 
@@ -163,6 +178,30 @@ const data: DataItem[] = [
 
       &:last-child {
         padding-left: 10px;
+      }
+    }
+  }
+
+  .operation {
+    position: absolute;
+    top: -88px;
+    right: 0;
+    display: flex;
+    line-height: 31px;
+    font-size: 22px;
+
+    .ant-btn {
+      height: 46px;
+
+      &:not([disabled]):hover {
+        z-index: 1;
+      }
+
+      &.active {
+        z-index: 1;
+        color: #55a8e8;
+        background: transparent;
+        border-color: #55a8e8;
       }
     }
   }

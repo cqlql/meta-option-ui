@@ -2,6 +2,7 @@
 import AIBrokerView from './AIBrokerView.vue'
 import AIBrokerFlowerView from './AIBrokerFlowerView.vue'
 import PortfolioView from './PortfolioView.vue'
+import { TabVal } from './types'
 
 export default {
   components: {
@@ -12,8 +13,7 @@ export default {
 }
 </script>
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { provide, ref } from 'vue'
 import TabButtons from '@/components/TabButtons.vue'
 
 const list = [
@@ -22,19 +22,14 @@ const list = [
     value: 'AIBrokerView',
   },
   {
-    label: 'AI broker2',
-    value: 'AIBrokerFlowerView',
-  },
-  {
     label: 'Portfolio',
     value: 'PortfolioView',
   },
 ]
-const route = useRoute()
 
-const tabVal = ref(
-  (route.query.tab as string) ? (route.query.tab as string) : 'PortfolioView',
-)
+const tabVal = ref<TabVal>('AIBrokerView')
+
+provide('tabVal', tabVal)
 </script>
 <template>
   <div class="mx-18 my-8 AITrading">

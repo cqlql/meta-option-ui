@@ -20,6 +20,7 @@ defineProps<{
   border-bottom: 1px solid #424b60;
   line-height: 34px;
   padding: 0 12px;
+  font-size: 16px;
 
   .t {
     flex: 1;

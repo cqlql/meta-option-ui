@@ -5,6 +5,9 @@ import TextTag from './components/TextTag.vue'
 import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
 import ValueDes from './components/ValueDes.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
+import WithdrawDialog from './components/WithdrawDialog.vue'
+import { inject, Ref, ref } from 'vue'
+import { TabVal } from './types'
 
 const dataSource = [
   {
@@ -60,6 +63,14 @@ const columns = [
   },
   { title: '', key: 'action' },
 ]
+const withdrawDialogVisible = ref(false)
+function onWithdraw() {
+  withdrawDialogVisible.value = true
+}
+const tabVal = inject('tabVal') as Ref<TabVal>
+function toFollowPage() {
+  tabVal.value = 'AIBrokerFlowerView'
+}
 </script>
 <template>
   <div>
@@ -81,7 +92,7 @@ const columns = [
           </a-button>
         </div>
         <div>
-          <a-button>Withdraw</a-button>
+          <a-button @click="onWithdraw">Withdraw</a-button>
         </div>
       </div>
       <a-table
@@ -121,10 +132,12 @@ const columns = [
             line chart
           </template>
           <template v-if="column.key === 'action'">
-            <a-button>Follow</a-button>
+            <a-button @click="toFollowPage">Follow</a-button>
           </template>
         </template>
       </a-table>
+
+      <WithdrawDialog v-model:visible="withdrawDialogVisible"> </WithdrawDialog>
     </div>
   </div>
 </template>

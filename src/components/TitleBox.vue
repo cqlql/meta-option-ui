@@ -24,7 +24,7 @@ defineProps<{
 
 .TitleBox_title {
   position: absolute;
-  top: -8px;
+  top: -7px;
   line-height: 1;
   padding: 0 2px;
   color: #898e9e;
