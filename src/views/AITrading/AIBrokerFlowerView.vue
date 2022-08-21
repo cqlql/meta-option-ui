@@ -18,7 +18,7 @@ const tabVal = ref('')
         <Icon icon="ic:baseline-keyboard-arrow-left"></Icon> back
       </a>
     </div>
-    <div class="max-w-1200px mt-3 mx-auto enter-y flex gap-4">
+    <div class="max-w-1200px mt-3 mx-auto enter-y flex gap-6">
       <div class="flex-1">
         <StrategyList></StrategyList>
         <TradingHistory></TradingHistory>

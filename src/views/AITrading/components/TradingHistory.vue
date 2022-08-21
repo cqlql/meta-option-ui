@@ -71,26 +71,28 @@ const data: any[] = [
 </template>
 
 <style lang="less" scoped>
-::v-deep(.ant-table) {
-  .ant-table-thead {
-  }
-
-  .ant-table-thead > tr > th {
-    padding: 10px 0;
-    color: #898e9e;
-    border-top: 1px solid #424b60;
-    border-bottom: 1px solid #424b60;
-
-    &::before {
-      display: none;
+.TradingHistory {
+  ::v-deep(.ant-table) {
+    .ant-table-thead {
     }
 
-    &:first-child {
-      padding-left: 10px;
-    }
+    .ant-table-thead > tr > th {
+      padding: 10px 0;
+      color: #898e9e;
+      border-top: 1px solid #424b60;
+      border-bottom: 1px solid #424b60;
 
-    &:last-child {
-      padding-left: 10px;
+      &::before {
+        display: none;
+      }
+
+      &:first-child {
+        padding-left: 10px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+      }
     }
   }
 }

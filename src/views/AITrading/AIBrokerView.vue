@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { Rate as ARate, Table as ATable } from 'ant-design-vue'
-import ValueMulti from '../components/ValueMulti.vue'
-import TextTag from '../components/TextTag.vue'
+import ValueMulti from './components/ValueMulti.vue'
+import TextTag from './components/TextTag.vue'
 import SvgIcon from '@/components/Icon/src/SvgIcon.vue'
-import ValueDes from '../components/ValueDes.vue'
+import ValueDes from './components/ValueDes.vue'
 import Icon from '@/components/Icon/src/Icon.vue'
 
 const dataSource = [

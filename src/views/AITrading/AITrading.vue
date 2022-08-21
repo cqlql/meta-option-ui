@@ -1,7 +1,7 @@
 <script lang="ts">
-import AIBrokerView from './AIBrokerView/AIBrokerView.vue'
+import AIBrokerView from './AIBrokerView.vue'
 import AIBrokerFlowerView from './AIBrokerFlowerView.vue'
-import PortfolioView from './PortfolioView/PortfolioView.vue'
+import PortfolioView from './PortfolioView.vue'
 
 export default {
   components: {
@@ -33,9 +33,7 @@ const list = [
 const route = useRoute()
 
 const tabVal = ref(
-  (route.query.tab as string)
-    ? (route.query.tab as string)
-    : 'AIBrokerFlowerView',
+  (route.query.tab as string) ? (route.query.tab as string) : 'PortfolioView',
 )
 </script>
 <template>
