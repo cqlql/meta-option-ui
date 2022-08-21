@@ -6,6 +6,8 @@ import StrategyList from './components/StrategyList.vue'
 import TradingHistory from './components/TradingHistory.vue'
 import LineStatistic from './components/LineStatistic.vue'
 import DescriptionBox from './components/DescriptionBox.vue'
+import IndicatorsBox from './components/IndicatorsBox.vue'
+import ProfitabilityStatistic from './components/ProfitabilityStatistic.vue'
 
 const tabVal = ref('')
 </script>
@@ -24,8 +26,14 @@ const tabVal = ref('')
       <div class="flex-1">
         <LineStatistic></LineStatistic>
         <DescriptionBox></DescriptionBox>
+        <a-button class="follow-btn" size="large" block type="primary"
+          >Follow</a-button
+        >
       </div>
-      <div class="flex-1">3</div>
+      <div class="flex-1">
+        <ProfitabilityStatistic></ProfitabilityStatistic>
+        <IndicatorsBox></IndicatorsBox>
+      </div>
     </div>
   </div>
 </template>
@@ -38,8 +46,13 @@ const tabVal = ref('')
   }
 
   .TradingHistory,
-  .DescriptionBox {
+  .DescriptionBox,
+  .IndicatorsBox {
     margin-top: 34px;
+  }
+
+  .follow-btn {
+    margin-top: 60px;
   }
 }
 </style>

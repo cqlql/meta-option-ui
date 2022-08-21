@@ -8,9 +8,9 @@ defineProps<{
     <div class="tit">
       {{ title }}
     </div>
-    <dic class="cont">
+    <div class="cont">
       <slot></slot>
-    </dic>
+    </div>
   </div>
 </template>
 

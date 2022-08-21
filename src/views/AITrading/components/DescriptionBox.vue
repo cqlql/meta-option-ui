@@ -21,6 +21,12 @@ import Icon from '@/components/Icon/src/Icon.vue'
 </template>
 
 <style lang="less" scoped>
+.DescriptionBox {
+  p {
+    margin-top: -4px;
+  }
+}
+
 .DescriptionBox-footer {
   color: #009aff;
   font-size: 20px;
