@@ -58,7 +58,10 @@ const data: DataItem[] = [
         <div class="data">
           <a-table :columns="columns" :data-source="data" :pagination="false">
             <template #bodyCell="{ column, record }">
-              <span v-if="column.dataIndex === 'margin'" class="red-color">
+              <span
+                v-if="column.dataIndex === 'margin'"
+                :class="record.key === '1' ? 'green-color' : 'red-color'"
+              >
                 {{ record.margin }}
               </span>
             </template>
@@ -66,7 +69,7 @@ const data: DataItem[] = [
         </div>
       </div>
       <div class="box">
-        <div class="tit">Current holdings</div>
+        <div class="tit">History</div>
         <div class="select">
           <TitleBox title="Currency">
             <a-select
@@ -79,7 +82,10 @@ const data: DataItem[] = [
         <div class="data">
           <a-table :columns="columns" :data-source="data" :pagination="false">
             <template #bodyCell="{ column, record }">
-              <span v-if="column.dataIndex === 'margin'" class="red-color">
+              <span
+                v-if="column.dataIndex === 'margin'"
+                :class="record.key === '1' ? 'green-color' : 'red-color'"
+              >
                 {{ record.margin }}
               </span>
             </template>
@@ -106,6 +112,7 @@ const data: DataItem[] = [
   .tit {
     padding: 0 4px 20px;
     color: #898e9e;
+    font-weight: bold;
   }
 
   .select {
@@ -116,6 +123,7 @@ const data: DataItem[] = [
       .TitleBox_title {
         left: 10px;
         z-index: 1;
+        padding: 0 5px;
         background-color: #171e2d;
       }
     }
