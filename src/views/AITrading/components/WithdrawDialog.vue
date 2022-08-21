@@ -17,6 +17,7 @@ const emit = defineEmits<{
 <template>
   <a-modal
     :visible="visible"
+    centered
     @ok="handleOk"
     width="440px"
     @update:visible="(v) => $emit('update:visible', v)"
