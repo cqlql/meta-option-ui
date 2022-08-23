@@ -26,9 +26,13 @@ import { Rate as ARate } from 'ant-design-vue'
 import LabelValueLine from '@/components/LabelValueLine.vue'
 import Logo from '@/components/Logo.vue'
 import ChartjsLineAreaDemo from './comp/ChartjsLineAreaDemo.vue'
+import ChartjsLineDemo from './comp/ChartjsLineDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="ChartjsLineDemo">
+      <ChartjsLineDemo></ChartjsLineDemo>
+    </BoxView>
     <BoxView title="ChartjsLineAreaDemo">
       <ChartjsLineAreaDemo></ChartjsLineAreaDemo>
     </BoxView>
