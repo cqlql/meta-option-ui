@@ -8,6 +8,8 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import WithdrawDialog from './components/WithdrawDialog.vue'
 import { inject, Ref, ref } from 'vue'
 import { TabVal } from './types'
+import ChartjsLineAreaDemo from '../Demo/comp/ChartjsLineAreaDemo.vue'
+import PerformanceLineChart from './components/PerformanceLineChart.vue'
 
 const dataSource = [
   {
@@ -129,7 +131,7 @@ function toFollowPage() {
             <a-rate class="rate-blue" :value="2" />
           </template>
           <template v-else-if="column.dataIndex === 'performance'">
-            line chart
+            <PerformanceLineChart></PerformanceLineChart>
           </template>
           <template v-if="column.key === 'action'">
             <a-button @click="toFollowPage">Follow</a-button>

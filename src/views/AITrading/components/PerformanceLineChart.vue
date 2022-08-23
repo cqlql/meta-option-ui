@@ -37,7 +37,7 @@ const conf = {
 }
 </script>
 <template>
-  <div>
+  <div style="display: inline-block; width: 90px; height: 30px">
     <ChartJs :conf="conf"></ChartJs>
   </div>
 </template>
