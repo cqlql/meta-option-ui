@@ -50,9 +50,24 @@ const conf = {
     scales: {
       y: {
         // display: false,
+        position: 'right',
+        ticks: {
+          borderColor: '#fff',
+        },
+        grid: {
+          color: '#fff',
+          drawBorder: false,
+        },
       },
       x: {
         // display: false,
+        ticks: {
+          borderColor: '#fff',
+        },
+        grid: {
+          color: '#fff',
+          drawBorder: false,
+        },
       },
     },
   },
