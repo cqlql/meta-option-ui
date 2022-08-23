@@ -21,6 +21,7 @@ defineProps<{
 <style lang="less" scoped>
 .MultiText {
   display: flex;
+  padding-bottom: 5px;
 
   .no {
   }

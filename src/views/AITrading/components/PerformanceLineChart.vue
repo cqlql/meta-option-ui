@@ -38,6 +38,6 @@ const conf = {
 </script>
 <template>
   <div style="display: inline-block; width: 90px; height: 30px">
-    <ChartJs :conf="conf"></ChartJs>
+    <ChartJs style="width: 100%; height: 100%" :conf="conf"></ChartJs>
   </div>
 </template>

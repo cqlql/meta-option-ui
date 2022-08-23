@@ -8,7 +8,6 @@ import Icon from '@/components/Icon/src/Icon.vue'
 import WithdrawDialog from './components/WithdrawDialog.vue'
 import { inject, Ref, ref } from 'vue'
 import { TabVal } from './types'
-import ChartjsLineAreaDemo from '../Demo/comp/ChartjsLineAreaDemo.vue'
 import PerformanceLineChart from './components/PerformanceLineChart.vue'
 
 const dataSource = [
@@ -225,6 +224,14 @@ function toFollowPage() {
     background-color: #21293a;
   }
 
+  .ant-rate {
+    font-size: 16px;
+
+    ::v-deep(.ant-rate-star:not(:last-child)) {
+      margin-right: 4px;
+    }
+  }
+
   ::v-deep(.ant-table) {
     overflow-x: auto;
     white-space: nowrap;
@@ -236,6 +243,14 @@ function toFollowPage() {
     td,
     th {
       text-align: right;
+    }
+
+    th {
+      color: #838898;
+    }
+
+    td {
+      padding: 2px 6px;
     }
 
     tr {

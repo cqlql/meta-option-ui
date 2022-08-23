@@ -16,6 +16,7 @@ defineProps<{
   display: inline-block;
   line-height: 1.2;
   text-align: right;
+  padding-top: 2px;
 
   .v {
   }

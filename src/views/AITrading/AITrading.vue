@@ -27,8 +27,7 @@ const list = [
   },
 ]
 
-// const tabVal = ref<TabVal>('AIBrokerView')
-const tabVal = ref<TabVal>('AIBrokerFlowerView')
+const tabVal = ref<TabVal>('AIBrokerView')
 
 provide('tabVal', tabVal)
 </script>
