@@ -15,7 +15,7 @@ const formState: UnwrapRef<FormState> = reactive({
 })
 
 defineProps<{
-  noTitle: boolean
+  noTitle?: boolean
 }>()
 </script>
 <template>

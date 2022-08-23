@@ -25,9 +25,13 @@ import ValueDes from '../AITrading/components/ValueDes.vue'
 import { Rate as ARate } from 'ant-design-vue'
 import LabelValueLine from '@/components/LabelValueLine.vue'
 import Logo from '@/components/Logo.vue'
+import ChartjsLineAreaDemo from './comp/ChartjsLineAreaDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="ChartjsLineAreaDemo">
+      <ChartjsLineAreaDemo></ChartjsLineAreaDemo>
+    </BoxView>
     <BoxView title="LabelValueLine">
       <LabelValueLine label="Available Balance">
         <span class="red-color">$20,367</span>
@@ -67,7 +71,7 @@ import Logo from '@/components/Logo.vue'
       </TitleBox>
     </BoxView>
     <BoxView title="MenuBtn">
-      <MenuBtn :active="false"></MenuBtn>
+      <MenuBtn :noStyle="false" :active="false"></MenuBtn>
     </BoxView>
     <BoxView title="avatar">
       <AvatarDemo></AvatarDemo>
@@ -114,7 +118,7 @@ import Logo from '@/components/Logo.vue'
       <CheckboxPaymentCard></CheckboxPaymentCard>
     </BoxView>
     <BoxView title="CheckboxPayment">
-      <CheckboxPayment></CheckboxPayment>
+      <CheckboxPayment :modelValue="'1'"></CheckboxPayment>
     </BoxView>
     <BoxView title="CheckboxPlus">
       <CheckboxPlusDemo> </CheckboxPlusDemo>
