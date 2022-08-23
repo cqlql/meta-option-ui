@@ -27,9 +27,13 @@ import LabelValueLine from '@/components/LabelValueLine.vue'
 import Logo from '@/components/Logo.vue'
 import ChartjsLineAreaDemo from './comp/ChartjsLineAreaDemo.vue'
 import ChartjsLineDemo from './comp/ChartjsLineDemo.vue'
+import ChartjsBarDemo from './comp/ChartjsBarDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="ChartjsBarDemo">
+      <ChartjsBarDemo></ChartjsBarDemo>
+    </BoxView>
     <BoxView title="ChartjsLineDemo">
       <ChartjsLineDemo></ChartjsLineDemo>
     </BoxView>

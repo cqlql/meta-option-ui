@@ -36,7 +36,7 @@ const conf = {
       {
         label: 'Filled',
         backgroundColor: gradient,
-        borderColor: '#05a856',
+        borderColor: '#088d4e',
         data: datapoints,
         // cubicInterpolationMode: 'monotone',
         // tension: 0.2,
@@ -52,20 +52,20 @@ const conf = {
         // display: false,
         position: 'right',
         ticks: {
-          borderColor: '#fff',
+          borderColor: '#3c4559',
         },
         grid: {
-          color: '#fff',
+          color: '#3c4559',
           drawBorder: false,
         },
       },
       x: {
         // display: false,
         ticks: {
-          borderColor: '#fff',
+          borderColor: '#3c4559',
         },
         grid: {
-          color: '#fff',
+          color: '#3c4559',
           drawBorder: false,
         },
       },
