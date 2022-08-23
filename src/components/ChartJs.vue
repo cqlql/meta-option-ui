@@ -37,7 +37,5 @@ watch([eCanvasRef, () => props.conf], function (eCanvas) {
 })
 </script>
 <template>
-  <div>
-    <canvas ref="eCanvasRef" :width="width" :height="height"></canvas>
-  </div>
+  <canvas ref="eCanvasRef" :width="width" :height="height"></canvas>
 </template>
