@@ -19,21 +19,22 @@ const tabVal = inject('tabVal') as Ref<TabVal>
         <Icon icon="ic:baseline-keyboard-arrow-left"></Icon> back
       </a>
     </div>
-    <div class="max-w-1200px mt-3 mx-auto enter-y flex gap-6">
-      <div class="flex-1">
-        <StrategyList></StrategyList>
-        <TradingHistory></TradingHistory>
-      </div>
-      <div class="flex-1">
-        <LineStatistic></LineStatistic>
-        <DescriptionBox></DescriptionBox>
-        <a-button class="follow-btn" size="large" block type="primary"
-          >Follow</a-button
-        >
-      </div>
-      <div class="flex-1">
-        <ProfitabilityStatistic></ProfitabilityStatistic>
-        <IndicatorsBox></IndicatorsBox>
+    <div class="max-w-1600px mt-3 mx-auto enter-y">
+      <StrategyList class="mb-8"></StrategyList>
+      <LineStatistic class="mb-8"></LineStatistic>
+      <ProfitabilityStatistic class="mb-8"></ProfitabilityStatistic>
+      <TradingHistory class="mb-8"></TradingHistory>
+
+      <div class="flex gap-6">
+        <div class="flex-1">
+          <DescriptionBox></DescriptionBox>
+          <a-button class="follow-btn" size="large" block type="primary"
+            >Follow</a-button
+          >
+        </div>
+        <div class="flex-1">
+          <IndicatorsBox></IndicatorsBox>
+        </div>
       </div>
     </div>
   </div>
@@ -46,11 +47,11 @@ const tabVal = inject('tabVal') as Ref<TabVal>
     // column-gap: 10px;
   }
 
-  .TradingHistory,
-  .DescriptionBox,
-  .IndicatorsBox {
-    margin-top: 34px;
-  }
+  // .TradingHistory,
+  // .DescriptionBox,
+  // .IndicatorsBox {
+  //   margin-top: 34px;
+  // }
 
   .follow-btn {
     margin-top: 60px;

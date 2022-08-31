@@ -26,7 +26,7 @@ for (let i = 20; i--; ) {
 const canvas = document.createElement('canvas')
 const gradient = (
   canvas.getContext('2d') as CanvasRenderingContext2D
-).createLinearGradient(0, 0, 0, 300)
+).createLinearGradient(0, 0, 0, 500)
 
 // Add three color stops
 gradient.addColorStop(0, 'rgba(5,168,86,0.5)')
@@ -50,7 +50,7 @@ const conf = {
     ],
   },
   options: {
-    aspectRatio: 1,
+    aspectRatio: 100 / (15 * 2),
     scales: {
       y: {
         // display: false,
@@ -130,7 +130,7 @@ const conf = {
 }
 .LineStatistic-content {
   position: relative;
-  padding: 50%;
+  padding: 15%;
   .chart {
     position: absolute;
     top: 0;
@@ -139,7 +139,7 @@ const conf = {
     bottom: 0;
   }
   canvas {
-    height: 100%;
+    // height: 100% !important;
   }
 }
 </style>

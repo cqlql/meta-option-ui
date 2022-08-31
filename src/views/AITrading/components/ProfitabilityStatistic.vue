@@ -36,7 +36,7 @@ const conf = {
     ],
   },
   options: {
-    aspectRatio: 1,
+    aspectRatio: 100 / (15 * 2),
     scales: {
       y: {
         // display: false,
@@ -44,7 +44,7 @@ const conf = {
         grid: {
           color: '#3c4559',
           drawBorder: false,
-          borderDash: [12, 12],
+          // borderDash: [12, 12],
           // borderDashOffset: 2,
           borderDash(context: any) {
             if (context.tick.value) return 0
@@ -118,7 +118,7 @@ const conf = {
 }
 .ProfitabilityStatistic-content {
   position: relative;
-  padding: 50%;
+  padding: 15%;
   .chart {
     position: absolute;
     top: 0;
