@@ -36,6 +36,7 @@ const conf = {
     ],
   },
   options: {
+    barPercentage: 0.2, // 比例值
     aspectRatio: 100 / (15 * 2),
     scales: {
       y: {
