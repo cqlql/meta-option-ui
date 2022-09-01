@@ -43,7 +43,6 @@ const conf = {
         // display: false,
         position: 'right',
         grid: {
-          color: '#3c4559',
           drawBorder: false,
           // borderDash: [12, 12],
           // borderDashOffset: 2,

@@ -28,9 +28,14 @@ import Logo from '@/components/Logo.vue'
 import ChartjsLineAreaDemo from './comp/ChartjsLineAreaDemo.vue'
 import ChartjsLineDemo from './comp/ChartjsLineDemo.vue'
 import ChartjsBarDemo from './comp/ChartjsBarDemo.vue'
+import TableBoxOneDemo from './comp/TableBoxOneDemo.vue'
 </script>
 <template>
   <DemoContainer class="layout-main">
+    <BoxView title="TableBoxOne">
+      <TableBoxOneDemo> </TableBoxOneDemo>
+    </BoxView>
+
     <BoxView title="ChartjsBarDemo">
       <ChartjsBarDemo></ChartjsBarDemo>
     </BoxView>

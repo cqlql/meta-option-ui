@@ -2,6 +2,7 @@
 import AIBrokerView from './AIBrokerView.vue'
 import AIBrokerFlowerView from './AIBrokerFlowerView.vue'
 import PortfolioView from './PortfolioView.vue'
+import WalletHistoryView from './WalletHistoryView.vue'
 import { TabVal } from './types'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     AIBrokerFlowerView,
     AIBrokerView,
     PortfolioView,
+    WalletHistoryView,
   },
 }
 </script>
@@ -25,9 +27,13 @@ const list = [
     label: 'Portfolio',
     value: 'PortfolioView',
   },
+  {
+    label: 'WalletHistory',
+    value: 'WalletHistoryView',
+  },
 ]
 
-const tabVal = ref<TabVal>('AIBrokerView')
+const tabVal = ref<TabVal>('AIBrokerFlowerView')
 
 provide('tabVal', tabVal)
 </script>

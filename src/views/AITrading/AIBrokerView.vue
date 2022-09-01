@@ -9,6 +9,7 @@ import WithdrawDialog from './components/WithdrawDialog.vue'
 import { inject, Ref, ref } from 'vue'
 import { TabVal } from './types'
 import PerformanceLineChart from './components/PerformanceLineChart.vue'
+import TableBoxOne from '@/components/TableBoxOne.vue'
 
 const dataSource = [
   {
@@ -74,8 +75,9 @@ function toFollowPage() {
 }
 </script>
 <template>
+  <!-- 此最外层div是为了解决 enter-y 延迟问题 -->
   <div>
-    <div class="AIBrokerView mt-12 enter-y">
+    <TableBoxOne class="AIBrokerView mt-12 enter-y">
       <div class="operation">
         <div>
           <a-button type="link">Reset</a-button>
@@ -139,7 +141,7 @@ function toFollowPage() {
       </a-table>
 
       <WithdrawDialog v-model:visible="withdrawDialogVisible"> </WithdrawDialog>
-    </div>
+    </TableBoxOne>
   </div>
 </template>
 
@@ -220,10 +222,6 @@ function toFollowPage() {
     }
   }
 
-  ::v-deep(tbody) {
-    background-color: #21293a;
-  }
-
   .ant-rate {
     font-size: 16px;
 
@@ -233,20 +231,9 @@ function toFollowPage() {
   }
 
   ::v-deep(.ant-table) {
-    overflow-x: auto;
-    white-space: nowrap;
-
-    .ant-table-cell::before {
-      display: none !important;
-    }
-
     td,
     th {
       text-align: right;
-    }
-
-    th {
-      color: #838898;
     }
 
     td {
@@ -257,30 +244,6 @@ function toFollowPage() {
       td:first-child,
       th:first-child {
         text-align: left;
-      }
-    }
-
-    tbody {
-      td {
-        // border-color: #424b60 !important;
-        // border-right: 1px solid #424b60 !important;
-        border-bottom: 1px solid #424b60 !important;
-      }
-
-      tr:first-child {
-        td {
-          border-top: 1px solid #424b60 !important;
-        }
-      }
-
-      tr {
-        td:first-child {
-          border-left: 1px solid #424b60 !important;
-        }
-
-        td:last-child {
-          border-right: 1px solid #424b60 !important;
-        }
       }
     }
   }

@@ -1,1 +1,5 @@
-export type TabVal = 'AIBrokerView' | 'PortfolioView' | 'AIBrokerFlowerView'
+export type TabVal =
+  | 'AIBrokerView'
+  | 'PortfolioView'
+  | 'AIBrokerFlowerView'
+  | 'WalletHistoryView'
