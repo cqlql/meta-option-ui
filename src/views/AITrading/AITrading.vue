@@ -20,7 +20,7 @@ import TabButtons from '@/components/TabButtons.vue'
 
 const list = [
   {
-    label: 'AI broker',
+    label: 'AI Broker',
     value: 'AIBrokerView',
   },
   {
@@ -28,12 +28,16 @@ const list = [
     value: 'PortfolioView',
   },
   {
-    label: 'WalletHistory',
+    label: 'Wallet History',
     value: 'WalletHistoryView',
+  },
+  {
+    label: 'AI Broker Flower',
+    value: 'AIBrokerFlowerView',
   },
 ]
 
-const tabVal = ref<TabVal>('AIBrokerFlowerView')
+const tabVal = ref<TabVal>('AIBrokerView')
 
 provide('tabVal', tabVal)
 </script>
