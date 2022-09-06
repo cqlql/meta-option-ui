@@ -112,6 +112,10 @@ import Icon from '@/components/Icon/src/Icon.vue'
 }
 
 .strategy-list__body {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 65px;
+
   .row {
     display: flex;
     height: 54px;
@@ -137,6 +141,12 @@ import Icon from '@/components/Icon/src/Icon.vue'
     ::v-deep(.ant-rate-star:not(:last-child)) {
       margin-right: 4px;
     }
+  }
+}
+
+@media (min-width: 1100px) {
+  .strategy-list__body {
+    grid-template-columns: repeat(3, auto);
   }
 }
 </style>
