@@ -1,19 +1,41 @@
 <script lang="ts" setup>
 import ChartJs from '@/components/ChartJs.vue'
-const datapoints = []
+const datapoints: number[] = []
 
 for (let i = 10; i--; ) {
   datapoints.push(~~(Math.random() * 100 - 50))
 }
 const canvas = document.createElement('canvas')
 const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
-const upGradient = ctx.createLinearGradient(0, 0, 0, 150)
-upGradient.addColorStop(0, 'rgb(6,159,83)')
-upGradient.addColorStop(1, 'rgba(6,159,83,0.5)')
+// const upGradient = ctx.createLinearGradient(0, 0, 0, 150)
+// upGradient.addColorStop(0, 'rgb(6,159,83)')
+// upGradient.addColorStop(1, 'rgba(6,159,83,0.5)')
 
-const downGradient = ctx.createLinearGradient(0, 150, 0, 300)
-downGradient.addColorStop(0, 'rgba(201,64,64,0.5)')
-downGradient.addColorStop(1, 'rgb(201,64,64)')
+// const downGradient = ctx.createLinearGradient(0, 150, 0, 300)
+// downGradient.addColorStop(0, 'rgba(201,64,64,0.5)')
+// downGradient.addColorStop(1, 'rgb(201,64,64)')
+let max = Math.max(...datapoints)
+let min = Math.abs(Math.min(...datapoints))
+
+function getGradient(raw: number) {
+  let height = 150
+  if (raw > 0) {
+    let elHeight = ~~((raw / max) * height)
+
+    const upGradient = ctx.createLinearGradient(0, height - elHeight, 0, height)
+    upGradient.addColorStop(0, 'rgb(6,159,83)')
+    // upGradient.addColorStop(0.3, 'rgba(6,159,83,0.9)')
+    upGradient.addColorStop(1, 'rgba(6,159,83,0.2)')
+    return upGradient
+  }
+
+  let elHeight = ~~((Math.abs(raw) / min) * height)
+  const downGradient = ctx.createLinearGradient(0, height, 0, height + elHeight)
+  downGradient.addColorStop(0, 'rgba(201,64,64,0.2)')
+  // downGradient.addColorStop(0.8, 'rgba(201,64,64,0.8)')
+  downGradient.addColorStop(1, 'rgb(201,64,64)')
+  return downGradient
+}
 
 const conf = {
   type: 'bar',
@@ -22,9 +44,7 @@ const conf = {
     datasets: [
       {
         label: 'Filled',
-        backgroundColor: datapoints.map((v) => {
-          return v > 0 ? upGradient : downGradient
-        }),
+        backgroundColor: datapoints.map(getGradient),
         // borderColor: '#088d4e',
         data: datapoints,
         // cubicInterpolationMode: 'monotone',
