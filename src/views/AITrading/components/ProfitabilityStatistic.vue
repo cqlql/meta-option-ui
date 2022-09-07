@@ -37,7 +37,7 @@ const conf = {
   },
   options: {
     barPercentage: 0.2, // 比例值
-    aspectRatio: 100 / (15 * 2),
+    maintainAspectRatio: false,
     scales: {
       y: {
         // display: false,
@@ -54,7 +54,7 @@ const conf = {
           color(context: any) {
             if (context.tick.value) return '#3c4559'
 
-            return '#fff'
+            return '#ccc'
           },
         },
       },
@@ -118,7 +118,8 @@ const conf = {
 }
 .ProfitabilityStatistic-content {
   position: relative;
-  padding: 15%;
+  // padding: 15%;
+  height: 300px;
   .chart {
     position: absolute;
     top: 0;

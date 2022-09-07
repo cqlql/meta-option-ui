@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Rate as ARate, Table as ATable } from 'ant-design-vue'
+import { Table as ATable } from 'ant-design-vue'
 import TableBoxOne from '@/components/TableBoxOne.vue'
 
 const dataSource = [

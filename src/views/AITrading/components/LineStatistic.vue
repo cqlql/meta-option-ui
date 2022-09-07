@@ -26,11 +26,12 @@ for (let i = 20; i--; ) {
 const canvas = document.createElement('canvas')
 const gradient = (
   canvas.getContext('2d') as CanvasRenderingContext2D
-).createLinearGradient(0, 0, 0, 500)
+).createLinearGradient(0, 0, 0, 300)
 
 // Add three color stops
-gradient.addColorStop(0, 'rgba(5,168,86,0.5)')
+gradient.addColorStop(0, 'rgba(5,168,86,0.6)')
 gradient.addColorStop(1, 'rgba(5,168,86,0)')
+
 const conf = {
   type: 'line',
   data: {
@@ -50,7 +51,10 @@ const conf = {
     ],
   },
   options: {
-    aspectRatio: 100 / (15 * 2),
+    // 不保持高宽比
+    maintainAspectRatio: false,
+    // 保持高宽比
+    // aspectRatio: 100 / (15 * 2),
     scales: {
       y: {
         // display: false,
@@ -130,7 +134,8 @@ const conf = {
 }
 .LineStatistic-content {
   position: relative;
-  padding: 15%;
+  // padding: 15%;
+  height: 300px;
   .chart {
     position: absolute;
     top: 0;
