@@ -9,10 +9,10 @@ const canvas = document.createElement('canvas')
 const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
 const upGradient = ctx.createLinearGradient(0, 0, 0, 150)
 upGradient.addColorStop(0, 'rgb(6,159,83)')
-upGradient.addColorStop(1, 'rgba(6,159,83,0.3)')
+upGradient.addColorStop(1, 'rgba(6,159,83,0.5)')
 
 const downGradient = ctx.createLinearGradient(0, 150, 0, 300)
-downGradient.addColorStop(0, 'rgba(201,64,64,0.3)')
+downGradient.addColorStop(0, 'rgba(201,64,64,0.5)')
 downGradient.addColorStop(1, 'rgb(201,64,64)')
 
 const conf = {
